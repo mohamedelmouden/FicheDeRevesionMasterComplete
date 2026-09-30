@@ -1,0 +1,267 @@
+{
+  "id": "linux",
+  "name": "Systèmes & Linux",
+  "color": "#22d3ee",
+  "sections": [
+    {
+      "id": "1.1",
+      "c": 1,
+      "t": "Introduction aux systèmes d'exploitation",
+      "x": "❖ Définition\n     Un système d'exploitation (OS) est un logiciel système qui gère les ressources matérielles\n     et logicielles d'un ordinateur. Il fournit une interface entre l'utilisateur et le matériel.\n      Fonctions principales :\n       — Gestion des processus (création, ordonnancement, terminaison)\n       — Gestion de la mémoire (RAM, mémoire virtuelle, pagination)\n       — Gestion des fichiers (systèmes de fichiers, droits)\n       — Gestion des E/S (périphériques, drivers)\n       — Sécurité et protection (utilisateurs, permissions)\n\n     ➔ Résumé rapide Types de systèmes d'exploitation\n\n      Type              Exemples                   Caractéristiques\n\n      Monolithique      Linux, Unix               Noyau unique, toutes fonctions en kernel space\n      Micro-noyau       Minix, QNX                Noyau minimal, services en user space\n      Hybride           Windows NT, macOS         Combinaison monolithique + micro-noyau\n      Temps réel        FreeRTOS, VxWorks         Garanties temporelles strictes\n      Embarqué          Android, Tizen            Adapté aux appareils mobiles/IoT\n\n     ◆ Concept clé\n     Le noyau (kernel) est le cœur de l'OS. Il s'exécute en mode privilégié (kernel mode)\n     et gère directement le matériel. Les applications s'exécutent en mode utilisateur (user mode)\n     et communiquent avec le noyau via des appels système (syscalls)."
+    },
+    {
+      "id": "1.2",
+      "c": 1,
+      "t": "Architecture Linux et distributions",
+      "x": "❖ Définition\n     Linux est un noyau (kernel) de système d'exploitation créé par Linus Torvalds en 1991.\n     Une distribution Linux = Noyau Linux + Outils GNU + Gestionnaire de paquets + Bureau.\n\n     ➔ Résumé rapide Distributions Linux populaires\n\n      Distribution     Base         Paquets        Usage\n\n      Ubuntu           Debian       apt/deb        Bureau, serveur, débutants\n      Debian           —            apt/deb        Serveur, stabilité\n      Fedora           Red Hat      dnf/rpm        Desktop, innovations\n      CentOS/Rocky     RHEL         yum/rpm        Serveur entreprise\n      Arch Linux       —            pacman         Avancé, rolling release\n      Kali Linux       Debian       apt/deb        Sécurité, pentesting\n      Alpine           —            apk            Conteneurs Docker\n\n     ➔ Résumé rapide Architecture Linux\n\n      Couche              Rôle\n\n      Matériel            CPU, RAM, disques, périphériques\n      Noyau (Kernel)      Gestion matériel, processus, mémoire, fichiers\n      Shell               Interface ligne de commande (Bash, Zsh)\n      Utilitaires GNU     Commandes de base (ls, cp, grep, etc.)\n      Applications        Logiciels utilisateur (Firefox, LibreOffice, etc.)\n\n     ★ Astuce Concours\n     Linux suit la philosophie Unix :\n      — Tout est fichier (périphériques, processus, sockets)\n      — Chaque programme fait une seule chose bien\n      — Les programmes communiquent via des flux de texte (pipes)"
+    },
+    {
+      "id": "1.3",
+      "c": 1,
+      "t": "Le Shell et Bash",
+      "x": "❖ Définition\n     Le Shell est l'interpréteur de commandes de Linux. Bash (Bourne Again Shell) est le\n     shell le plus courant. Il interprète les commandes saisies par l'utilisateur et les\n     transmet au noyau.\n\n     ➣ Syntaxe / Code Bases du Shell Bash\n\n 1   # Types de shell\n 2   echo $SHELL            # Shell par défaut (/bin/bash)\n 3   cat /etc/shells        # Lister les shells disponibles\n 4   chsh -s /bin/zsh       # Changer de shell par défaut\n 5\n 6   # Variables\n 7   NOM=\"Mohamed\"           # Déclaration (PAS d'espaces autour de =)\n 8   echo $NOM              # Afficher la variable\n 9   echo \"Bonjour $NOM\"    # Interpolation (guillemets doubles)\n10   echo 'Bonjour $NOM'   # Littéral (guillemets simples) → $NOM\n11\n12   # Variables d'environnement\n13   export PATH=$PATH:/opt/bin    # Ajouter au PATH\n14   env                          # Lister toutes les variables d'env\n15   printenv HOME                # Afficher une variable spécifique\n16\n17   # Variables spéciales\n18   $0    # Nom du script\n19   $1    # Premier argument\n20   $#    # Nombre d'arguments\n21   $@    # Tous les arguments (séparés)\n22   $*    # Tous les arguments (une chaîne)\n23   $?    # Code retour de la dernière commande (0 = succès)\n24   $$    # PID du shell courant\n25   $!    # PID du dernier processus en arrière-plan\n\n     ☞ Attention / Piège\n      — Pas d'espaces autour du = dans les affectations : NOM=\"val\" (pas NOM = \"val\")\n      — Les guillemets doubles permettent l'interpolation, les simples non\n      — $? doit être lu immédiatement après la commande testée"
+    },
+    {
+      "id": "2.1",
+      "c": 2,
+      "t": "Navigation dans le système de fichiers",
+      "x": "❖ Définition\n     Linux utilise une arborescence unique partant de / (racine). Tout est organisé\n     sous cette racine, y compris les périphériques montés.\n\n     ➔ Résumé rapide Arborescence Linux (FHS)\n\n      Répertoire     Contenu\n\n      /              Racine du système de fichiers\n      /home          Répertoires personnels des utilisateurs\n      /root          Répertoire personnel de root\n      /etc           Fichiers de configuration système\n      /var           Données variables (logs, mail, spool)\n      /tmp           Fichiers temporaires (effacés au redémarrage)\n      /bin           Commandes essentielles (ls, cp, mv)\n      /sbin          Commandes système (fdisk, iptables)\n      /usr           Programmes et bibliothèques utilisateur\n      /opt           Logiciels tiers optionnels\n      /dev           Fichiers de périphériques\n      /proc          Pseudo-FS : infos processus et noyau\n      /sys           Pseudo-FS : infos matériel\n      /mnt, /media   Points de montage\n\n     ➣ Syntaxe / Code Navigation\n\n 1   pwd                    # Afficher le répertoire courant\n 2   cd /etc                # Aller dans /etc (chemin absolu)\n 3   cd ..                  # Remonter d'un niveau\n 4   cd ~                   # Aller dans le home (~  = /home/user)\n 5   cd -                   # Retourner au répertoire précédent\n 6   cd ../..               # Remonter de 2 niveaux\n 7\n 8   ls                     # Lister les fichiers\n 9   ls -l                  # Format long (permissions, taille, date)\n10   ls -la                 # Inclure les fichiers cachés (commençant par .)\n11   ls -lh                 # Tailles lisibles (Ko, Mo, Go)\n12   ls -lR                 # Récursif\n13   ls -lt                 # Trier par date de modification\n14   ls -lS                 # Trier par taille\n15\n16   tree                   # Afficher l'arborescence\n17   tree -L 2              # Limiter la profondeur à 2 niveaux"
+    },
+    {
+      "id": "2.2",
+      "c": 2,
+      "t": "Manipulation de fichiers et répertoires",
+      "x": "➣ Syntaxe / Code Créer, copier, déplacer, supprimer\n\n 1   # Créer\n 2   touch fichier.txt           # Créer un fichier vide\n 3   mkdir dossier               # Créer un répertoire\n 4   mkdir -p a/b/c              # Créer une arborescence complète\n 5\n 6   # Copier\n 7   cp source.txt dest.txt      # Copier un fichier\n 8   cp -r dossier/ copie/       # Copier un répertoire (récursif)\n 9   cp -i fichier.txt dest/     # Demander confirmation si écrasement\n10   cp -p fichier.txt dest/     # Préserver les attributs (dates, droits)\n11\n12   # Déplacer / Renommer\n13   mv ancien.txt nouveau.txt   # Renommer\n14   mv fichier.txt /tmp/        # Déplacer\n15   mv -i source dest           # Confirmation si écrasement\n16\n17   # Supprimer\n18   rm fichier.txt              # Supprimer un fichier\n19   rm -r dossier/              # Supprimer un répertoire récursivement\n20   rm -rf dossier/             # Forcer sans confirmation (DANGEREUX !)\n21   rmdir dossier_vide/         # Supprimer un dossier vide uniquement\n22\n23   # Liens\n24   ln fichier.txt lien_dur         # Lien dur (même inode)\n25   ln -s fichier.txt lien_symb     # Lien symbolique (raccourci)\n26   readlink -f lien_symb           # Résoudre un lien symbolique\n\n     ☞ Attention / Piège\n      — rm -rf / peut détruire tout le système ! Toujours vérifier avant d'exécuter\n      — Un lien dur ne peut pas traverser les systèmes de fichiers\n      — Un lien symbolique peut pointer vers un fichier inexistant (lien cassé)"
+    },
+    {
+      "id": "2.3",
+      "c": 2,
+      "t": "Visualisation et édition de fichiers",
+      "x": "➣ Syntaxe / Code Afficher et éditer le contenu\n\n 1   cat fichier.txt              # Afficher tout le contenu\n 2   cat -n fichier.txt           # Avec numéros de ligne\n 3   tac fichier.txt              # Afficher à l'envers\n 4\n 5   head fichier.txt             # 10 premières lignes\n 6   head -n 20 fichier.txt       # 20 premières lignes\n 7   tail fichier.txt             # 10 dernières lignes\n 8   tail -n 20 fichier.txt       # 20 dernières lignes\n 9   tail -f /var/log/syslog      # Suivre en temps réel (logs)\n10\n11   less fichier.txt             # Pagination interactive\n12   #   Espace = page suivante, b = page précédente\n13   #   /mot = chercher, q = quitter\n14\n15   more fichier.txt             # Pagination simple\n16\n17   wc fichier.txt               # Compter lignes, mots, octets\n18   wc -l fichier.txt            # Nombre de lignes seulement\n19   wc -w fichier.txt            # Nombre de mots\n20   wc -c fichier.txt            # Nombre d'octets\n21\n22   # Éditeurs en terminal\n23   nano fichier.txt             # Éditeur simple (Ctrl+O sauver, Ctrl+X quitter)\n24   vim fichier.txt              # Éditeur avancé (i=insert, Esc, :wq=sauver+quitter)\n25   vi fichier.txt               # Version classique de vim\n\n     ➔ Résumé rapide Commandes essentielles Vim\n\n      Mode         Touche       Action\n\n      Normal       i            Passer en mode insertion\n      Normal       dd           Supprimer une ligne\n      Normal       yy           Copier une ligne\n      Normal       p            Coller\n      Normal       u            Annuler\n      Normal       /mot         Rechercher\n      Normal       :w           Sauvegarder\n      Normal       :q           Quitter\n      Normal       :wq          Sauvegarder et quitter\n      Normal       :q!          Quitter sans sauvegarder\n      Insertion    Esc          Revenir en mode normal"
+    },
+    {
+      "id": "3.1",
+      "c": 3,
+      "t": "Permissions et propriétés",
+      "x": "❖ Définition\n     Chaque fichier/répertoire a 3 types de permissions pour 3 catégories :\n      — Permissions : lecture (r=4), écriture (w=2), exécution (x=1)\n      — Catégories : propriétaire (u), groupe (g), autres (o)\n      — Format : rwxrwxrwx = user|group|others\n\n     ➣ Syntaxe / Code Gestion des permissions\n\n 1   ls -l fichier.txt\n 2   # -rw-r--r-- 1 user group 1234 Jan 15 10:00 fichier.txt\n 3   # │└──┴──┴──┘ │ │    │      │\n 4   # │ u  g  o   │ │    │      └─ taille\n 5   # └─ type     │ │    └─ groupe\n 6   #   (- fichier, d dossier, l lien)\n 7   #             │ └─ propriétaire\n 8   #             └─ nombre de liens\n 9\n10   # chmod : changer les permissions\n11   chmod 755 script.sh          # rwxr-xr-x (notation octale)\n12   chmod 644 fichier.txt        # rw-r--r--\n13   chmod u+x script.sh          # Ajouter exécution pour le propriétaire\n14   chmod g-w fichier.txt        # Retirer écriture pour le groupe\n15   chmod o=r fichier.txt        # Mettre lecture seule pour les autres\n16   chmod a+r fichier.txt        # Lecture pour tous (a = all)\n17   chmod -R 755 dossier/        # Récursif\n18\n19   # chown : changer le propriétaire\n20   chown user fichier.txt             # Changer le propriétaire\n21   chown user:group fichier.txt       # Changer propriétaire et groupe\n22   chown -R user:group dossier/       # Récursif\n23\n24   # chgrp : changer le groupe\n25   chgrp group fichier.txt\n\n     ➔ Résumé rapide Permissions octales courantes\n\n      Octal    Symbole     Usage typique\n\n      777      rwxrwxrwx   Accès total (dangereux !)\n      755      rwxr-xr-x   Scripts exécutables, dossiers\n      644      rw-r--r--   Fichiers normaux\n      600      rw-------   Fichiers privés (clés SSH)\n      700      rwx------   Dossiers privés\n      444      r--r--r--   Lecture seule pour tous\n\n     ★ Astuce Concours\n     Permissions spéciales : SUID (4), SGID (2), Sticky Bit (1)\n      — SUID (chmod 4755) : exécuter avec les droits du propriétaire\n      — SGID (chmod 2755) : exécuter avec les droits du groupe\n      — Sticky Bit (chmod 1755) : seul le propriétaire peut supprimer ses fichiers (ex: /tmp)"
+    },
+    {
+      "id": "3.2",
+      "c": 3,
+      "t": "Gestion des utilisateurs et groupes",
+      "x": "➣ Syntaxe / Code Administration des utilisateurs\n\n 1   # Créer un utilisateur\n 2   useradd -m -s /bin/bash user1       # -m = créer le home, -s = shell\n 3   adduser user2                        # Version interactive (Debian)\n 4   passwd user1                         # Définir/changer le mot de passe\n 5\n 6   # Modifier un utilisateur\n 7   usermod -aG sudo user1               # Ajouter au groupe sudo\n 8   usermod -l newname oldname           # Renommer\n 9   usermod -d /new/home -m user1        # Changer le home\n10   usermod -s /bin/zsh user1            # Changer le shell\n11\n12   # Supprimer un utilisateur\n13   userdel user1                        # Supprimer (garder le home)\n14   userdel -r user1                     # Supprimer avec le home\n15\n16   # Groupes\n17   groupadd devs                        # Créer un groupe\n18   groupdel devs                        # Supprimer un groupe\n19   groups user1                         # Lister les groupes d'un user\n20   id user1                             # UID, GID, groupes\n21\n22   # Fichiers importants\n23   cat /etc/passwd                      # Liste des utilisateurs\n24   # format: user:x:UID:GID:commentaire:home:shell\n25   cat /etc/shadow                      # Mots de passe hashés (root)\n26   cat /etc/group                       # Liste des groupes\n27\n28   # Élévation de privilèges\n29   su - root                            # Basculer vers root\n30   sudo commande                        # Exécuter en tant que root\n31   sudo -u user1 commande              # Exécuter en tant que user1\n32   visudo                               # Éditer /etc/sudoers (sécurisé)\n\n     ☞ Attention / Piège\n      — Ne jamais se connecter directement en root, utiliser sudo\n      — Le fichier /etc/shadow ne doit être lisible que par root (600)\n      — usermod -G (sans -a) REMPLACE tous les groupes secondaires !"
+    },
+    {
+      "id": "4.1",
+      "c": 4,
+      "t": "Gestion des processus",
+      "x": "❖ Définition\n     Un processus est un programme en cours d'exécution. Chaque processus a un PID unique,\n     un PPID (parent), un UID (propriétaire), et un état (running, sleeping, zombie...).\n\n     ➣ Syntaxe / Code Commandes de gestion des processus\n\n 1   # Lister les processus\n 2   ps                       # Processus du terminal courant\n 3   ps aux                   # Tous les processus (format BSD)\n 4   ps -ef                   # Tous les processus (format System V)\n 5   ps aux | grep nginx      # Chercher un processus spécifique\n 6\n 7   top                      # Moniteur en temps réel\n 8   htop                     # Moniteur amélioré (interactif)\n 9\n10   # Signaux\n11   kill PID                 # Envoyer SIGTERM (terminaison propre)\n12   kill -9 PID              # Envoyer SIGKILL (tuer de force)\n13   kill -HUP PID            # Recharger la configuration\n14   killall nginx            # Tuer par nom\n15   pkill -f \"python app\"    # Tuer par pattern\n16\n17   # Arrière-plan et avant-plan\n18   commande &               # Lancer en arrière-plan\n19   jobs                     # Lister les jobs du shell\n20   fg %1                    # Remettre le job 1 en avant-plan\n21   bg %1                    # Continuer le job 1 en arrière-plan\n22   Ctrl+Z                   # Suspendre le processus en cours\n23   Ctrl+C                   # Interrompre le processus en cours\n24\n25   # nohup : continuer après déconnexion\n26   nohup commande &         # Le processus survit à la fermeture du terminal\n27   disown %1                # Détacher un job du shell\n28\n29   # Priorité (nice)\n30   nice -n 10 commande      # Lancer avec priorité basse (10)\n31   renice -n -5 PID         # Changer la priorité d'un processus\n32   # -20 = plus haute priorité, 19 = plus basse\n\n     ➔ Résumé rapide Signaux importants\n\n      Signal      Numéro    Action\n\n      SIGHUP      1         Recharger configuration\n      SIGINT      2         Interruption (Ctrl+C)\n      SIGKILL     9         Tuer immédiatement (non interceptable)\n      SIGTERM     15        Terminaison propre (par défaut)\n      SIGSTOP     19        Suspendre (non interceptable)\n      SIGCONT     18        Reprendre après suspension"
+    },
+    {
+      "id": "4.2",
+      "c": 4,
+      "t": "Services et systemd",
+      "x": "❖ Définition\n     systemd est le système d'init par défaut de la plupart des distributions Linux modernes.\n     Il gère le démarrage du système, les services (daemons), les logs, et plus encore.\n\n     ➣ Syntaxe / Code Gestion des services avec systemctl\n\n 1   # Gérer les services\n 2   systemctl start nginx          # Démarrer un service\n 3   systemctl stop nginx           # Arrêter un service\n 4   systemctl restart nginx        # Redémarrer\n 5   systemctl reload nginx         # Recharger la configuration\n 6   systemctl status nginx         # Voir l'état du service\n 7\n 8   # Activation au démarrage\n 9   systemctl enable nginx         # Activer au boot\n10   systemctl disable nginx        # Désactiver au boot\n11   systemctl is-enabled nginx     # Vérifier si activé\n12   systemctl is-active nginx      # Vérifier si en cours\n13\n14   # Lister les services\n15   systemctl list-units --type=service          # Services actifs\n16   systemctl list-units --type=service --all    # Tous les services\n17   systemctl list-unit-files --type=service     # Fichiers d'unité\n18\n19   # Journaux (logs)\n20   journalctl                     # Tous les logs\n21   journalctl -u nginx            # Logs d'un service spécifique\n22   journalctl -f                  # Suivre en temps réel\n23   journalctl --since today       # Logs du jour\n24   journalctl -p err              # Seulement les erreurs\n25   journalctl -b                  # Logs depuis le dernier boot\n26\n27   # Système\n28   systemctl reboot               # Redémarrer le système\n29   systemctl poweroff             # Éteindre\n30   systemctl suspend              # Mettre en veille"
+    },
+    {
+      "id": "5.1",
+      "c": 5,
+      "t": "Recherche de fichiers et texte",
+      "x": "➣ Syntaxe / Code find, grep, locate\n\n 1   # find : recherche par critères dans le système de fichiers\n 2   find /home -name \"*.txt\"              # Par nom\n 3   find /home -iname \"*.TXT\"             # Insensible à la casse\n 4   find / -type f -size +100M            # Fichiers > 100 Mo\n 5   find / -type d -name \"log\"            # Répertoires nommés log\n 6   find . -mtime -7                      # Modifiés dans les 7 derniers jours\n 7   find . -user root                     # Appartenant à root\n 8   find . -perm 755                      # Avec permissions 755\n 9   find . -name \"*.tmp\" -delete          # Trouver ET supprimer\n10   find . -name \"*.sh\" -exec chmod +x {} \\;   # Exécuter une commande\n11\n12   # grep : recherche dans le contenu des fichiers\n13   grep \"erreur\" fichier.txt             # Chercher un mot\n14   grep -i \"erreur\" fichier.txt          # Insensible à la casse\n15   grep -r \"TODO\" /home/projet/          # Recherche récursive\n16   grep -n \"erreur\" fichier.txt          # Afficher les numéros de ligne\n17   grep -c \"erreur\" fichier.txt          # Compter les occurrences\n18   grep -v \"commentaire\" fichier.txt     # Lignes NE contenant PAS le mot\n19   grep -E \"err(eur|or)\" fichier.txt     # Expression régulière étendue\n20   grep -l \"motif\" *.txt                 # Lister les fichiers contenant\n21\n22   # Combinaisons puissantes\n23   grep -rn \"function\" --include=\"*.py\" .    # Chercher dans les .py\n24   find . -name \"*.log\" | xargs grep \"ERROR\"  # find + grep\n25\n26   # locate : recherche rapide par base de données\n27   locate fichier.txt           # Recherche rapide (utilise une BDD)\n28   updatedb                     # Mettre à jour la BDD de locate\n29\n30   # which / whereis : localiser des commandes\n31   which python3                # Chemin de l'exécutable\n32   whereis python3              # Exécutable + man + sources"
+    },
+    {
+      "id": "5.2",
+      "c": 5,
+      "t": "Redirections et pipes",
+      "x": "❖ Définition\n     Les redirections et pipes sont au cœur de la philosophie Unix :\n     connecter des programmes simples pour créer des flux de traitement complexes.\n\n     ➣ Syntaxe / Code Redirections et pipes\n\n 1   # Redirections de sortie\n 2   commande > fichier.txt       # Écraser le fichier\n 3   commande >> fichier.txt      # Ajouter à la fin\n 4   commande 2> erreurs.txt      # Rediriger stderr\n 5   commande > out.txt 2>&1      # stdout + stderr dans un fichier\n 6   commande &> tout.txt         # Idem (raccourci Bash)\n 7\n 8   # Redirection d'entrée\n 9   commande < fichier.txt       # Lire depuis un fichier\n10   commande << EOF              # Here document\n11   ligne 1\n12   ligne 2\n13   EOF\n14\n15   # Pipe : connecter la sortie d'une commande à l'entrée d'une autre\n16   ls -la | grep \".txt\"                 # Filtrer la sortie de ls\n17   cat access.log | sort | uniq -c | sort -rn | head   # Top accès\n18   ps aux | awk '{print $1, $11}' | sort | uniq         # Users + cmds\n19\n20   # tee : écrire dans un fichier ET afficher\n21   commande | tee fichier.txt           # Affiche + sauvegarde\n22   commande | tee -a fichier.txt        # Affiche + ajoute\n23\n24   # xargs : convertir stdin en arguments\n25   find . -name \"*.txt\" | xargs wc -l              # Compter les lignes\n26   echo \"f1 f2 f3\" | xargs -n 1 touch              # Créer 3 fichiers\n27   find . -name \"*.bak\" | xargs -I {} mv {} /tmp/   # Déplacer\n\n     ★ Astuce Concours\n     La commande pipeline la plus utile pour les concours :\n      cat fichier | sort | uniq -c | sort -rn | head -n 10\n     → Lit le fichier, trie, compte les doublons, trie par fréquence, top 10"
+    },
+    {
+      "id": "5.3",
+      "c": 5,
+      "t": "Expressions régulières (regex)",
+      "x": "❖ Définition\n     Les expressions régulières sont des motifs de recherche de texte utilisés par\n     grep, sed, awk et de nombreux outils Unix.\n\n     ➔ Résumé rapide Syntaxe des regex\n\n      Symbole    Signification                    Exemple\n\n      .          N'importe quel caractère         a.c → abc, a1c\n      *          0 ou plus du précédent           ab* → a, ab, abb\n      +          1 ou plus du précédent            ab+ → ab, abb (pas a)\n      ?          0 ou 1 du précédent              ab? → a, ab\n      ^          Début de ligne                   ^Hello\n      $          Fin de ligne                     world$\n      [ ]        Classe de caractères             [aeiou], [0-9]\n      [^ ]       Négation de classe               [^0-9] = pas un chiffre\n      \\d         Chiffre (équiv. [0-9])           \\d+ = un ou plusieurs chiffres\n      \\w         Mot (lettre, chiffre, _)          \\w+\n      \\s         Espace blanc                     \\s+\n      |          Ou (alternation)                 cat|dog\n      ( )        Groupement                       (ab)+\n      {n}        Exactement n fois                a{3} → aaa\n      {n,m}      Entre n et m fois                a{2,4}\n\n     ➣ Syntaxe / Code Exemples pratiques\n\n 1   # grep avec regex\n 2   grep '^root' /etc/passwd              # Lignes commençant par root\n 3   grep -E '^[A-Z]' fichier.txt          # Lignes commençant par majuscule\n 4   grep -E '[0-9]{3}\\.[0-9]{3}' log.txt  # Motif type IP partiel\n 5   grep -E '^$' fichier.txt              # Lignes vides\n 6   grep -Ev '^(#|$)' config.conf         # Ignorer commentaires et vides\n 7\n 8   # sed : éditeur de flux\n 9   sed 's/ancien/nouveau/' fichier.txt         # Remplacer (1ère occurrence)\n10   sed 's/ancien/nouveau/g' fichier.txt        # Remplacer toutes\n11   sed -i 's/ancien/nouveau/g' fichier.txt     # Modifier en place\n12   sed '/^#/d' config.conf                     # Supprimer les commentaires\n13   sed -n '5,10p' fichier.txt                  # Afficher lignes 5 à 10\n14\n15   # awk : traitement de texte avancé\n16   awk '{print $1}' fichier.txt                # 1er champ\n17   awk -F: '{print $1, $3}' /etc/passwd        # Séparateur : (user, UID)\n18   awk '$3 > 1000' /etc/passwd                 # Filtrer par condition\n19   awk '{sum += $1} END {print sum}' data.txt  # Somme de la 1ère colonne"
+    },
+    {
+      "id": "6.1",
+      "c": 6,
+      "t": "Réseau : commandes essentielles",
+      "x": "➣ Syntaxe / Code Configuration et diagnostic réseau\n\n 1   # Interfaces réseau\n 2   ip addr                      # Afficher les interfaces (remplace ifconfig)\n 3   ip addr show eth0            # Interface spécifique\n 4   ip link set eth0 up          # Activer une interface\n 5   ip link set eth0 down        # Désactiver\n 6   ifconfig                     # Ancien outil (deprecated)\n 7\n 8   # Configuration IP\n 9   ip addr add 192.168.1.100/24 dev eth0     # Ajouter une IP\n10   ip route show                              # Table de routage\n11   ip route add default via 192.168.1.1       # Route par défaut\n12\n13   # DNS\n14   cat /etc/resolv.conf         # Serveurs DNS configurés\n15   nslookup google.com          # Résolution DNS\n16   dig google.com               # Résolution DNS détaillée\n17   host google.com              # Résolution DNS simple\n18\n19   # Diagnostic\n20   ping google.com              # Test de connectivité\n21   ping -c 4 google.com         # 4 paquets seulement\n22   traceroute google.com        # Tracer la route\n23   mtr google.com               # ping + traceroute combinés\n24\n25   # Ports et connexions\n26   netstat -tlnp                # Ports TCP en écoute\n27   ss -tlnp                     # Idem (remplace netstat)\n28   ss -s                        # Statistiques réseau\n29   lsof -i :80                  # Qui utilise le port 80 ?\n30\n31   # Transfert de fichiers\n32   scp fichier.txt user@host:/chemin/    # Copie via SSH\n33   rsync -avz dossier/ user@host:/dest/  # Synchronisation\n34   wget https://example.com/file.zip     # Télécharger\n35   curl -O https://example.com/file.zip  # Télécharger\n36   curl -X GET https://api.example.com   # Requête HTTP"
+    },
+    {
+      "id": "6.2",
+      "c": 6,
+      "t": "SSH et accès distant",
+      "x": "❖ Définition\n     SSH (Secure Shell) est un protocole de communication sécurisé pour l'accès\n     distant à des machines Linux. Il utilise un chiffrement asymétrique.\n\n     ➣ Syntaxe / Code Connexion et configuration SSH\n\n 1   # Connexion\n 2   ssh user@hostname                    # Connexion basique\n 3   ssh -p 2222 user@hostname            # Port personnalisé\n 4   ssh -i ~/.ssh/id_rsa user@hostname   # Clé spécifique\n 5\n 6   # Génération de clés\n 7   ssh-keygen -t rsa -b 4096           # Générer paire RSA 4096 bits\n 8   ssh-keygen -t ed25519               # Algorithme moderne (recommandé)\n 9   # → Crée ~/.ssh/id_ed25519 (privée) + ~/.ssh/id_ed25519.pub (publique)\n10\n11   # Copier la clé publique sur un serveur\n12   ssh-copy-id user@hostname            # Méthode automatique\n13   # Ou manuellement :\n14   cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys\n15\n16   # Configuration SSH (~/.ssh/config)\n17   # Host monserveur\n18   #   HostName 192.168.1.100\n19   #   User admin\n20   #   Port 2222\n21   #   IdentityFile ~/.ssh/id_ed25519\n22   # → Ensuite : ssh monserveur\n23\n24   # Tunnel SSH (port forwarding)\n25   ssh -L 8080:localhost:80 user@host     # Local → Remote\n26   ssh -R 9090:localhost:3000 user@host   # Remote → Local\n27   ssh -D 1080 user@host                  # Proxy SOCKS\n28\n29   # SCP et SFTP\n30   scp -r dossier/ user@host:/dest/       # Copie récursive\n31   sftp user@host                          # FTP sécurisé interactif\n\n     ☞ Attention / Piège\n      — Permissions de ~/.ssh : 700, authorized_keys : 600, clé privée : 600\n      — Ne JAMAIS partager la clé privée\n      — Désactiver l'authentification par mot de passe en prod : PasswordAuthentication no"
+    },
+    {
+      "id": "7.1",
+      "c": 7,
+      "t": "Gestion des paquets",
+      "x": "➣ Syntaxe / Code Gestionnaires de paquets\n\n 1   # === APT (Debian / Ubuntu) ===\n 2   apt update                     # Mettre à jour la liste des paquets\n 3   apt upgrade                    # Mettre à jour les paquets installés\n 4   apt full-upgrade               # Mise à jour complète (peut supprimer)\n 5   apt install nginx              # Installer un paquet\n 6   apt remove nginx               # Désinstaller (garder config)\n 7   apt purge nginx                # Désinstaller + supprimer config\n 8   apt autoremove                 # Supprimer les dépendances inutiles\n 9   apt search nginx               # Chercher un paquet\n10   apt show nginx                 # Infos sur un paquet\n11   apt list --installed           # Lister les paquets installés\n12   dpkg -i paquet.deb             # Installer un .deb local\n13   dpkg -l                        # Lister tous les paquets\n14\n15   # === YUM / DNF (Red Hat / Fedora / CentOS) ===\n16   dnf install nginx              # Installer\n17   dnf remove nginx               # Désinstaller\n18   dnf update                     # Mettre à jour\n19   dnf search nginx               # Chercher\n20   dnf info nginx                 # Informations\n21   rpm -ivh paquet.rpm            # Installer un .rpm local\n22\n23   # === Pacman (Arch Linux) ===\n24   pacman -S nginx                # Installer\n25   pacman -R nginx                # Désinstaller\n26   pacman -Syu                    # Mettre à jour le système\n27   pacman -Ss nginx               # Chercher\n28\n29   # === Snap / Flatpak ===\n30   snap install firefox           # Installer via Snap\n31   flatpak install firefox        # Installer via Flatpak"
+    },
+    {
+      "id": "7.2",
+      "c": 7,
+      "t": "Gestion des disques et partitions",
+      "x": "➣ Syntaxe / Code Disques, partitions, montage\n\n 1   # Informations disques\n 2   lsblk                          # Lister les périphériques bloc\n 3   fdisk -l                       # Lister les partitions\n 4   df -h                          # Espace disque utilisé\n 5   du -sh /home/*                 # Taille des dossiers\n 6   du -sh --max-depth=1 /         # Taille de chaque dossier racine\n 7\n 8   # Partitionnement\n 9   fdisk /dev/sdb                 # Partitionner un disque (MBR)\n10   gdisk /dev/sdb                 # Partitionner un disque (GPT)\n11   parted /dev/sdb                # Outil avancé\n12\n13   # Systèmes de fichiers\n14   mkfs.ext4 /dev/sdb1            # Formater en ext4\n15   mkfs.xfs /dev/sdb1             # Formater en XFS\n16   mkfs.ntfs /dev/sdb1            # Formater en NTFS\n17\n18   # Montage\n19   mount /dev/sdb1 /mnt/data      # Monter une partition\n20   umount /mnt/data               # Démonter\n21   mount -o remount,rw /          # Remonter en lecture-écriture\n22\n23   # Montage permanent (/etc/fstab)\n24   # /dev/sdb1  /mnt/data  ext4  defaults  0  2\n25   # UUID=xxxx  /mnt/data  ext4  defaults  0  2\n26\n27   # LVM (Logical Volume Manager)\n28   pvcreate /dev/sdb1                     # Créer un Physical Volume\n29   vgcreate vg_data /dev/sdb1             # Créer un Volume Group\n30   lvcreate -L 10G -n lv_data vg_data     # Créer un Logical Volume\n31   mkfs.ext4 /dev/vg_data/lv_data         # Formater\n32   mount /dev/vg_data/lv_data /mnt/data   # Monter\n\n     ➔ Résumé rapide Systèmes de fichiers Linux\n\n      FS           Taille max     Usage\n\n      ext4         1 EiB          Standard Linux, fiable\n      XFS          8 EiB          Serveurs, grandes données\n      Btrfs        16 EiB         Snapshots, compression\n      FAT32        4 GiB/fichier  Clés USB, compatibilité\n      NTFS         16 TiB         Interopérabilité Windows\n      tmpfs        RAM            Fichiers temporaires en mémoire"
+    },
+    {
+      "id": "8.1",
+      "c": 8,
+      "t": "Scripts Bash avancés",
+      "x": "➣ Syntaxe / Code Structures de contrôle Bash\n\n 1   #!/bin/bash\n 2   # Shebang : indique l'interpréteur\n 3\n 4   # Conditions\n 5   if [ $age -gt 18 ]; then\n 6       echo \"Majeur\"\n 7   elif [ $age -eq 18 ]; then\n 8       echo \"Tout juste !\"\n 9   else\n10       echo \"Mineur\"\n11   fi\n12\n13   # Tests sur fichiers\n14   if [ -f fichier.txt ]; then echo \"Fichier existe\"; fi\n15   if [ -d dossier ]; then echo \"Dossier existe\"; fi\n16   if [ -r fichier ]; then echo \"Lisible\"; fi\n17   if [ -w fichier ]; then echo \"Modifiable\"; fi\n18   if [ -x fichier ]; then echo \"Exécutable\"; fi\n19   if [ -s fichier ]; then echo \"Non vide\"; fi\n20\n21   # Tests sur chaînes\n22   if [ -z \"$var\" ]; then echo \"Vide\"; fi\n23   if [ -n \"$var\" ]; then echo \"Non vide\"; fi\n24   if [ \"$a\" = \"$b\" ]; then echo \"Égaux\"; fi\n25\n26   # Boucle for\n27   for i in 1 2 3 4 5; do\n28       echo \"Numéro $i\"\n29   done\n30\n31   for fichier in *.txt; do\n32       echo \"Traitement de $fichier\"\n33   done\n34\n35   for ((i=0; i<10; i++)); do\n36       echo $i\n37   done\n38\n39   # Boucle while\n40   compteur=0\n41   while [ $compteur -lt 10 ]; do\n42       echo $compteur\n43       compteur=$((compteur + 1))\n44   done\n45\n46   # Case (switch)\n47   case $choix in\n48       1) echo \"Option 1\" ;;\n49       2|3) echo \"Option 2 ou 3\" ;;\n50       *) echo \"Choix invalide\" ;;\n51   esac\n52\n53   # Fonctions\n54   saluer() {\n55       local nom=$1     # Variable locale\n56       echo \"Bonjour $nom !\"\n57       return 0         # Code retour\n58   }\n59   saluer \"Mohamed\"\n\n     ➔ Résumé rapide Opérateurs de test Bash\n\n      Opérateur    Type       Signification\n\n      -eq          Entier     Égal\n      -ne          Entier     Différent\n      -gt          Entier     Plus grand que\n      -lt          Entier     Plus petit que\n      -ge          Entier     Plus grand ou égal\n      -le          Entier     Plus petit ou égal\n      =            Chaîne     Égal\n      !=           Chaîne     Différent\n      -z           Chaîne     Vide\n      -n           Chaîne     Non vide"
+    },
+    {
+      "id": "8.2",
+      "c": 8,
+      "t": "Cron et automatisation",
+      "x": "❖ Définition\n     Cron est le planificateur de tâches de Linux. Il permet d'exécuter des commandes\n     ou scripts de manière récurrente selon un horaire défini.\n\n     ➣ Syntaxe / Code Crontab\n\n 1   # Éditer la crontab de l'utilisateur courant\n 2   crontab -e\n 3\n 4   # Format : minute heure jour mois jour_semaine commande\n 5   # ┌───────── minute (0 - 59)\n 6   # │ ┌───────── heure (0 - 23)\n 7   # │ │ ┌───────── jour du mois (1 - 31)\n 8   # │ │ │ ┌───────── mois (1 - 12)\n 9   # │ │ │ │ ┌───────── jour de la semaine (0 - 7, 0 et 7 = dimanche)\n10   # │ │ │ │ │\n11   # * * * * *  commande\n12\n13   # Exemples\n14   0 * * * *    /script/sauvegarde.sh          # Toutes les heures\n15   30 2 * * *   /script/nettoyage.sh           # Tous les jours à 2h30\n16   0 0 * * 0    /script/weekly.sh              # Chaque dimanche minuit\n17   */5 * * * *  /script/check.sh               # Toutes les 5 minutes\n18   0 9-18 * * 1-5  /script/business.sh         # Heures de bureau, lun-ven\n19\n20   # Gestion\n21   crontab -l               # Lister les tâches\n22   crontab -r               # Supprimer toutes les tâches\n23   crontab -u user -l       # Lister les tâches d'un utilisateur\n24\n25   # at : exécution unique à un moment donné\n26   at 14:30                 # Programmer à 14h30\n27   at now + 2 hours         # Dans 2 heures\n28   atq                      # Lister les tâches at\n29   atrm 5                   # Supprimer la tâche 5\n\n     ★ Astuce Concours\n     Les symboles cron :\n      — * = chaque valeur possible\n      — */n = toutes les n unités\n      — n,m = les valeurs n et m\n      — n-m = de n à m\n     Exemple : */10 9-17 * * 1-5 = toutes les 10 min, de 9h à 17h, lundi à vendredi"
+    },
+    {
+      "id": "9.1",
+      "c": 9,
+      "t": "Pare-feu et sécurité réseau",
+      "x": "➣ Syntaxe / Code iptables et ufw\n\n 1   # === UFW (Uncomplicated Firewall) — Ubuntu/Debian ===\n 2   ufw enable                         # Activer le pare-feu\n 3   ufw disable                        # Désactiver\n 4   ufw status verbose                 # État détaillé\n 5   ufw allow 22                       # Autoriser SSH\n 6   ufw allow 80/tcp                   # Autoriser HTTP\n 7   ufw allow 443/tcp                  # Autoriser HTTPS\n 8   ufw deny 3306                      # Bloquer MySQL\n 9   ufw allow from 192.168.1.0/24      # Autoriser un sous-réseau\n10   ufw delete allow 80                # Supprimer une règle\n11\n12   # === iptables (avancé) ===\n13   iptables -L -v -n                  # Lister les règles\n14   iptables -A INPUT -p tcp --dport 80 -j ACCEPT   # Autoriser port 80\n15   iptables -A INPUT -p tcp --dport 22 -j ACCEPT   # Autoriser SSH\n16   iptables -A INPUT -j DROP          # Bloquer tout le reste\n17   iptables -D INPUT 3                # Supprimer la règle 3\n18   iptables -F                        # Vider toutes les règles\n19\n20   # Sauvegarder les règles iptables\n21   iptables-save > /etc/iptables.rules\n22   iptables-restore < /etc/iptables.rules\n23\n24   # === firewalld (Red Hat / Fedora) ===\n25   firewall-cmd --state               # État\n26   firewall-cmd --list-all            # Lister les règles\n27   firewall-cmd --add-service=http --permanent   # Autoriser HTTP\n28   firewall-cmd --add-port=8080/tcp --permanent  # Autoriser port\n29   firewall-cmd --reload              # Appliquer les changements\n\n     ☞ Attention / Piège\n      — Toujours autoriser SSH (port 22) AVANT d'activer le pare-feu !\n      — Les règles iptables sont appliquées dans l'ordre, la première correspondance gagne\n      — Ne pas oublier --permanent avec firewalld, sinon perdu au redémarrage"
+    },
+    {
+      "id": "9.2",
+      "c": 9,
+      "t": "Archivage et compression",
+      "x": "➣ Syntaxe / Code tar, gzip, zip\n\n 1   # tar : archivage (sans compression par défaut)\n 2   tar cf archive.tar dossier/          # Créer une archive\n 3   tar xf archive.tar                   # Extraire\n 4   tar tf archive.tar                   # Lister le contenu\n 5\n 6   # tar + compression\n 7   tar czf archive.tar.gz dossier/      # Créer + gzip\n 8   tar xzf archive.tar.gz               # Extraire .tar.gz\n 9   tar cjf archive.tar.bz2 dossier/     # Créer + bzip2\n10   tar xjf archive.tar.bz2              # Extraire .tar.bz2\n11   tar cJf archive.tar.xz dossier/      # Créer + xz\n12\n13   # Options utiles de tar\n14   tar czf archive.tar.gz -C /chemin dossier/   # Depuis un répertoire\n15   tar czf archive.tar.gz --exclude='*.log' .    # Exclure des fichiers\n16   tar xzf archive.tar.gz -C /destination/       # Extraire ailleurs\n17\n18   # gzip / gunzip\n19   gzip fichier.txt                     # Compresser → fichier.txt.gz\n20   gunzip fichier.txt.gz                # Décompresser\n21   gzip -k fichier.txt                  # Garder l'original\n22   gzip -d fichier.txt.gz               # Décompresser (= gunzip)\n23\n24   # zip / unzip\n25   zip archive.zip fichier1 fichier2    # Créer un zip\n26   zip -r archive.zip dossier/          # Zip récursif\n27   unzip archive.zip                    # Extraire\n28   unzip -l archive.zip                 # Lister le contenu\n29   unzip archive.zip -d /destination/   # Extraire ailleurs\n\n     ➔ Résumé rapide Compression comparée\n\n      Format       Extension      Ratio      Vitesse\n\n      gzip         .gz            Moyen      Rapide\n      bzip2        .bz2           Bon        Moyen\n      xz           .xz            Excellent  Lent\n      zip          .zip           Moyen      Rapide (multi-plateforme)\n      zstd         .zst           Excellent  Très rapide"
+    },
+    {
+      "id": "10.1",
+      "c": 10,
+      "t": "Variables d'environnement et profils",
+      "x": "➣ Syntaxe / Code Variables et fichiers de configuration\n\n 1   # Variables d'environnement importantes\n 2   echo $HOME                   # Répertoire personnel\n 3   echo $USER                   # Nom d'utilisateur\n 4   echo $PATH                   # Chemins de recherche des commandes\n 5   echo $SHELL                  # Shell par défaut\n 6   echo $PWD                    # Répertoire courant\n 7   echo $HOSTNAME               # Nom de la machine\n 8   echo $LANG                   # Langue du système\n 9\n10   # Modifier le PATH\n11   export PATH=$PATH:/opt/mon_app/bin\n12\n13   # Fichiers de profil (ordre de chargement Bash)\n14   # /etc/profile          → Tous les utilisateurs (login shell)\n15   # ~/.bash_profile       → Utilisateur courant (login shell)\n16   # ~/.bashrc             → Utilisateur courant (chaque terminal)\n17   # ~/.bash_logout        → À la déconnexion\n18\n19   # Alias\n20   alias ll='ls -la'            # Créer un alias\n21   alias gs='git status'        # Raccourci Git\n22   alias rm='rm -i'             # rm avec confirmation\n23   unalias ll                   # Supprimer un alias\n24\n25   # Appliquer les modifications\n26   source ~/.bashrc             # Recharger la configuration\n27   # ou\n28   . ~/.bashrc                  # Idem\n\n     ★ Astuce Concours\n     Pour rendre un alias ou une modification de PATH permanent :\n      1. L'ajouter dans ~/.bashrc (pour les sessions interactives)\n      2. Exécuter source ~/.bashrc pour l'appliquer immédiatement\n     Pour TOUS les utilisateurs : modifier /etc/profile ou /etc/environment"
+    },
+    {
+      "id": "10.2",
+      "c": 10,
+      "t": "Mémoire et performances système",
+      "x": "➣ Syntaxe / Code Surveillance système\n\n 1   # Mémoire\n 2   free -h                      # RAM utilisée/disponible\n 3   cat /proc/meminfo            # Infos mémoire détaillées\n 4   vmstat 1 5                   # Stats mémoire/CPU (5 relevés, 1s)\n 5\n 6   # CPU\n 7   lscpu                        # Informations CPU\n 8   cat /proc/cpuinfo            # Détails CPU\n 9   uptime                       # Charge système\n10   # Load average : 1min, 5min, 15min\n11   # Valeur < nb_cores = OK, > nb_cores = surcharge\n12\n13   # Processus et ressources\n14   top                          # Moniteur temps réel\n15   htop                         # Version améliorée\n16   iotop                        # I/O par processus\n17   iftop                        # Trafic réseau par interface\n18\n19   # Système\n20   uname -a                     # Infos système complètes\n21   uname -r                     # Version du noyau\n22   cat /etc/os-release          # Distribution et version\n23   hostname                     # Nom de la machine\n24   date                         # Date et heure\n25   timedatectl                  # Fuseau horaire et NTP\n26\n27   # Historique et divers\n28   history                      # Historique des commandes\n29   history | grep ssh           # Chercher dans l'historique\n30   !42                          # Ré-exécuter la commande 42\n31   !!                           # Ré-exécuter la dernière commande\n32   sudo !!                      # Refaire la dernière commande en sudo\n33\n34   # Informations matériel\n35   lshw                         # Matériel complet\n36   lspci                        # Périphériques PCI\n37   lsusb                        # Périphériques USB\n38   dmesg | tail                 # Messages du noyau\n\n     ◆ Concept clé\n     La commande free -h affiche :\n      — total : mémoire physique totale\n      — used : mémoire utilisée (inclut buffers/cache)\n      — free : mémoire vraiment libre\n      — available : mémoire disponible pour les applications (free + buffers/cache récupérables)\n     C'est 'available' qui est le vrai indicateur de mémoire disponible, pas 'free' !"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Quelle commande affiche le répertoire de travail courant ?",
+      "o": ["cd", "pwd", "ls", "dir"],
+      "a": 1,
+      "e": "pwd (Print Working Directory) affiche le chemin absolu du répertoire courant."
+    },
+    {
+      "q": "Quelle permission octale correspond à rwxr-xr-x ?",
+      "o": ["777", "755", "644", "700"],
+      "a": 1,
+      "e": "rwx=7, r-x=5, r-x=5 → 755. Le propriétaire peut tout faire, les autres peuvent lire et exécuter."
+    },
+    {
+      "q": "Quelle commande permet de rechercher du texte dans le contenu des fichiers ?",
+      "o": ["find", "locate", "grep", "which"],
+      "a": 2,
+      "e": "grep recherche un motif (pattern) dans le contenu des fichiers. find cherche des fichiers par critères (nom, taille, date)."
+    },
+    {
+      "q": "Que fait la commande chmod 600 fichier.txt ?",
+      "o": ["Lecture seule pour tous", "Lecture+écriture pour le propriétaire uniquement", "Exécutable par tous", "Aucune permission"],
+      "a": 1,
+      "e": "600 = rw------- → lecture et écriture pour le propriétaire, aucun accès pour le groupe et les autres. Utilisé pour les clés SSH."
+    },
+    {
+      "q": "Quel signal est envoyé par Ctrl+C ?",
+      "o": ["SIGKILL (9)", "SIGTERM (15)", "SIGINT (2)", "SIGHUP (1)"],
+      "a": 2,
+      "e": "Ctrl+C envoie SIGINT (signal d'interruption, numéro 2). SIGKILL (9) ne peut pas être intercepté et tue le processus de force."
+    },
+    {
+      "q": "Que signifie le pipe (|) dans la commande : ls | grep txt ?",
+      "o": ["Exécuter les deux commandes séquentiellement", "Rediriger la sortie de ls vers un fichier", "Connecter la sortie de ls à l'entrée de grep", "Exécuter les deux en parallèle"],
+      "a": 2,
+      "e": "Le pipe (|) connecte la sortie standard (stdout) de la commande à gauche vers l'entrée standard (stdin) de la commande à droite."
+    },
+    {
+      "q": "Quel répertoire contient les fichiers de configuration système sous Linux ?",
+      "o": ["/var", "/etc", "/usr", "/opt"],
+      "a": 1,
+      "e": "/etc contient les fichiers de configuration du système et des services (fstab, passwd, nginx.conf, etc.)."
+    },
+    {
+      "q": "Quelle commande ajoute un utilisateur au groupe sudo ?",
+      "o": ["useradd -G sudo user", "usermod -aG sudo user", "groupadd sudo user", "addgroup user sudo"],
+      "a": 1,
+      "e": "usermod -aG sudo user. Le -a (append) est crucial : sans lui, l'utilisateur est RETIRÉ de tous ses autres groupes !"
+    },
+    {
+      "q": "Que fait la commande tar xzf archive.tar.gz ?",
+      "o": ["Créer une archive compressée", "Extraire une archive gzip", "Lister le contenu d'une archive", "Compresser un dossier"],
+      "a": 1,
+      "e": "x = extraire, z = décompresser gzip, f = fichier. Pour créer : czf (c = create)."
+    },
+    {
+      "q": "Quelle expression cron correspond à 'toutes les 5 minutes' ?",
+      "o": ["5 * * * *", "*/5 * * * *", "0 5 * * *", "* 5 * * *"],
+      "a": 1,
+      "e": "*/5 * * * * signifie 'toutes les 5 minutes'. 5 * * * * signifie 'à la 5ème minute de chaque heure'."
+    },
+    {
+      "q": "Quelle commande affiche l'espace disque utilisé en format lisible ?",
+      "o": ["du -sh", "df -h", "free -h", "lsblk"],
+      "a": 1,
+      "e": "df -h (disk free, human-readable) affiche l'espace utilisé/disponible sur chaque partition. du -sh affiche la taille d'un dossier."
+    },
+    {
+      "q": "Comment rediriger stdout ET stderr dans un même fichier ?",
+      "o": ["commande > fichier 2>&1", "commande >> fichier", "commande 2> fichier", "commande < fichier"],
+      "a": 0,
+      "e": "> redirige stdout vers le fichier, puis 2>&1 redirige stderr (2) vers la même destination que stdout (1)."
+    },
+    {
+      "q": "Quelle est la différence entre un lien dur et un lien symbolique ?",
+      "o": ["Un lien dur ne peut pas traverser les systèmes de fichiers", "Un lien dur est plus lent", "Un lien symbolique partage le même inode", "Il n'y a pas de différence"],
+      "a": 0,
+      "e": "Un lien dur pointe vers le même inode (données physiques) et ne peut pas traverser les FS. Un lien symbolique est un pointeur vers le chemin du fichier."
+    },
+    {
+      "q": "Quelle commande permet de voir les ports TCP en écoute ?",
+      "o": ["ping -l", "ss -tlnp", "traceroute -p", "curl -p"],
+      "a": 1,
+      "e": "ss -tlnp : -t (TCP), -l (listening), -n (numérique), -p (processus). Remplace netstat -tlnp."
+    },
+    {
+      "q": "Que contient le fichier /etc/passwd ?",
+      "o": ["Les mots de passe en clair", "Les mots de passe hashés", "La liste des utilisateurs et leurs infos", "Les logs de connexion"],
+      "a": 2,
+      "e": "/etc/passwd contient la liste des utilisateurs avec UID, GID, home, shell. Les mots de passe hashés sont dans /etc/shadow."
+    },
+    {
+      "q": "Quelle commande génère une paire de clés SSH moderne ?",
+      "o": ["ssh-keygen -t rsa -b 1024", "ssh-keygen -t ed25519", "ssh-gen --new", "openssl genrsa"],
+      "a": 1,
+      "e": "ssh-keygen -t ed25519 est l'algorithme moderne recommandé. RSA reste valide mais avec au moins 4096 bits."
+    },
+    {
+      "q": "Que fait 'systemctl enable nginx' ?",
+      "o": ["Démarre nginx immédiatement", "Active nginx au démarrage du système", "Recharge la configuration de nginx", "Affiche le statut de nginx"],
+      "a": 1,
+      "e": "enable active le service au démarrage (boot). Pour démarrer immédiatement, utiliser start. On peut combiner : systemctl enable --now nginx."
+    },
+    {
+      "q": "Comment voir les logs en temps réel d'un service avec systemd ?",
+      "o": ["tail -f /var/log/nginx.log", "journalctl -fu nginx", "systemctl log nginx", "dmesg nginx"],
+      "a": 1,
+      "e": "journalctl -fu nginx : -f = follow (temps réel), -u = unit (service spécifique). C'est la méthode systemd moderne."
+    },
+    {
+      "q": "Que signifie la variable $? en Bash ?",
+      "o": ["Le PID du shell", "Le nombre d'arguments", "Le code retour de la dernière commande", "Le nom du script"],
+      "a": 2,
+      "e": "$? contient le code de retour de la dernière commande exécutée. 0 = succès, tout autre valeur = erreur."
+    },
+    {
+      "q": "Quelle commande permet de trouver des fichiers de plus de 100Mo ?",
+      "o": ["grep -s 100M /", "find / -type f -size +100M", "locate --size 100M", "ls -R --min-size 100M"],
+      "a": 1,
+      "e": "find / -type f -size +100M : cherche les fichiers (-type f) de taille supérieure à 100 Mo (+100M) dans tout le système (/)."
+    }
+  ]
+}

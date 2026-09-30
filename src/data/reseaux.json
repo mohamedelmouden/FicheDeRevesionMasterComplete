@@ -1,0 +1,1136 @@
+{
+  "id": "reseaux",
+  "name": "Réseaux",
+  "color": "#34d399",
+  "sections": [
+    {
+      "id": "1.1",
+      "c": 1,
+      "t": "Pr. M. AIT HEMAD ...",
+      "x": "ait.hemad.m@gmail.com\n\n❖ Définition générale d’un réseau\nUn réseau est un système complexe d'objets\nou de personnes interconnectés ( reliés. )\nExemples de réseaux\nRéseaux sociaux  relations familiales\nRéseaux routiers  carte routière\nRéseaux électriques  câblage électrique\nRéseaux téléphoniques  interconnexion\nd’équipements télécom\nRéseaux de données (réseaux informatiques )\ninterconnexion d’équipements\ninformatiques\n\n❖ Réseau informatique\nC’est un ensemble des équipements\ninformatiques (ordinateurs, imprimantes, …)\nrelies entre eux.\n\n❖ Réseau informatique\nVue utilisateur vs Vue détaillée"
+    },
+    {
+      "id": "1.2",
+      "c": 1,
+      "t": "Réseau informatique ...",
+      "x": "Un ensemble de matériels informatiques\ncommuniquant entre eux grâce à :\n– des matériels de connexion\n• Câbles, modem, concentrateurs, commutateurs,\nrouteurs…\n– des logiciels gérant la communication\n• Systèmes d'exploitation, Protocoles…\n\n❖ Noeuds de\ncommunication\n\n❖ Pourquoi un réseau informatique?\nApplications industrielles\n– Contrôle de la production, suivi des stocks,\ncomptabilité, gestion clientèle : pas de contraintes\ngéographiques\n• -> partage de ressources (bases de données,\nimprimante, scanners, graveurs...)\n– Système de messagerie, vidéoconférence, réunions\ntéléphoniques : gain de temps\n• -> outil de communication\n– Commandes électroniques en temps réel :\nefficacité, diminution des stocks\n• -> outil de conclusion d’affaires\n\n❖ Pourquoi un réseau informatique?\nApplications industrielles\n– Commerce électronique : diminution des coûts\n• -> outil de vente directe\n– De nombreuses entreprises s’arrêtent en même\ntemps que le réseau\n• Banques\n• usines de production\n– Distances entre les sites de plus en plus grandes\n• -> multinationales\n• grâce aux progrès des réseaux !"
+    },
+    {
+      "id": "1.3",
+      "c": 1,
+      "t": "Pourquoi un réseau informatique? ...",
+      "x": "Les applications domestiques\n– Internet, Internet, Internet...\n• recherche d’informations\n• communication entre personnes (e-mail, forums, messagerie\ninstantanée, chat…)\n• divertissements interactifs\n• commerce électronique, vente aux enchères\n• gestion comptes en banques, opérations boursières\n• démarches administratives\n• peer-to-peer : BitTorrent\n• téléphonie, visiophonie, radio, vidéos à la carte…\n• enseignement à distance, travail à domicile ?\n– Téléphonie, TV, Radio\n\n❖ Modèle Client-Serveur\nPrincipe :\n– Le client initie la connexion, demande un service\n– Le serveur fournit un service\n• Exemple : Web : navigateur/serveur Web\nQuelquefois, chaque participant est\nsimultanément client et serveur\n• Exemple : FTP\n\n❖ Modèle Client-Serveur\nPrincipe :\n\n❖ Modèle Client-Serveur\nFonctionnement :\n– Un système client/serveur fonctionne de la façon\nsuivante :\n1. Le client émet une requête vers le serveur grâce à un\nidentificateur qui désigne un service particulier\n2. Le serveur reçoit la demande et répond à l’aide de\nl’identificateur du client"
+    },
+    {
+      "id": "1.4",
+      "c": 1,
+      "t": "Modèle Client-Serveur ...",
+      "x": "Avantage :\n– simplicité d’utilisation et de gestion\nInconvénient :\n– difficulté de passage à l’échelle\n– pas/peu de tolérance aux pannes\n\n❖ Modèle d’égal à égal (Peer-to-peer)\nChaque nœud est client et serveur à la fois\n\n❖ Modèle d’égal à égal (Peer-to-peer)\nPrincipe :\n– les utilisateurs forment un groupe dans lequel\nchacun peut communiquer avec l'autre\n– chacun joue le rôle de client et de serveur\n\n❖ Modèle d’égal à égal (Peer-to-peer)\nAvantage:\n– décentralisation totale\nInconvénient :\n– difficulté de gestion (localisation et\nsynchronisation)"
+    },
+    {
+      "id": "1.5",
+      "c": 1,
+      "t": "Modèle Hybride",
+      "x": "Certaines fonctions gérées en Client-Serveur\net d’autres en P2P\nExemple :\n– Instant messaging (chat décentralisé et\nlocalisation centralisée des usagers)"
+    },
+    {
+      "id": "2.1",
+      "c": 2,
+      "t": "Nombreux réseaux différents ...",
+      "x": "par le débit\npar leur topologie\npar le type de transmission (connexion)\npar leur étendue et leurs objectifs\npar leur technique de transfert\n…\n\n❖ Débit\nLe débit d’un réseau mesure la quantité\nd’information que le réseau peut transmettre\npar unité de temps.\ndébit =quantité d’information/temps\nL’unité est le bit par seconde, noté b/s ou bps.\nLes réseaux actuels ayant un débit assez élevé,\non utilise plus souvent des méga-bits par\nsecondes, notés Mb/s.\n\n❖ Débit\nPlusieurs sorte de débits :\n– Le débit nominal d’un réseau est la quantité\nthéorique maximale d’information pouvant être\ntransmise par unité de temps.\n– Le débit utile est la quantité d’information\neffectivement transmise par unité de temps.\nExemple :\n– Ethernet : 10 Mb/s, 100 Mb/s, 1 Gb/s (débit\nnominal)\n\n❖ Débit\nOn trouve trois grandes familles :\n– les réseaux à faible et moyen débits (débits ≤ 200\nkbps),\n– les réseaux à haut débit (200 kbps < débit < 30"
+    },
+    {
+      "id": "2.2",
+      "c": 2,
+      "t": "Mbps), ...",
+      "x": "– les réseaux à très haut débit (débit ≥ 30 Mbps).\n\n❖ Topologie maillée\nCombien de câbles dont nous avons besoin ?\n– On a besoin de N(N-1)/2 câbles\n– Pour N= 100 on a besoin de 4950 câbles\n\n❖ Topologie en bus\nToutes les stations sont reliées à une même\nligne de transmission par l'intermédiaire de\ncâble, généralement coaxial.\n\n❖ Topologie en bus\nAvantage :\n– d’être facile à mettre en œuvre et de posséder un\nfonctionnement simple.\nInconvénient :\n– Plus le nombre de stations augmente plus les\nperformances se dégradent\n– Extrêmement vulnérable étant donné que si l’une\ndes connexions est défectueuse, l’ensemble du\nréseau en est affecté."
+    },
+    {
+      "id": "2.3",
+      "c": 2,
+      "t": "Topologie en anneau ...",
+      "x": "Les stations communiquent chacun à leur tour, on a\ndonc une boucle d'ordinateurs sur laquelle chacun\nd'entre-eux va \"avoir la parole \"successivement.\n\n• Le support relie les stations deux à deux\n• L’information circule dans un sens\n• Les stations communiquent chacune à leur\ntour\n• Toute station (sauf l’émettrice)\nréémet le signal reçu provoquant\nla diffusion de la trame dans\nl’anneau\n\nAvantage :\n– Le temps d’accès est déterminé (chaque station\nsait à quel moment c’est son tour de « parler »).\n• Inconvénient :\n– En théorie, la panne d'un nœud paralyse le\nfonctionnement du réseau.\n\n❖ Topologie en étoile\nLes stations sont reliées à un nœud central\n(généralement concentrateur ou\ncommutateur)."
+    },
+    {
+      "id": "2.4",
+      "c": 2,
+      "t": "Topologie en étoile ...",
+      "x": "Avantage :\n– Un nœud peut tomber en panne sans affecter le\nfonctionnement du réseau.\n• Inconvénient :\n– La longueur du câble nécessaire est importante.\n– Le coût est relativement élevé par rapport à celui\nde la topologie en bus.\n– La panne du nœud central provoque la panne\nglobale du réseau.\n\n❖ Par topologie\nDifférentes topologies possibles :\nétoile\n\n❖ Maillage régulier             Maillage irrégulier\nbus\narbre                      anneau"
+    },
+    {
+      "id": "3.1",
+      "c": 3,
+      "t": "Point à Point ...",
+      "x": "Liaison (connexion) point à point\n– un canal est dédié spécifiquement à la connexion\nde deux machines\nRéseau point à point\n– ensemble de liaisons point à point\n\n❖ Multipoint\nLiaison (réseau) multipoint\n– Un canal est partagé par un ensemble de\nmachines\n\n❖ Multipoint\ncanal de transmission partagé par tous\n– un message envoyé sur ce canal est reçu par toutes les\nstations\n– le message contient un champ adresse de destination\n– la station possédant cette adresse accepte le message\n3 types d'adresses :\n– unicast : destination unique\n– multicast : destination a un groupe\nde stations\n– broadcast : adresse de toutes les stations\n\n❖ Unicast\nUne machine (source) envoie un message à\nune machine destination"
+    },
+    {
+      "id": "3.2",
+      "c": 3,
+      "t": "Src                         Dst ...",
+      "x": "OK\n\n❖ Multicast\nDiffusion restreinte : une machine envoie\nun message aux machines d’un groupe\n\nOK                   OK\n\n❖ Broadcast\nDiffusion générale : une machine (source)\nenvoie un message à toutes les machines"
+    },
+    {
+      "id": "3.3",
+      "c": 3,
+      "t": "Problème des collisions ...",
+      "x": "Si deux machines transmettent en même\ntemps ?\n\n❖ Classification selon l’étendue\nLes réseaux peuvent être classés selon leur\nétendue :\n– PAN (Personal Area Network) : réseau pour\nune seule personne\n– LAN (Local Area Network) : réseau d’entreprise\ndans un bâtiment ou un campus\n\n❖ Réseaux             Réseaux           Réseaux             Réseaux\npersonnels            locaux         métropolitains        étendus\n(PAN)                (LAN)             (MAN)              (WAN)\nétendue\n\n❖ Introduction          1m et\naux réseaux      10 m   100 m     1 km        10 km   100 km   1000 km"
+    },
+    {
+      "id": "3.4",
+      "c": 3,
+      "t": "Cyril Pain-Barre ...",
+      "x": "modèle OSI\n\n❖ Classification selon l’étendue\n– MAN (Metropolitan Area Network) : couvre une\nville\n– WAN (Wide Area Network) : couvre un pays, un\ncontinent.\n\n❖ Réseaux             Réseaux           Réseaux             Réseaux\npersonnels            locaux         métropolitains        étendus\n(PAN)                (LAN)             (MAN)              (WAN)\nétendue\n\n❖ Introduction          1m et\naux réseaux      10 m   100 m     1 km        10 km   100 km   1000 km"
+    },
+    {
+      "id": "3.5",
+      "c": 3,
+      "t": "Cyril Pain-Barre ...",
+      "x": "modèle OSI\n\n❖ Réseaux personnels\nPAN (Personal Area Network)\n– Un réseau personnel interconnecte (souvent par\ndes liaisons sans fil) des équipements personnels\ncomme un ordinateur portable, un agenda\nélectronique…\n– Dimension : jusque quelques mètres\n\n❖ Réseaux locaux\nLAN (Local Area Network)\n– Administration unique\n– Topologies diverses\n• bus\n• anneau\n• étoile\n– Dimension : jusque quelques kilomètres\n– Débit élevé, taux d’erreur faible\n\n❖ Réseaux métropolitains\nMAN (Metropolitan Area Network)\n– Fédération de réseaux locaux\n– Dimension : une ville, une région"
+    },
+    {
+      "id": "3.6",
+      "c": 3,
+      "t": "Réseaux longue distance ...",
+      "x": "WAN (Wide Area network)\n– Constitution\n• hôtes\n• Routeurs\n– liaisons terrestres et satellitaires\n– Dimension : un pays, un continent\n– Débit variable, taux d’erreur relativement élevé\n\nrouteur\nhôte\nsous-réseau\n\n❖ Internet\nInterconnexion de réseaux\nInternet = le réseau mondial\n\n❖ Internet\nFAI \"Tier-1\" → couverture na onale ou interna onale\nFAI \"Tier-2\" → couverture régionale etc.\nFAI Local → plus proche des hôtes"
+    },
+    {
+      "id": "3.7",
+      "c": 3,
+      "t": "Internet ...",
+      "x": "Global Internet Map 2022\n\nCarte des câbles sous-marins\n\nVisualisation des multiples\nchemins à travers une\nportion d'Internet.\n\nUne minute sur Internet en 2023"
+    },
+    {
+      "id": "3.8",
+      "c": 3,
+      "t": "Internet ...",
+      "x": "The Online World 2020\n\nCarte de l’Internet des Objets (Internet of Things - IoT)\n\n❖ One server farm with more than 1,000\nservers Source: zentilia/Getty Images\nCloud Computing\n– Le cloud computing est une tendance\nglobale qui nous permet de stocker des fichiers personnels\nou la sauvegarde nos données sur des serveurs sur Internet.\n• Les applications sont également accessibles via le Cloud.\n• Permet aux entreprises de livrer sur n'importe quel appareil\npartout dans le monde.\n– Le cloud computing fonctionne grâce aux centres de\ndonnées.\n• Les petites entreprises qui ne peut pas se permettre de leurs\npropres centres de données, louer des services de serveur et de\nstockage de plus grandes organisations de centre de données dans\nle Cloud.\n\n❖ Classification selon l’étendue\nRésumé :"
+    },
+    {
+      "id": "3.9",
+      "c": 3,
+      "t": "Intranets et Extranets ...",
+      "x": "Intranet / Extranet\n– Contrairement à Internet, un\nintranet est un ensemble privé de\n\n❖ LAN et WAN internes à une\nentreprise qui est conçue pour être\naccessible uniquement pour les membres d'entreprises ou\nd'autres avec l'autorisation.\n– Une entreprise peut utiliser un extranet pour fournir un accès\nsécurisé à leur réseau pour les personnes qui travaillent pour\nune autre entreprise qui ont besoin d'accéder à leurs\ndonnées sur leur réseau.\n\n❖ Modes de communication\nTrois modes distincts :\n– Mode sans connexion\n– Mode sans connexion mais avec accusés de\nréception (ack)\n– Mode avec connexion\n\n❖ Liaison point à point\nOn s’intéresse ici (pour simplifier) à une\ncommunication sur une liaison point à point."
+    },
+    {
+      "id": "3.10",
+      "c": 3,
+      "t": "Mode sans connexion ...",
+      "x": "Aucune connexion au préalable\nPas d'accusé de réception\n– si une trame est perdue …\nCe service convient :\n– lorsque le taux d'erreur est faible\n– lorsque la correction des erreurs est prévue dans\nles couches supérieures\n– pour des trafics en temps réel\n\nTransmission avec succès\ntrame\nTransmission avec échec\ntrame\n\n❖ Mode sans connexion mais ack\nMode plus fiable que le précédent.\nChaque trame envoyée doit être acquittée.\nL’émetteur peut ré-envoyer une trame si\naucun ack n’est arrivé après une certaine\ntemporisation.\nCe service convient pour des canaux peu\nfiables tels que les liaisons sans fils.\n\n❖ Mode sans connexion mais ack\nTransmission avec succès\ntrame\nt0\nack\nt1"
+    },
+    {
+      "id": "3.11",
+      "c": 3,
+      "t": "Mode sans connexion mais ack ...",
+      "x": "Transmission avec (un) échec\ntrame\nt0\ntemporisation\ntrame\nti\nack\nti+1\n\n❖ Mode avec connexion\nFournit à la couche réseau l’équivalent d’un\ncanal fiable.\nTrois phases :\n– Établissement de la connexion\n=> initialisation de certains paramètres\n– Transmission des données\n– Libération de la connexion\n=> libération des ressources utilisées\n\n❖ Mode avec connexion\nEtablissement de la connexion\n\n❖ CD(x, y, …)\nt0"
+    },
+    {
+      "id": "3.12",
+      "c": 3,
+      "t": "CA(w,z,…) ...",
+      "x": "t1\n\n❖ Mode avec connexion\nTransmission des données\ntrame 0\nti\n…\ntrame n\ntj\n\n❖ Mode avec connexion\nLibération de la connexion\n\n❖ DD\ntk"
+    },
+    {
+      "id": "3.13",
+      "c": 3,
+      "t": "DA ...",
+      "x": "tk+1\n\n❖ Modes connecté/non-connecté\nMode connecté:                         Mode non-connecté:\n• Envoi direct des paquets de\n– 3 temps:                                         l'émetteur vers le récepteur\n• Etablissement de la connexion\n• Tous les paquets contiennent\n• Echange des données                           l'ensemble des infos nécessaires\n• Libération de la connexion                    à l'acheminement\n– Avantage                                    – Avantage :\n• qualité de service négociable               • plus simple et plus efficace pour\n(débit, délais, etc...) à la connexion        des messages courts\n– Inconvénient                                – Inconvénient\n• compliqué à mettre en place                 • Difficulté de garantir une\nqualité de service"
+    },
+    {
+      "id": "4.1",
+      "c": 4,
+      "t": "Commutation de circuits ...",
+      "x": "Circuit switching en anglais, consiste à établir un\ncircuit entre un émetteur et un récepteur\nLe circuit est un tube unique qui se prolonge de\nnœud en nœud par des commutateurs jusqu'au\nrécepteur\nLes éléments du circuit peuvent être de nature\ndifférente : câble métallique, onde hertzienne, fibre\noptique...\nCe circuit est réservé le temps de la communication\nafin de permettre le transfert de données et est\nlibéré à la fin de la transmission\n\nMéthode utilisée dans le réseau téléphonique\ncommuté (RTC)\nDans le cas d'une communication vocale par\nexemple, il est essentiel que la ligne ne soit\npas coupée pendant tout le temps de la\ntransmission\n\nIllustration\n\n❖ Transfert de messages\nun message forme un tout (fichier, ligne/page\nde texte, secteur disque)\nle message passe de nœud en nœud jusqu‘à\nsa destination\nenvoyé au nœud suivant lorsque\ncomplètement et correctement reçu par le\nnœud courant (store-and-forward)"
+    },
+    {
+      "id": "4.2",
+      "c": 4,
+      "t": "Transfert de messages ...",
+      "x": "temps de transit >= somme des temps de\ntransfert\n\n❖ Noeud1\nmessage\n\nInconvénients\n– nécessité de la mémoire tampon, la gestion des\n(re)transmissions, le contrôle de flux\n– difficulté de transmission de très longs messages:\n• pour un taux d'erreur de 10-5 par bit, un message de\n100 000 octets a une probabilité de 0,0003 d'arriver\ncorrectement\n– après 1970, remplacé progressivement par le\ntransfert de paquets\n\n❖ Transfert de paquets\nle message est découpé en paquets\nchaque paquet comporte la référence ou\nl'adresse destination\nun paquet a une taille maximale fixée\nles paquets sont retransmis après réception\n(store-and-forward)\nplus il y a de paquets, plus le transfert est\nefficace comparé au transfert de messages"
+    },
+    {
+      "id": "4.3",
+      "c": 4,
+      "t": "Transfert de paquets ...",
+      "x": "Il existe 2 types de commutation de paquets\n– le circuit virtuel : tous les paquets d'un même\nmessage suivent le même chemin défini pour\nchaque message ; la méthode est similaire à celle\nde la commutation de circuits.\n– le datagramme : chaque paquet d'un message\npeut emprunter un chemin différent des autres; à\nl'arrivée, il faut réordonner les paquets du\nmessage car des paquets peuvent aller plus vite\nque d'autres puisqu'empruntant des chemins\ndifférents.\n\nlorsque le paquet est très petit et de taille fixe\n(53 octets), il est appelé cellule\nsi les routes suives par les paquets sont\ndifférentes, il faudra le réassembler pour\nreformer le message\nInternet utilise le routage de paquets (IP)\nATM (Asynchronous Transfert Mode) utilise la\ncommutation de cellules (taille limitée à 53\noctets)\n\n❖ Transfert de message vs de paquets\nComparaison\n\n❖ Noeud1\nmessage"
+    },
+    {
+      "id": "4.4",
+      "c": 4,
+      "t": "Noeud3 ...",
+      "x": "paquet\n\n❖ Efficacité de la reprise sur erreur\nsupposons qu'en cas d'erreur de transmission\nle message ou le paquet soit immédiatement\nretransmis\n\n❖ Efficacité de la reprise sur erreur\nTransfert de message/paquets\non s'aperçoit que le transfert de paquet est bien plus efficace\n\n❖ Protocole et normalisation\nLa conception d’un réseau nécessite des équipements à\ninterconnecter, des logiciels à installer et des services à\nconfigurer,….\nDifférents constructeurs d’équipements et de logiciels !\n– Les constructeurs informatiques ont proposé des architectures\nréseaux propres à leurs équipements.\n• IBM a proposé SNA\n• DEC a proposé DNA\n• …\nProblème d’interopérabilité ?\nSolution : protocole et normalisation\n(standardisation)"
+    },
+    {
+      "id": "4.5",
+      "c": 4,
+      "t": "Protocole ...",
+      "x": "L’échange d’information se fait selon un protocole :\nensemble de règles compréhensibles par les entités\ncommunicantes\nIl y a des protocoles pour :\n– les applications\n– transporter/router l’information\n– émettre de l’information sur un support physique\nIls doivent gérer en particulier :\n– les erreurs\n– la fragmentation et l’assemblage des données\nIls sont généralement normalisés pour assurer\nl’interopérabilité et la transparence\n\nExemple de protocole\n\n❖ Protocole HTTP : HyperText Transfert Protocol\nhttp://www.yahoo.com\n\n❖ Le serveur qui héberge\nle site yahoo.com"
+    },
+    {
+      "id": "4.6",
+      "c": 4,
+      "t": "Normalisation ...",
+      "x": "L’établissement de normes permet d’avoir une\nstructure homogène pour faire communiquer\ndifférents équipements.\nLa norme offre un cadre compatible entre les\nentités hétérogènes.\nLa norme permet d’assurer un niveau\nminimum de qualité.\n\nOrganismes les plus connus :\n– ISO (International Organization for Standardization) : est\nune organisation non gouvernementale internationale.\n\n❖ Regroupant plus de 160 pays.\n– UIT (Union Internationale des Télécommunications) : est\nl’institution spécialisée de l’ONU dans le domaine des\ntélécommunications.\n• UIT-T : domaine des télécommunications\n• UIT-R : domaine des radiocommunications.\n• UIT-D : développement des Télécommunications\n– IEEE (Institute of Electrical and Electronic Engineers) : est\nune association professionnelle constituée d’industriels et\nd’universitaires.\n• Le comité 802 (IEEE 802) s'occupe de normalisation des réseaux\nlocaux.\n\n❖ Modèle architectural OSI\n1977 : ISO (Organisation Internationale de"
+    },
+    {
+      "id": "4.7",
+      "c": 4,
+      "t": "Normalisation) démarre une réflexion sur...",
+      "x": "architecture de réseau en couches\n1984 : définition du modèle OSI\n– Open : systèmes ouverts à la communication avec\nd’autres systèmes\n– Systems : ensemble des moyens informatiques\n(matériel et logiciel) contribuant au traitement et\nau transfert de l’information\n– Interconnection\n\n❖ Modèle architectural OSI\n« une couche » : un ensemble homogène\ndestiné à accomplir une tâche ou à rendre un\nservice\nLe découpage en couches permet de\n– dissocier des problèmes de natures différentes\n– rendre évolutive l’architecture : une nouvelle\ntechnologie ne remet en cause que la couche\nconcernée\n– masquer les détails d’implémentation : une\ncouche fournie certains services\n\n❖ Modèle architectural OSI\nLe modèle OSI repose sur trois termes importants:\n– Les couches\n• 1 fonctionnalité= 1 couche.\n• La gestion interne d’une couche est indépendante des autres.\n• Chaque couche du modèle ne communique qu’avec les\ncouches adjacentes supérieure et inférieure.\n– Les protocoles\n• règles et conventions utilisées pour la conversation entre 2\ncouches de même niveau.\n– Les interfaces\n• opérations élémentaires et services qu’une couche inférieure\noffre à une couche supérieure"
+    },
+    {
+      "id": "5.1",
+      "c": 5,
+      "t": "Modèle architectural OSI ...",
+      "x": "Composé de 7 couches:\n– Les couches 1 à 3 : orientées transmission\n– La couches 4 : couche middleware\n– Les couches 5 à 7 : orientées traitement\nchaque couche:\n– fourni des services à la couche supérieure\n– utilise des services de la couche inférieure\n– les données transférées par les services sont des SDU=\n\n❖ Service Data Unit\n– échange de l’information suivant un protocole avec des\ncouches distantes de même niveaux\n– les données transférées par ce protocole sont des PDU=\n\nUne couche communique avec les couches N-\n1 et N+1 par le biais d’une interface appelée\n\n❖ SAP () composé d’un ensemble de primitives\n(CONNECT.request, CONNECT.confirm …) proposé par la\ncouche adjacente."
+    },
+    {
+      "id": "5.2",
+      "c": 5,
+      "t": "Encapsulation ...",
+      "x": "Une couche de niveau N ayant des données à\nenvoyer les transmet à la couche N-1\npour réaliser son service, la couche N-1\nencapsule les données en y ajoutant des\ninformations :\n– un en-tête (header)\n– et/ou un en-queue\n(trailer)\n\n❖ Les données utilisateurs\n7 Application                                                     APDU\n6 Présentation                                                    PPDU\n5 Session                                                         SPDU\n4 Transport                                                       Message\n\n❖ Fragment\n3 Réseau                                           Paquet\n2 Liaison                                             Trame\n1 Physique\n\n❖ Modèle architectural OSI\n7 couches\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique"
+    },
+    {
+      "id": "5.3",
+      "c": 5,
+      "t": "Couche physique ...",
+      "x": "Couche 1\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique\n\nCette couche s'occupe de la transmission des bits de\nfaçon brute sur un canal de communication.\nconcernée par :\n– représentation de bit à 1 ou 0 (voltage,...)\n– durée de transmission d'un bit\n– débit\n– sens de transmission\n– type de support (câbles, ondes,...)\n– nombre de broches des connecteurs et rôle\n\nDans cette couche se trouve les moyens mécaniques,\nélectriques et fonctionnelles pour remplir cette tâche\n:\n– jonctions\n– modems\n– Multiplexeurs\n–…\n\n❖ Couche liaison\nCouche 2\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique"
+    },
+    {
+      "id": "5.4",
+      "c": 5,
+      "t": "Couche liaison ...",
+      "x": "Cette couche doit assurer une transmission\nexempte d'erreurs sur un canal de\ncommunication. Les données sont fractionnées\nen trames.\nconcernée par :\n– la création de frontières de trames\n– le découpage de flots de bits en trames\n– la gestion des accès au canal de communication\n– l'adressage des interfaces de la liaison (adresses MAC)\n– la correction ou la détection d'erreur\n– l'envoi en séquence et la gestion d'acquittements\n– la régulation de flux\n\nServices offerts :\n– gestion des erreurs\n– régulation du flux\n– contrôle d'accès à un canal partagé (MAC)\n\n❖ Couche réseau\nCouche 3\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique\n\n❖ Couche réseau\nCette couche doit assurer une transmission\nentre deux machines quelconques. Les\ndonnées sont fractionnées en paquets.\nconcernée par :\n– l'acheminement de paquets dans le sous-réseau\n(choix d'une \"route\")\n– la gestion de la congestion (trop de paquets dans\nle sous-réseau)\n– adressage uniforme"
+    },
+    {
+      "id": "5.5",
+      "c": 5,
+      "t": "Couche réseau ...",
+      "x": "Services offerts :\n– adressage logique universel\n– routage\n– Contrôle de congestion\n\n❖ Couche transport\nCouche 4\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique\n\n❖ Couche transport\nCette couche doit assurer une transmission avec\nune certaine qualité de service entre deux\nmachines quelconques.\nconcernée par :\n– l'optimisation de l'utilisation des infrastructures\n– la fourniture d'une qualité de service de transmission\nd'informations adéquate\n– la création de connexion(s)\n– multiplexage des données\n– contrôle de flux entre source et destination finale\n\n❖ Couche transport\nC'est la première couche de bout en bout.\n– il n'est requis que sur les équipements terminaux\nElle peut gérer plusieurs connexions sur une\nmême machine."
+    },
+    {
+      "id": "5.6",
+      "c": 5,
+      "t": "Couche session ...",
+      "x": "Couche 5\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique\n\nCette couche doit fournir les moyens nécessaires pour :\n– ouvrir et fermer des sessions entre utilisateurs\n– organiser et synchroniser le dialogue.\nconcernée par :\n– l'ouverture et la fermeture de sessions entres les\nutilisateurs\n– la gestion du dialogue\n– la gestion de jetons (réserves pour des opérations\ncritiques)\n– la synchronisation (points de reprise en cas d‘échec),\nl'interruption et la reprise du dialogue\n\nServices offerts :\n– gestion du jeton\n– synchronisation (utilisation de points de reprise)\n\n❖ Couche présentation\nCouche 6\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique"
+    },
+    {
+      "id": "5.7",
+      "c": 5,
+      "t": "Couche présentation ...",
+      "x": "La couche présentation se charge de la\nreprésentation des données échangées dans un\nsoucis de compatibilité.\nconcernée par :\n– La représentation des informations échangées\n(entiers, chaînes, flottants, structures composites)\n– le masquage de l'hétérogénéité de techniques de\ncodage utilisées par les différents systèmes\n– encodage/décodage des données dans une norme\nreconnue\n\nServices offerts :\n– traduction\n• Ascii / Unicode\n– compression\n– cryptage\n\n❖ Couche application\nCouche 7\n7. Application\n6. Présentation\n5. Session\n4. Transport\n3. Réseau\n2. Liaison\n1. Physique\n\n❖ Couche application\nCette couche est chargée de l'exécution des applications\nréseaux.\nconcernée par :\n– terminal virtuel\n– courrier électronique\n– WWW (base de données repartie, commerce électronique,...)\n– groupes de discussion\n– exécution de travaux à distance\n– transfert de fichiers\nServices offerts :\n– Transfert de fichiers\n– Exécutions de travaux à distance\n– Interrogation de bases de données\n– …"
+    },
+    {
+      "id": "5.8",
+      "c": 5,
+      "t": "OSI dans le Monde Réel ...",
+      "x": "Le modèle OSI est surtout une référence pour la\ncréation de services compatibles\nOSI ne donne aucune spécification sur les protocoles et\nle matériel\nRésultat pratique : aucun système actuel implémente\n\n❖ OSI « à la lettre »\n– le modèle TCP/IP est le standard de facto pour l'Internet\nOSI reste néanmoins LA RÉFÉRENCE pour l'étude des\nréseaux\n– La séparation des rôles facilite la compréhension\n– La conformité à OSI est un signe d'interopérabilité\n\n❖ Un autre modèle\nModèle OSI\n– Modèle théorique\n– Conçu et approuvé avant d’être implémenté\n– Difficile à implémenter\nModèle TCP/IP\n– Modèle issu du développement\n– Approche pragmatique\n\n❖ TCP/IP: Un peu d’histoire\nL'architecture TCP/IP (Transmission Control"
+    },
+    {
+      "id": "5.9",
+      "c": 5,
+      "t": "Protocol /Internet Protocol) a été dével...",
+      "x": "dans le milieu des années 70, par la DARPA\n(Defense Advanced Research Projets Agency –\n\n❖ États-Unis)\n– Dans le but de satisfaire les besoins\nd'interconnexion des systèmes informatiques de\nl’armée (DOD, Department of Defense)\n• Modèle TCP/IP appelé aussi « modèle DoD »\n\n❖ TCP/IP: Un peu d’histoire\nTCP/IP, du nom de ses deux protocoles principaux\n:\n– TCP : Transmission Control Protocol\n– IP: Internet Protocol\nTCP/IP est un ensemble de protocoles permettant\nde résoudre les problèmes d'interconnexion en\nmilieu hétérogène\nTCP/IP a remplacé (1983) le protocole NCP\n(Network Control Program) dans ARPANET,\nancêtre de l'Internet\nAujourd'hui, TCP/IP est le protocole standard de\ntous les réseaux, du LAN au WAN.\n\n❖ TCP/IP: 4 couches\nModèle en 4\ncouches\n– Simplification des\ncouches inférieures\n– Incorporation des\ncouches Session et"
+    },
+    {
+      "id": "5.10",
+      "c": 5,
+      "t": "Présentation dans ...",
+      "x": "la couche\n\n❖ Architecture TCP/IP vs OSI\nComparaison\n\n❖ La couche Hôte-Réseau\nDans le modèle TCP/IP, la couche Hôte Réseau\nn’a pas un rôle précis ni une architecture\ndéfinie\nDéfinit juste la capacité d’un hôte à se\nconnecter à un réseau et à envoyer des\npaquets IP\n\n❖ La couche Internet\nRôles\n– Permettre la diffusion et l’acheminement de\npaquets à travers les réseaux\n• i.e., adressage et routage\n– Définition d’un format de paquet et du protocole"
+    },
+    {
+      "id": "5.11",
+      "c": 5,
+      "t": "IP ...",
+      "x": "Similaire à la couche Réseau de l’OSI\n• Réseau = Internet\n\n❖ La couche Transport\nRôles\n– Permettre à des entités paires de soutenir une «\nconversation »\nSimilaire à la couche Transport OSI\n– Transport = Transport\nProtocoles définis\n– TCP\n– UDP\n\n❖ La couche Application\nRôles\n– « Héberger » les protocoles de haut niveau\nProtocoles définis\n– telnet\n– ssh\n– SMTP\n– DNS\n– HTTP\n– Etc.\n\n❖ Architecture en couches :Points Clés\nLe découpage permet de se concentrer sur les\nfonctionnalités et simplifier le développement\nLe modèle OSI est le plus \"complet\" mais c'est"
+    },
+    {
+      "id": "5.12",
+      "c": 5,
+      "t": "Encapsulation ...",
+      "x": "Encapsulation d'un paquet de données FTP\ndans la Pile TCP/IP  Entête FTP Data FTP\n\nEncapsulation d'un paquet de données FTP\ndans la Pile TCP/IP\n\n❖ Communication sans routeur\nDeux machines sur un même sous réseau\n\n❖ Communication avec routeur\nPrise en compte de l'hétérogénéité"
+    },
+    {
+      "id": "5.13",
+      "c": 5,
+      "t": "Encapsulation dans Internet",
+      "x": "Encapsulation/décapsulation des données\ndans Internet"
+    },
+    {
+      "id": "6.1",
+      "c": 6,
+      "t": "Introduction ...",
+      "x": "La couche Physique définit les :\n– spécifications électriques\n– mécaniques\n– fonctionnelles\ndes procédures assurant la transmission des éléments binaires\nsur la liaison physique\n\n❖ Couche liaison de                             Couche liaison de\ndonnées                                       données\n\nRôle de la couche physique :\n– Assure l’interface avec le matériel\n– Prend en charge la conversion des signaux\nnumériques en signaux analogiques (la\nmodulation)\n– l’émission physique sur la ligne de communication\n– Partager le canal de transmission\n\n❖ Circuit de données\nUn circuit de données est constitué d’une\nligne de transmission et de deux équipements\nde terminaison de circuit de données ETCD\n(DCE : Data circuit-terminating Equipement )"
+    },
+    {
+      "id": "6.2",
+      "c": 6,
+      "t": "ETTD et ETCD ...",
+      "x": "ETTD ( Equipement Terminal de Traitement de\n\n❖ Données) : est un équipement informatique\nquelconque\n– Exemple : Ordinateur\nETCD ( Equipement Terminal de Circuit de données )\n– ETCD a pour rôle :\n• Etablir la communication\n• Assurer la mise en forme des données numériques\n• Transmettre les données\n• Terminer la transmission\n• Exemple : Modem\n\nExemple :\n\n❖ Jonction\nJonction ou interface :\n– permet à l’ETTD de piloter l’ETCD pour\nétablissement et libération du circuit, échange de\ndonnées, …\n– utilise un signal numérique"
+    },
+    {
+      "id": "6.3",
+      "c": 6,
+      "t": "Support de ...",
+      "x": "transmission\n\n❖ Support de transmission\nSupport ou ligne de transmission :\n– caractéristiques physiques (débit, taux d’erreurs,…)\n– transmission d’une onde lumineuse, acoustique,\nélectromagnétique ou électrique : supports\noptiques, radio, filaires\n\ntransmission\n\n❖ La transmission\nLa transmission correspond à l’envoi de 0 et 1\nentre l’émetteur et le récepteur sur un\nsupport de transmission\nLa transmission est assurée par l'ETCD\n(équipement terminal de circuit de données)."
+    },
+    {
+      "id": "6.4",
+      "c": 6,
+      "t": "Mode de liaison de données ...",
+      "x": "Selon le sens de la communication, un circuit\nde donnée peut être :\n– simplex\n– half duplex\n– full duplex\n\n❖ Communication simplex\nUnidirectionnelle\n– Exemple : radio / télévision\n\n❖ Communication half duplex\nBidirectionnelle à l'alternat\n– Exemple : radio de police\n\n❖ Communication full duplex\nBidirectionnelle\n– Exemple : téléphone"
+    },
+    {
+      "id": "6.5",
+      "c": 6,
+      "t": "Types de transmission ...",
+      "x": "Deux de types de transmission\n– Transmission parallèle\n– Transmission en série\n\nTransmission parallèle : Les bits sont émis en\nparallèle sur des fils distincts (8, 16, 32, 64,\nvoire parfois plus) :\n\nTransmission en série : les bits sont transmis\n“un par un”.\n\nParallèle\n– Utilisable sur de courtes distances\n– Problèmes de synchronisation\nSérie\n– Lent\n– Transmissions sur des distances importantes."
+    },
+    {
+      "id": "6.6",
+      "c": 6,
+      "t": "Types de transmission ...",
+      "x": "Problème:\n– L’émetteur utilise son horloge pour déterminer le\ndébut et la fin de chaque bit\n– Le récepteur utilise son horloge pour déterminer\nquand un bit se termine et quand le suivant\ncommence\n– Si les deux horloges n’ont pas la même fréquence\n==> erreurs de transmission\n\nProblème :\n\nDeux modes de synchronisation\n– Asynchrone\n• Synchronisation assurée à chaque émission\n– Synchrone\n• Synchronisation assurée constamment\n\n❖ Transmission asynchrone\nTransmission caractère par caractère\nLa synchronisation s’effectue à chaque\némission de caractère\nStructure de la transmission asynchrone\n– 1 bit start\n– 7 bits de données + 1 bit de parité (en général)\n– 1 bit stop"
+    },
+    {
+      "id": "6.7",
+      "c": 6,
+      "t": "Transmission asynchrone ...",
+      "x": "Illustration\n\n❖ Transmission synchrone\nL'horloge du récepteur est esclave de l'émetteur. Les deux\nhorloges tournent à la même fréquence.\nPour ce faire, l'émetteur envoie continuellement son signal\nd'horloge au récepteur:\n– Envoyer le signal d'horloge sur un canal séparé.\n\n❖ Emetteur                                        Récepteur\n– Choisir une manière d'encodage qui permet de transmettre le signal d'horloge\ndans le signal d' information. Exemple: Manchester\n\n❖ Transmission synchrone\nIllustration\n– Liaison synchrone full duplex"
+    },
+    {
+      "id": "6.8",
+      "c": 6,
+      "t": "Support de transmission ...",
+      "x": "Généralement, on classe les supports en\ndeux catégories :\n– les supports guidés (supports cuivre et supports\noptiques)\n– les supports libres (faisceaux hertziens et\nliaisons satellites)\n\nles supports guidés\n– paire torsadée : téléphonie, LAN\nlarge infrastructure existante\ndébit limité (centaine de Mbits/s)\n– câble coaxial : TV, LAN, (MAN ?)\nplus coûteux, meilleurs débits\n(1 à 2 Gbits/s sur 1km)\nmeilleure protection contre les interférences\n– fibre optique : LAN, MAN, WAN\nde moins en moins coûteuse\n40 km sans répéteur, fiabilité\ntrès haut-débit (50000 Gbits/s en théorie)\n\nles supports libres\n– faisceaux hertziens : MAN, LAN\n• infrastructure peu coûteuse\n• erreurs fréquentes et dépendantes des conditions\nclimatiques\n– satellites : WAN\n• répéteurs dans le ciel\n• grande couverture géographique\n• bande passante élevée\n• délais élevés (250 à 300 ms de latence)\n• coût élevé par équipement\n\n❖ Câble coaxial\nIl se compose d’un conducteur de cuivre\nentouré d’une couche de matériau isolant\nflexible."
+    },
+    {
+      "id": "6.9",
+      "c": 6,
+      "t": "Câble coaxial ...",
+      "x": "Différents types de connecteurs sont\nutilisés avec un câble coaxial.\n\nAvantages\n– Sensibilité moindre aux perturbations\nélectromagnétiques par rapport à la paire\ntorsadée\nInconvénients\n– Encombrant\n– Peu coûteux\n\n❖ Paire torsadée\nUne paire torsadée (Twisted Pair) est formée\nde 2 conducteurs enroulés en hélice l’un\nautour de l’autre.\nCette configuration a pour but de diminuer la\ndiaphonie.\n\n❖ Paire torsadée\nGénéralement plusieurs paires sont regroupées\nsous une enveloppe protectrice appelée gaine\npour former un câble"
+    },
+    {
+      "id": "6.10",
+      "c": 6,
+      "t": "Paire torsadée ...",
+      "x": "Compte tenu de la proximité des différentes\npaires dans un câble, un phénomène spécifique\napparaît : la diaphonie.\nLa diaphonie, due au couplage inductif entre\npaires voisines, correspond au transfert du\nsignal d’un câble à un autre. Elle limite\nl’utilisation de la paire torsadée à de faibles\ndistances.\n\nLa paire torsadée est constituée de deux\nconducteurs identiques torsadés.\nGénéralement plusieurs paires sont regroupées\nsous une enveloppe protectrice appelée gaine\npour former un câble\n\nLes câbles à paires torsadées sont souvent\nblindés pour limiter les interférences.\nLe blindage peut être appliqué à\n– l’ensemble du câble\n– ou individuellement à chacune des paires\nconstituant le câble.\nLorsque le blindage est appliqué à l’ensemble,\non parle d’écrantage et la feuille métallique\nformant le blindage est appelée écran.\n\nPaires non blindées\n– UTP (Unshielded Twisted-Pair)\nPaires blindées\n– STP (Shielded Twisted-Pair)\nPaires torsadées avec blindage général\n– FTP (Foiled Twisted Pairs )\nPaires torsadées avec double blindage\n– SFTP (Shielded and Foiled Twisted Pairs)"
+    },
+    {
+      "id": "6.11",
+      "c": 6,
+      "t": "Paire torsadée ...",
+      "x": "Types de blindages et appellations\nnormalisées associées (norme ISO-CEI 11801)\n\nTypes de blindages et appellations\nnormalisées associées (norme ISO-CEI 11801)\n\nTypes de blindages et appellations\nnormalisées associées (norme ISO-CEI 11801)\n\nTypes de blindages et appellations\nnormalisées associées (norme ISO-CEI 11801)"
+    },
+    {
+      "id": "6.12",
+      "c": 6,
+      "t": "Paire torsadée ...",
+      "x": "Types de blindages et appellations\nnormalisées associées (norme ISO-CEI 11801)\n– SF/UTP : Câble à paires torsadées. Blindage\ncomposé d’une tresse associée à une feuille\nd’aluminium.\n\nCatégories de câbles\n– Les câbles ont été répartis en différentes catégories selon les\nspécifications auxquelles ils répondent (atténuation, bande passante,...).\n100 Mhz\n8               2 Ghz               transmission de données à 40 Gbits/s\n\nLe câble à paires torsadées se branche à un\nconnecteur\n– RJ45 => Réseaux informatiques\n– RJ11 => Réseaux téléphoniques\nLe connecteur RJ45 comporte 8 broches\n\nLes 2 normes principales de câblage sont :\n– EIA/TIA 568B (La plus\nutilisée)\n– EIA/TIA 568A"
+    },
+    {
+      "id": "6.13",
+      "c": 6,
+      "t": "Paire torsadée ...",
+      "x": "Norme de couleur et câblage T568A et T568B\n– La norme détermine 4 numéros de paire associés chacun à\nune couleur :Paire 1 bleu, paire 2 orange, paire 3 vert,\npaire 4 marron.\n\n❖ Paire torsadée : Câble droit/croisé\nLa liaison d'une station à une autre par un lien\néquipé de la même prise aux deux extrémités\npose un problème (symétrie).\nNorme 100 base Tx\n– 2 fils sont dédiés à l'émission\n– 2 fils sont dédiés à la réception\n\n❖ Paire torsadée : Câble droit/croisé\nPour relier deux machines entre elles, il faut\ndonc inverser les connexions des fils aux\nbroches de la prise entre les deux extrémités\n– La broche d'émission doit être reliée à une broche\nde réception (et vice versa)\n\n❖ Paire torsadée : Câble droit/croisé\nPour éviter d'avoir à sertir des câbles croisés,\nles répéteurs, hubs, etc. fournissent des ports\ndont les fils sont croisés en interne.\n– Câble croisé entre deux machines ou deux hubs\n– Câblage « droit » entre une machine et un hub\n(par ex.), car les fils sont croisés à l'intérieur des\nports des répéteurs"
+    },
+    {
+      "id": "6.14",
+      "c": 6,
+      "t": "Paire torsadée : Câble droit/croisé ...",
+      "x": "On utilise un câble droit pour relier des\néquipements terminaux (PC, imprimante, ...)\navec des équipements d’interconnexion\n(Switch, hub, routeur,...).\n\nCâble droit/croisé\n\nCâble droit/croisé/inversé\nType de câble                            Standard                                  Application\nEthernet droit                           Les deux extrémités T568A ou              Hôte à périphérique réseau\n\n❖ T568B\nEthernet croisé                          Une extrémité T568A, l'autre T568B        Hôte-à-hôte, commutateur à\ncommutateur, routeur à routeur\n* Considéré comme un héritage dû au fait que la plupart des NICs utilisent l'Auto-MDIX pour détecter le type de câble et la\nconnexion complète\nInversé                                  Contenu propriétaire de Cisco             Port série de l'hôte vers le port du routeur\nou de la console de commutation, en\nutilisant un adaptateur"
+    },
+    {
+      "id": "6.15",
+      "c": 6,
+      "t": "Paire torsadée ...",
+      "x": "Avantages\n– le moins cher\n– Largement répandu (téléphone, réseaux locaux),\n– Facile à installer et à maintenir\nInconvénients\n– Très sensible aux bruits\n\n❖ Fibre optique\nUne fibre optique est un fil en verre ou en\nplastique très fin qui a la propriété de conduire\nla lumière.\nLa fibre permet la transmission de données à\nhaut débit grâce à des rayons optiques.\n\n❖ Fibre optique\nLes fibres optiques peuvent être classées en deux\ngrandes catégories selon le diamètre de leur\ncœur et la longueur d'onde utilisée :\n– fibres monomodes\n– fibres multimodes.\n\n❖ Fibre optique\nFibre multimode\n– Elles ont été les premières sur le marché.\n– Elles sont caractérisées par un diamètre de cœur de\nplusieurs dizaines de micromètres.\n– Elles ont pour caractéristique de transporter plusieurs\nmodes (trajets lumineux). En conséquence, elles sont\nutilisées uniquement pour de courtes distances,\npermettant d'atteindre le Gbit/s sur des distances de\nl'ordre du km."
+    },
+    {
+      "id": "6.16",
+      "c": 6,
+      "t": "Fibre optique ...",
+      "x": "Fibre monomode\n– Elles sont utilisées pour de plus longues distances.\n– Elles sont caractérisées par un diamètre de cœur\nd’une dizaine de micromètres et technologiquement\nplus avancées. Leur cœur n'admet ainsi qu'un mode\nde propagation. Les pertes sont donc minimes -\nmoins de réflexion sur l'interface cœur/gaine.\n– Elles sont de ce fait adaptées pour les lignes\nintercontinentales de très longues distances.\n\nMonomode / Multimode\n\n❖ Fibre monomode                       Fibre multimode\n•   Plus grand cœur\n•   Très petit noyau\n•   Utilise des LED moins chères\n•   Utilise des lasers coûteux\n•   Les LED transmettent à différents angles\n•   Applications longue distance\n•   Jusqu'à 10 Gbit/s sur 550 mètres\n\nConnecteur pour fibre optique : le domaine des\nconnecteurs fibre comporte plus de 100 connecteurs\ndifférents, mais seul un petit nombre d'entre eux est\nutilisé de façon significative."
+    },
+    {
+      "id": "6.17",
+      "c": 6,
+      "t": "Fibre optique ...",
+      "x": "Avantages\n– Support léger, peu encombrant, sécurisé\n– Hauts débits sur longues distances\n– Pas d’interférences, pas de rayonnement\nInconvénients\n– Plus cher\n– Fragilité\n– Difficile à installer et à maintenir\n\n❖ Câblage à fibre optique\nœuvre                    non blindées (UTP)\n\n❖ Distance\n100 mètres)                000 mètres)\n\n❖ Résistance aux\nperturbations"
+    },
+    {
+      "id": "6.18",
+      "c": 6,
+      "t": "Faible                     Haute (résist...",
+      "x": "électromagnétiques et\nradioélectriques\n\nélectriques\n\n❖ Moins élevé               Plus élevé\nconnecteurs\n\n❖ Moins élevé                Plus élevé\npour l'installation"
+    },
+    {
+      "id": "6.19",
+      "c": 6,
+      "t": "Moins élevé                Plus élevé .....",
+      "x": "concernant la sécurité\n\n❖ L'Air\nTransmission sur L’Air\n– Se fait par des ondes\n• Radio : fréquences basses [FM, AM] et haute fréquence\n(Transmission par satellite)\n• Infrarouge : des transmissions très locales (télécommande de\ntélévision par exemple)\n• Commence à prendre place dans les réseaux locaux (réseaux\nsans fil, Bluetooth, IEEE802.11, HyperLan, …)\n\n❖ L'Air\nAvantages\n– Ne nécessite pas de câblage\n– La mobilité des équipements\nInconvénients\n– Risque plus grand de piratage et de perturbation\n– Manque de bande passante (autorisée) pour satisfaire\nles besoins d’interconnexion\n\n❖ Transmission ADSL\nADSL : Asymmetric data rate Digital Subscriber Line\nla bande des fréquences utilisées sur les paires\ntéléphoniques va de 0 Hz à 1,1 MHz\n– La bande de 0 Hz à 4 kHz reste réservée aux\ncommunications de type voix analogique.\n– La bande de 64 kHz à 1,1 MHz est utilisée pour la\ntransmission des données en deux bandes distinctes, une\npour chaque flux."
+    },
+    {
+      "id": "6.20",
+      "c": 6,
+      "t": "Transmission ADSL ...",
+      "x": "Équipements d'une connexion d’ADSL\n\nADSL2+ et les évolutions\n– Débit descendant (usager ← réseau) ADSL2+ : plus de 20 Mbps\n– Débit montant (usager → réseau) ADSL2+ : plus de 1 Mbps\n– Utilisation de différentes plages de fréquences\n• Débit descendant → 140 kHz-2,2 MHz\n• Débit montant → 4 kHz-140 kHz\n• Téléphone → 0 kHz-4 kHz\n\n❖ Les différentes technologies xDSL\nL'xDSL regroupent tout ce qui permet de faire\npasser des flots de données à grande vitesse\nsur de simples lignes téléphoniques. Il en\nexiste différentes variantes :\n– SDSL : Single pair, ou symmetric DSL\n– HDSL : High bit rate DSL\n– ADSL : Asymmetric DSL\n– RADSL : Rate adaptative DSL\n– VDSL : Very high DSL\n\n❖ Transmission sur fibre optique\nPlusieurs technologies sont disponibles - Fiber To The\nx\n– Lien entre abonné et Nœud de Raccordement Optique\ndifférent\n• FTTH\n• FTTLA\n• FTTB\n• …"
+    },
+    {
+      "id": "6.21",
+      "c": 6,
+      "t": "Fiber To The Home - FTTH ...",
+      "x": "Fibre jusqu’au domicile\nDeux variantes possibles\n– Dédiée → FTTH-P2P (Point à Point)\n– Partagée → FTTH-GPON (Gigabit Passive Optical Network)\n\n❖ Fiber To The Last Amplifier - FTTLA\nFibre jusqu’au dernier amplificateur\nFibre partagée jusqu’à un nœud optique, puis câble\ncoaxial\n\n❖ Fiber To The Building - FTTB\nFibre jusqu’au palier (pied de l’immeuble)\nFibre partagée, puis techno. non optique (Ethernet\nou VDSL)\n\n❖ Transmission sans fil WiMAX\nWiMAX : Worldwide Interoperability for Microwave Access\nWiMax est un standard de transmission sans fil permettant,\ncomme l’ADSL, de transporter des signaux numériques sur des\ndistances de plusieurs kilomètres.\nL’objectif principal est de couvrir la zone dite du « dernier\nkilomètre », encore appelée boucle locale radio,\nparticulièrement dans des endroits où l’abonné est situé trop\nloin de son équipement de raccordement, rendant l’ADSL\ninexploitable.\nLe WiMAX qui est souvent comparé à un « ADSL sans fil »\npermet donc de fournir un accès haut débit à l’Internet dans\nles zones non couvertes par les technologies filaires classiques\nou encore permet de raccorder à l’Internet une zone équipée\nlocalement en ADSL"
+    },
+    {
+      "id": "6.22",
+      "c": 6,
+      "t": "Transmission sans fil WiMAX ...",
+      "x": "WiMAX est une norme basée sur le standard IEEE 802.16.\nCe standard permet théoriquement d’émettre et de recevoir\ndes données dans les bandes de fréquences radio de 2 à 66\n\n❖ GHz avec un débit maximum théorique de 70 Mbps sur une\nportée de 50 km.\nEn pratique, WiMAX permet d’atteindre 12 Mbps sur une\nportée de 20 km\nLe WiMAX2 qui correspond à la dernière norme IEEE 802.16m\npermet des débits théoriques descendants de plus de 300\n\nUtilisation du WiMAX pour la connexion Internet."
+    },
+    {
+      "id": "7.1",
+      "c": 7,
+      "t": "Couche liaison ...",
+      "x": "Cette couche doit assurer la constitution des\ntrames, en gérer le séquencement, la\ndétection et la correction des erreurs, ainsi\nque la retransmission éventuelle des trames\nerronées (acquittement)…\n\n❖ Fonctions de la couche liaison\nElle offre une interface clairement définie à la\ncouche réseau (supérieure)\nElle détermine la façon dont les bits venant de\nla couche physique sont regroupées en trames\nElle traite les erreurs de transmission\nElle effectue un contrôle de flux pour\nrégulariser le volume des données échangées\nentre la source et la destination\n\n❖ Description\nLa couche liaison récupère des paquets de la\ncouche réseau.\nPour chaque paquet, elle construit une (ou\nplusieurs) trame(s).\nLa couche liaison envoie chaque trame à la\ncouche physique.\n\n❖ Description\ncouche réseau                   couche réseau\npaquet                    paquet\ncouche liaison                  couche liaison\ntrame                     trame\nbits\ncouche physique                 couche physique"
+    },
+    {
+      "id": "7.2",
+      "c": 7,
+      "t": "Trame ...",
+      "x": "Trame : appelée aussi L-PDU, l’unité de\ndonnées de protocole (PDU) de la couche\nliaison (couche 2)\nTrame = paquet (données provenant de la\ncouche 3) + infos de contrôle.\n– le paquet est encapsule dans une trame.\n\nComposition d'une trame (frame)\n– en-tête (header)\n– paquet fourni par la couche supérieure (la couche\nréseau)\n– en-queue (trailer)\n\n❖ Services offerts\nDélimitation et identification de trames\nContrôle d’erreurs\nContrôle de flux\nContrôle d'accès à un canal partagé (MAC)\n\n❖ Délimitation des trames\nTechniques de découpage en trame :\n– Compter les caractères\n– Utiliser des champs délimiteurs de trame\n– Violer le codage normalement utilisé dans la\ncouche physique"
+    },
+    {
+      "id": "7.3",
+      "c": 7,
+      "t": "Compter les caractères ...",
+      "x": "On utilise un champ dans l'en-tête de la trame\npour indiquer le nombre de caractères de la\ntrame\n06 ‘S’ ‘U’ ‘P’ ‘E’ ‘R’ 03 ‘L’ ‘E’ 06 ‘C’ ‘O’ ‘U’ ‘R’ ‘S’\nProblème : si la valeur du champ est modifiée\nau cours de la transmission\nMéthode rarement utilisée seule\nExemple\n\n❖ Trames émises\n06 ‘S’ ‘U’ ‘P’ ‘E’ ‘R’ 03 ‘L’ ‘E’ 06 ‘C’ ‘O’ ‘U’ ‘R’ ‘S’\n\n❖ Trames reçues\n06 ‘S’ ‘U’ ‘P’ ‘E’ ‘R’ 04 ‘L’ ‘E’ 06 43 ‘O’ ‘U’ ‘R’ ‘S’\ncode ASCII de ‘C’\n\n❖ Utiliser des délimiteurs\nUn fanion (délimiteur) est placé :\n– au début de chaque trame\n– à la fin de chaque trame"
+    },
+    {
+      "id": "7.4",
+      "c": 7,
+      "t": "Fanion       Données       Fanion ...",
+      "x": "Un fanion (flag) = séquence particulière de bits\ngénéralement 01111110\nExemple\nFanion : 01111110\nTechnique utilisée dans :\n– HDLC\n– PPP\n\n❖ Transparence\nConfusion des délimiteurs de trame et des\ndonnées\n– les données peuvent contenir les délimiteurs de\ntrames\n– Un mécanisme de transparence permet de régler\nles problèmes d’apparition du fanion dans le bloc\nde données.\nDes bits de transparence sont alors\nnécessaires pour qu’une séquence binaire\ndans la trame ne corresponde\naccidentellement au fanion.\nExemple 1\nDonnées du paquet : 0110 1111 1100 1110 1001.\nFanion utilisé : 0111 1110.\nSans mécanisme de transparence la trame envoyée\nserait mal interprétée :\n0111 1110 0110 1111 1100 1110 1001 0111 1110.\nAvec mécanisme de transparence, il n'y a plus\nd'ambiguïté :\n– Bit de transparence : 0 inséré après toute séquence de\ncinq 1 successifs dans la trame.\n0111 1110 0110 1111 10100 1110 1001 0111 1110.\nExemple 2\nBit de transparence : 0 inséré après toute\nséquence de cinq 1 successifs dans la trame.\n\n❖ Trame :\n01111110       010110011111010   01111110\n\n❖ Utiliser des fanions\nAvantages\n– permet toujours de retrouver la synchronisation\n– permet l'envoi de trames de tailles quelconques\n– technique la plus simple"
+    },
+    {
+      "id": "7.5",
+      "c": 7,
+      "t": "Violer le codage ...",
+      "x": "Utilisable lorsque le codage sur le support\nphysique contient des redondances\nPar exemple :\n– 0 = impulsion positive puis négative\n– 1 = impulsion négative puis positive\n– On peut donc utiliser les combinaisons positive-\npositive et négative-négative pour délimiter les\ntrames\nUtilisée dans la norme 802\n\n❖ Contrôle d’intégrité\nD’une manière générale on doit, lors d’une\ntransmission de données, s’assurer que les\ndonnées reçues n’ont pas été altérées durant la\ntransmission.\nPlusieurs facteurs peuvent modifier le contenu\ndes données.\n– Les uns sont d’origine humaine\n• le contrôle d’intégrité concerne alors la sécurité des\ndonnées.\n– Les autres sont d’origine physique\n• le contrôle d’intégrité porte alors le nom de contrôle\nd’erreur.\n\n❖ Transmission d’information\nL’existence de bruit conduit inévitablement à\ndes erreurs de transmission\n\n❖ Notion d’erreur\nOn appelle taux d’erreur binaire ou BER (Bit"
+    },
+    {
+      "id": "7.6",
+      "c": 7,
+      "t": "Error Rate) le rapport entre le nombre ....",
+      "x": "d’informations (bits) erronées reçues et le\nnombre d’informations (bits) transmises\nnombre de bits erronés\ntaux d' erreur\nnombre de bits émis\nExemple\n\n❖ La suite reçue est : 011001 10110010\n– Nombre de bites transmise est : 24\n– Nombre de bites erroné est : 3\n– Donc, BER = 3/24 = 0,125\n\n❖ Taux d’erreur binaire\nLe taux d’erreur binaire varie en pratique de\n10–4 à 10–9 (réseaux locaux)\nDans les réseaux, les erreurs se produisent\ngénéralement par rafale.\n– L’erreur affecte aléatoirement n bits consécutifs\net non 1 bit tous les x bits\n\n❖ Taux d’erreur binaire\nSi Te est la probabilité pour qu’un bit soit\nerroné, la probabilité de recevoir un bit\ncorrect est de (1 − Te).\nSoit, pour un bloc de N bits, une probabilité de\nréception correcte P est :"
+    },
+    {
+      "id": "7.7",
+      "c": 7,
+      "t": "P = (1 − Te)(1 − Te)...(1 − Te) = (1 − T...",
+      "x": "La probabilité de recevoir un bloc sans erreur\nest d’autant plus faible que la longueur du bloc\nest grande\n\n❖ Exercice\nSupposons une transaction de 100 caractères\némis sur une liaison en mode synchrone à\n4800 bit/s avec un BER de 10–4.\nLes erreurs sont supposées être distribuées\naléatoirement. Quelle est la probabilité de\nrecevoir un message erroné ?\n\n❖ Exercice\nRéponse :\n– Un caractère : 8 bits\n– Nombre de bites transmises est : 100 x 8 = 800\nbites\n– Probabilité de réception d’un bloc correct est :\n\n❖ Pc = (1 - 10–4)800 = 0,923\n– La probabilité de recevoir un message erroné est:"
+    },
+    {
+      "id": "7.8",
+      "c": 7,
+      "t": "Détection d’erreur ...",
+      "x": "On appelle détection d’erreur le mécanisme\nmis en œuvre par le système destinataire pour\nvérifier la validité des données reçues.\nLa détection d’erreur repose sur l’introduction\nd’une certaine redondance dans l’information\ntransmise.\n\nQuatre techniques peuvent être mises en\nœuvre pour détecter et éventuellement\ncorriger les erreurs :\n– La détection par écho\n– La détection par répétition\n– La détection par clé calculée\n– La détection et correction d’erreur par code\n\n❖ Détection par écho\nPrincipe :\n– Le récepteur renvoie en écho le message reçu à\nl’émetteur\n– Si le message est différent de celui émis,\nl’émetteur retransmet le message\nUtilisation :\n– Cette technique est utilisée dans les terminaux\nasynchrones (Telnet, Minitel...)\n\n❖ Détection par répétition\nPrincipe :\n– Chaque message émis est suivi de sa réplique\n– Si les deux messages sont différents, le récepteur\ndemande une retransmission\nUtilisation :\n– Cette technique est utilisée dans les milieux\nsécurisés très perturbés et dans certaines\napplications dites temps réel"
+    },
+    {
+      "id": "7.9",
+      "c": 7,
+      "t": "Détection d’erreur par clé calculée ...",
+      "x": "une information supplémentaire (clé) déduite\ndes informations transmises est ajoutée à\ncelles-ci.\nL’émetteur calcule une séquence de contrôle\n\n❖ CTL1 par une opération mathématique\nappliquée au message à émettre et envoyée\navec le message\n\nLe récepteur recalcule la clé CTL2 en utilisant\nla même opération.\n– si CTL1 identique à CTL2,, alors le bloc est exact\n– sinon le bloc est rejeté.\nExemples d'algorithmes de détection d'erreurs\n:\n– VRC\n– LRC\n– CRC\n\n❖ Détection \\& correction d’erreur par code\nCette technique consiste à substituer aux\ncaractères à transmettre, une combinaison\nbinaire différente du codage de base (code\nauto-correcteur) tel que, en cas d’erreur sur\nun nombre limité de bits, on puisse toujours\ndéduire du code reçu la valeur binaire\nenvoyée."
+    },
+    {
+      "id": "7.10",
+      "c": 7,
+      "t": "Contrôle de parité ...",
+      "x": "La parité peut être paire ou impaire.\nLa technique du bit de parité consiste à\najouter, à la séquence binaire à protéger, un\nbit, telle que la somme des bits à 1 transmise\nsoit paire ou impaire.\nLa protection apportée est limitée à quelques\nbits : le caractère.\nExemple\n\nSystème le plus simple\nAlourdie très peu le message\nMais, pas de correction d’erreurs\nNe détecte que les erreurs en nombre impair\n(50\\%)\n\nConnue aussi sous le nom de VRC (Vertical\n\n❖ Redundancy Check),\nElle n’est guère plus utilisée que dans les\ntransmissions asynchrones"
+    },
+    {
+      "id": "7.11",
+      "c": 7,
+      "t": "Contrôle de parité à deux dimensions ...",
+      "x": "Bit de parité LRC (Longitudinal Redundancy\n\n❖ Check)\nPrincipe :\n– Chaque bit du caractère LRC correspond à la «parité»\ndes bits de même rang que lui des caractères\ncomposant le message : le premier bit du LRC est la\nparité de tous les premiers bits de chaque caractère,\nle second de tous les deuxièmes bits... Le caractère\nainsi constitué est ajouté au message.\n– Le LRC est lui-même protégé par un bit de parité(VRC).\n\nDans les transmissions synchrones, les\ncaractères sont envoyés en blocs\nExemple\nTransmission du mot « HELLO »\n\n❖ CRC (Cyclic Redundancy Check)\nRedondance cyclique CRC : appelé aussi\ncontrôle polynomial, ou encore FCS (Frame"
+    },
+    {
+      "id": "7.12",
+      "c": 7,
+      "t": "Check Sequence) ...",
+      "x": "Il représente la principale méthode de\ndétection d'erreurs utilisée dans les\ntélécommunications.\n\n❖ CRC (Cyclic Redundancy Check)\nPrincipe :\n– Considère le bloc de N bits à transmettre comme\nun polynôme de degré N −1 : P(x)\n– Ce polynôme est divisé par un autre, dit polynôme\ngénérateur G(x) selon les règles de l’arithmétique\nbooléenne ou arithmétique modulo 2.\n– Le reste de cette division R(x) constitue le CRC\n\n❖ CRC (Cyclic Redundancy Check)\nEmetteur : T(x) = P(x) . Xk +R(x) où k : le plus\ngrand degré de G(x)\nRécepteur : si le reste de T(x)/G(x) égale à 0,\nalors pas d’erreur\n\n❖ CRC (Cyclic Redundancy Check)\nLe CRC calculé est transmis à la suite du bloc\nde données.\nExemple 1: CRC (division polynomiale)\nDonnées à transmettre : 110111.\nle polynôme correspondant est :"
+    },
+    {
+      "id": "7.13",
+      "c": 7,
+      "t": "P(x) = x5 + x4 + x2 + x1 + 1 ...",
+      "x": "Soit le polynôme générateur suivant :\n\n❖ G(x) = x2 + x + 1\nLa division de x2 * P(x) par G(x) donne le\npolynôme reste :\n\n❖ R(x) = (x2 *P(x)) mod G(x) = x+ 1\nExemple 1: CRC (division polynomiale)\nL'information redondante à ajouter en fin de\ntrame est donc : 11.\nT(x) = x7 + x6 + 0x5 + x4 + x3 + x2+ x + 1\nLe message envoyé contient donc :\nExemple 2: CRC (division polynomiale)\nDonnées à transmettre : 1101011011.\nle polynôme correspondant est :\n\n❖ P(x) = x9 + x8 + x6 + x4 + x3 + x1 + 1\nSoit le polynôme générateur suivant :"
+    },
+    {
+      "id": "7.14",
+      "c": 7,
+      "t": "G(x) = x4 + x + 1 ...",
+      "x": "La division de x4 * P(x) par G(x) donne le\npolynôme reste :\n\n❖ R(x) = (x4 *P(x)) mod G(x) = x3 + x2 + x\nExemple 2: CRC (division polynomiale)\nL'information redondante à ajouter en fin de\ntrame est donc : 1110.\nLe message envoyé contient donc :\nExemple 2: CRC par division binaire\n\n❖ Plusieurs polynômes ont fait l’objet d’une norme\ncar possédant de bonnes propriétés\n\n❖ CRC CCITT = x16 + x12 + x5 + 1\n(Ce code est notamment utilisé dans HDLC.)"
+    },
+    {
+      "id": "7.15",
+      "c": 7,
+      "t": "Aperçu d’Ethernet ...",
+      "x": "Technologie LAN développée pour mettre\nlocalement en réseau les équipements\ninformatiques d’une entreprise\n\ncorrespond aux couches 1 et 2 du modèle OSI :\n\n❖ Ethernet : Un peu d’histoire\n1973 : naissance d'Ethernet\n– Bob Metcalfe et David Boggs (Xerox PARC)\n– Initialement 2,94 Mbit/s, câble coaxial, ≤ 256 ordinateurs\n1980 : Ethernet DIX (Digital/Intel/Xerox) 10Mbit/s\n1982 : spécifications définitives d'Ethernet V2\n1983 : IEEE normalise :\n– La technique d’accès de Ethernet (CSMA/CD 802.3)\n– La gestion des collisions\n• Notifications (bourrage de la ligne - JAM)\n• définit la variante CSMA-persistant\n• Algorithme de reprise après collision (Binary Exponential Backoff)\n\n❖ Ethernet : Un peu d’histoire\n• Les algorithmes d’émission et de réception\n• Les grandeurs physiques IEEE 802.3 (délais, distances,\n…)\n• La structure de la trame Ethernet 802.3\n• Les spécifications des supports physiques"
+    },
+    {
+      "id": "7.16",
+      "c": 7,
+      "t": "Caractéristiques principales ...",
+      "x": "Débit de 10 Mbits/s, 100 Mbits/s, 1 Gbits/s, …\nTransmission en bande de base (généralement)\nTopologie physique (câblage) en étoile (ou en bus\npour le coaxial)\nCâbles cuivre (coaxial ou paires torsadées) ou\nfibre optique (monomode ou multimode).\nMéthode d'accès CSMA/CD (Carrier Sense\n\n❖ Multiple Access / Collision Detection)\nLongueur des trames comprises entre 64 et 1518\noctets\nTopologie logique en bus\n\nPlusieurs variantes de Ethernet existent\n– 10 base 2, 10 base 5, 10 base T, 10 Broad 36, …etc.\nElles utilisent toutes :\n– 802.3 CSMA/CD\nElles diffèrent par :\n– le type de support (UTP, STP, Coax, Fibre optique)\n– le type de topologie (bus, étoile, arbre)\n– le débit (1, 5, 10 Mbps, 1, 10, 100 Gbps )\n\nSigle :                             Le diamètre du réseau\nou le type de support"
+    },
+    {
+      "id": "7.17",
+      "c": 7,
+      "t": "Mbps ...",
+      "x": "10 BASE 5 : Ethernet 10 Mbits/s standard coaxial\n(Thick)\n– 5 : longueur max. du segment 500 m\n10 BASE 2 : Ethernet fin à 10 Mbits/s coaxial\n(Thin)\n– 2 : longueur max. du segment 185 m\n\n❖ Caractéristiques de l'Ethernet partagé\nplusieurs stations se partagent un unique canal\nde communication\nune trame envoyée par une station est reçue par\ntoutes les autres\ndes collisions de trames peuvent se produire (et\nsont détectées)\nnécessite la gestion de l'accès au canal : méthode\n\n❖ CSMA/CD appliquée par la (sous) couche MAC\n(Medium Access Control)\nchronologiquement 10Base5 puis 10Base2 et\n10BaseT en sont les versions majeures\n10Base5\n10Base5\nRaccordement\n10Base5\nsegment : câble coaxial épais (RG11) d’au plus\n500 mètres\nrepères tous les 2,5 mètres pour prises\nvampires (transceiver ou MAU (Medium\n\n❖ Attachment Unit –unité d’attachement au\nsupport))\n100 stations max par segment\n10Base5\nextension par répéteurs (couche 1) reliant 2\nsegments\nentre 2 stations, max 5 segments et 4\nrépéteurs (diamètre max 2,5 km)"
+    },
+    {
+      "id": "7.18",
+      "c": 7,
+      "t": "Répéteur ...",
+      "x": "Atténuation du signal\n– Lorsque les données sont transmises sur de\nlongues distances, l’atténuation du signal\naugmente.\nRégénération\n– Un répéteur est un équipement d’interconnexion\ncapable de générer un nouveau signal à partir\nd’un signal faible reçu.\n\nrépéteur\n\n❖ Autres                                           Autres\ncouches                                          couches\n\n❖ Physique 1       Physique 1    Physique 2         Physique 2\nmédium 1                         médium 2\n10Base5\nLa dorsale sert à relier les segments (équipés de stations)\n10Base5 : Transmission d’une trame\nTrame émise (sans collision) reçue par tous, acceptée par certains."
+    },
+    {
+      "id": "7.19",
+      "c": 7,
+      "t": "Transmission d'une trame unicast ...",
+      "x": "Trame unicast : un seul destinataire\n\n❖ Transmission d'une trame multicast\nTrame multicast : groupe de plusieurs destinataires\n\n❖ Transmission d'une trame broadcast\nTrame broadcast : toutes les stations sont destinataires\n10Base5 : exemple de collision\nSi deux stations parlent en même temps, il y a collision\n10Base5 : Résumé\nEthernet épais « Thick Ethernet »\nCoaxial (1cm de ∅, jaune, peu flexible, 50 ohms)\n– Jusqu'à 500 mètres de câble pour 1 segment\n– Max 100 machines, tous les 2,5 mètres (bandes\nnoires)\nMAU (transceiver) = prise vampire\nAUI = câble entre transceiver et machine\n– Prise 15 broches (DB15)\n– Longueur maximale du câble = 50 mètres\nCarte Ethernet avec connecteur 15 broches\n10Base5\nLa dorsale sert à relier les segments (équipés de stations)\n10Base5 : Transmission d’une trame\nTrame émise (sans collision) reçue par tous, acceptée par certains.\n\nTrame unicast : un seul destinataire"
+    },
+    {
+      "id": "7.20",
+      "c": 7,
+      "t": "Transmission d'une trame multicast ...",
+      "x": "Trame multicast : groupe de plusieurs destinataires\n\n❖ Transmission d'une trame broadcast\nTrame broadcast : toutes les stations sont destinataires\n10Base5 : exemple de collision\nSi deux stations parlent en même temps, il y a collision\n10Base5 : Résumé\nEthernet épais « Thick Ethernet »\nCoaxial (1cm de ∅, jaune, peu flexible, 50 ohms)\n– Jusqu'à 500 mètres de câble pour 1 segment\n– Max 100 machines, tous les 2,5 mètres (bandes\nnoires)\nMAU (transceiver) = prise vampire\nAUI = câble entre transceiver et machine\n– Prise 15 broches (DB15)\n– Longueur maximale du câble = 50 mètres\nCarte Ethernet avec connecteur 15 broches\n\n❖ Longueur totale comprise entre 64 et 1518 octets :\nPréambule :\n– 7 octets contenant 10101010 pour la synchronisation\n– puis 1 octet contenant 10101011 annonçant le début de la\ntrame\nAdresse de destination : adresse MAC (IEEE 802) de la\ndestination (unicast, multicast ou broadcast)\nAdresse source : adresse MAC (IEEE 802) de l’émetteur\n(source)\n\n❖ IEEE 802 :\noccupent 48 bits (6 octets)\n– 248 ≈ 281 475 milliards d’adresses possibles.\nse représentent sous forme hexa\n– Exemple : 80:40:C0:20:A0:C0 ou 01-02-03-04-05-06\nFF:FF:FF:FF:FF:FF est l’adresse de broadcast (diffusion\ngénérale)\nle premier bit indique si l’adresse est unicast (0) ou de\ngroupe (1) multicast ou broadcast"
+    },
+    {
+      "id": "7.21",
+      "c": 7,
+      "t": "Adressage MAC IEEE 802 ...",
+      "x": "les adresses unicast sont uniques car\ncomposées d’un identifiant de fabricant et\nd’un identifiant de carte du fabricant\nL’adresse MAC est considérée comme étant\nunique car gravée physiquement par le\nconstructeur dans l’interface réseau.\n– Toutefois, il existe divers procédés permettant de\nmodifier l’adresse MAC sur une machine\n\nStation : unique\n– 3 premiers octets : constructeur\n• CISCO : 00:00:0C\n• Sun : 08:00:20\n• HP : 08:00:09\n– 3 octets suivants : coupleur\nBroadcast : FF:FF:FF:FF:FF:FF\nMulticast : 1er bit à 1\n\n❖ Format de la trame Ethernet V2\nEther Type : indique au récepteur (couche Ethernet) à qui\n(couche réseau) remettre les données.\n– 0x0800 (IP)\n– 0x0806 (ARP)\n– 0x8137 et 0x8138 (IPX)\n– 0x809B (AppleTalk)...\nDonnées : contient un paquet (PDU) de la couche réseau\nRemplissage : utilisé si Données < 46 octets (trame de 64\noctets min)\nCRC : code de redondance cyclique (degré 32) pour\ndétection d’erreur\n\n❖ Accès au canal : CSMA/CD\nLes contraintes topologiques et de taille minimale\nde trame sont dues au protocole CSMA/CD\nimplémenté par la couche MAC\nPrincipes\n– Carrier Sense : chaque station est à l'écoute pour\ndétecter la présence d'un signal\n• écouter la porteuse et n'envoyer que si elle est libre\n(absence de signal), sinon attendre\n– Multiple Access : plusieurs stations peuvent émettre\nen même temps\n– Collision Detection : chaque station sait si elle a\nprovoqué une collision"
+    },
+    {
+      "id": "7.22",
+      "c": 7,
+      "t": "CSMA/CD : Durée minimale d'émission ...",
+      "x": "Durée minimale d'émission\n– D : débit\n– P : durée maximale de propagation\n– Durée d'émission >= 2*P\nCe qui revient à dire que la trame doit avoir\nune longueur >= 2*P*D\n\nVitesse de propagation : 200 000 km/s\nDistance maximale entre 2 stations : 2,5 km\nDélai maximal de propagation\n– P = 2,5/200 000 = 12,5 µs\nTranche canal (Slot Time)\n– TC >= 2 x P = 25 µs.\n– on prend TC = 51,2 µs\nTaille de trame minimale\n– D x TC = 10Mbps x 51,2µs\n= 512 bits soit 64 octets.\n\n❖ Délai d’attente avant retransmission\nLe BEB (Binary Exponentiel Backoff), ou\nencore algorithme de ralentissement\nexponentiel, détermine le délai aléatoire\nd'attente\nLa station attend R * TC tel que\n– R étant un entier « Random » R =[0, 2n - 1] avec\nn ≤ 10\n– n = nombre de collisions successives de la trame\n\n❖ Délai d’attente avant retransmission\nen cas de collision détectée par l’émetteur\n– renforce la collision par l’envoi de 4 octets (jam)\n• la taille du JAM (signal de renforcement de collision) est\nfixée à 32 bits (contenu quelconque).\n– interrompt la transmission\n– la station attend R * TC (R* slot time)\n– Après seize tentatives, l'émetteur abandonne\nl'émission"
+    },
+    {
+      "id": "7.23",
+      "c": 7,
+      "t": "Le silence inter-message (IFG) ...",
+      "x": "Les normes Ethernet précise qu’un temps de\nsilence doit être observé entre deux\ntransmissions de trames.\nCe temps inter-trame est appelé Inter-Frame\n\nCe temps est prévu pour que chaque élément\nait le temps de se préparer à la réception de la\ntrame suivante.\nPhysiquement, il s’agit également du temps\nnécessaire aux équipements électroniques et\nau média pour retrouver l’état de repos.\n\nL’IFS minimum correspond à la transmission\nde 96 bits ce qui équivaut à :\n– 9,6 µs en Ethernet 10 Mbps\n– 960 ns en Fast Ethernet\n– 96 ns en Gigabit Ethernet.\n\n❖ Trame N                      Trame N+1\n9,6 µs (par ex.)"
+    },
+    {
+      "id": "7.24",
+      "c": 7,
+      "t": "Les caractéristiques de CSMA/CD ...",
+      "x": "L’accès multiple au réseau, plusieurs stations\npeuvent émettre en même temps, le risque de\ncollision est accepté. Il n’y a pas de priorité, ni\nbesoin d’une autorisation pour émettre.\nEcoute du câble et détection de la porteuse\nEcoute du câble et détection des collisions\nInterdiction à toutes les stations d’un réseau\nd’émettre si le support n’est pas libre\n\nEn cas de collision :\n– Les stations concernées cessent de transmettre\npendant une durée aléatoire\n– Les stations émettent de nouveau si le câble est\nlibre après ces délais\n\n❖ Ethernet : Principe d’émission\n10Base2\nTrop contraignant, assez cher et de\nmanipulation délicate, 10Base5 a cédé la\nplace 10Base2 bien meilleur marché et plus\nsimple à installer :\n– segment : câble coaxial fin plus maniable (RG 58)\nde 185 m max (en théorie 2 fois 100 m).\n10Base2\nRaccordement\n10Base2\nRaccordement\n10Base2 : Résumé\nEthernet fin « Thin Ethernet » ou «Cheapernet»\nCoaxial (0,5cm de ∅, noir/gris, + flexible, 50\nohms)\n– Jusqu'à 185 mètres de câble pour un segment\n– Maximum de 30 machines\n– Espacées de 50 cm\nTransceiver peut être intégré à la carte Ethernet\n– Dans ce cas, pas besoin de câble de transceiver (AUI)\nConnectique T-BNC et BNC bouchon\n– Pour raccorder une machine directement au câble\ncoaxial\n10baseT\nEncore plus simple d’installation, offre une\nmeilleure résistance aux pannes\nbasé sur l’utilisation de hubs\n– opère uniquement au niveau physique : matériel\nde la couche 1\n– répéteur multiports offrant des ports de\nconnexion RJ-45\n– simule un bus (un signal reçu sur un port est\nrépercuté sur tous les autres)\n10baseT\nLe passage du bus à l’étoile.\n– simule un bus (un signal reçu sur un port est\nrépercuté sur tous les autres)\n10 Base T\nEthernet 10 Base T\n– 10 Mbps\n– Bande de base\n– Paire Torsadée (Twisted pair)\n– Connectique RJ45\n– Topologie étoile (– concentrateur – Hub…)\n10 Base T\n10 Base T\n– Longueur minimale 2.5 m, maxi 100 m (150 m si\n\n❖ STP)\n– On définit ainsi un domaine géographique de\ncollision\n– Extensible par cascades de hubs\n– Limite à 1024 nœuds.\n10 Base T\nCascades de hubs\n10 Base T\nles collisions sont possibles dans le hub\n(comme sur un bus) :\n10 Base T : Résumé\nEthernet « à paire torsadée »\nPaire torsadée non blindée (Unshield Twisted"
+    },
+    {
+      "id": "7.25",
+      "c": 7,
+      "t": "Pair) ...",
+      "x": "– 100 mètres par segment;\n– Tolopogie en étoile (hub)\nTransceiver le plus souvent intégré à la carte\n\n❖ Ethernet\nConnectique type RJ45 (8 broches)\n\n❖ Défaut majeur de l'Ethernet partagé\nles collisions sont un élément clé de la\nperformance d’Ethernet :\n– elles rendent imprévisible le temps réel avant\ntransmission effective d’une trame\n– quand le réseau est très utilisé (en particulier avec\nde petites trames), il s’effondre sous le poids de\ntrop nombreuses collisions et devient peu\nperformant\n\n❖ Défaut majeur de l'Ethernet partagé\ndans l’Ethernet partagé, le domaine de\ncollision est l’ensemble du réseau : il y a\ncollision si deux trames y circulent en même\ntemps\nréduire les possibilités de collision améliore\nconsidérablement les performances en\npermettant plusieurs trames de circuler\npour cela, il faut scinder le domaine de\ncollision en sous-domaines distincts avec de\nl’Ethernet commuté"
+    },
+    {
+      "id": "7.26",
+      "c": 7,
+      "t": "Ethernet commuté : les switchs ...",
+      "x": "Apparu dans les années 1990, l’Ethernet\ncommuté réduit (voire élimine) le\ndomaines de collision en utilisant des\ncommutateurs (switchs) :\n– matériel d’apparence similaire à un hub\n\nmais dispositif de niveau 2 (jusqu’ à couche\nliaison) qui examine les trames qui lui\nparviennent et les commute en décidant de\nleur(s) port(s) de sortie :\n\nbroadcast ou multicast : renvoyer la trame sur\ntous les ports ;\nsi unicast : renvoyer la trame vers le port\nmenant à cette destination s'il a été auto-\nappris, sinon sur tous les ports.\nEn aucun cas, la trame est retransmise sur son\nport d'entrée.\n\nSéparation des domaines de collision avec un\nswitch :\n– dans un switch, les trames se croisent sans\ncollision"
+    },
+    {
+      "id": "7.27",
+      "c": 7,
+      "t": "Ethernet commuté : les switchs ...",
+      "x": "– chaque port du switch est attachée à un segment,\nqui possède son propre domaine de collision\n\n❖ IEEE 802.3\n1983 : l'IEEE \"s'empare\" d'Ethernet et publie\nle standard IEEE 802.3 (compatible Ethernet\n\n❖ V2)\ndepuis, le sous-comité IEEE 802.3 n'a pas\ncessé d'améliorer ses performances (Fast\n\n❖ IEEE 802.3\nIEEE 802.3 ajoute une couche LLC au dessus\nde MAC :"
+    },
+    {
+      "id": "7.28",
+      "c": 7,
+      "t": "IEEE 802.3 ...",
+      "x": "IEEE 802.3 utilise une trame légèrement\ndifférente :\n– où le champ Longueur remplace le champ\n\n❖ EtherType qui est déporté dans l'en-tête de la\n(sur) couche LLC.\n\nFormat de la trame Ethernet v2/IEEE 802.3\n\n❖ DIFFERENCES ETHERNET et IEEE 802.3\nRemarques:\n– 802.3: concerne uniquement la couche physique\net la couche MAC\n– Ethernet : couche physique + MAC + LLC +\ntopologie + support + technique de transmission =\nspécification complète d’un LAN"
+    },
+    {
+      "id": "7.29",
+      "c": 7,
+      "t": "IEEE 802.3",
+      "x": "Fast Ethernet"
+    },
+    {
+      "id": "8.1",
+      "c": 8,
+      "t": "IEEE 802.3 ...",
+      "x": "Giga Ethernet\n\n❖ Interconnexion des réseaux locaux\nPhysiquement, deux réseaux ne peuvent être\nreliés que par l’intermédiaire d’un\néquipement connecté à chacun d’eux, sachant\nacheminer des messages de l’un à l’autre\nPlusieurs dispositifs d’interconnexion se\nmettent en place, selon le degré de similitude\ndes réseaux.\n\n❖ IRISI1\nÉquipements d’interconnexion\n\n❖ Répéteur\nC’est un boîtier avec deux ports.\nIl retransmet sur un port les signaux reçus sur\nl’autre port.\nIl régénère les signaux reçus qui se dégradent\nsur des longues distances\nLes répéteurs ne font que prolonger le support\nphysique en amplifiant les signaux transmis.\nIls propagent aussi les collisions. Ils sont\nutilisés pour relier deux segments de réseaux"
+    },
+    {
+      "id": "8.2",
+      "c": 8,
+      "t": "Répéteur ...",
+      "x": "répéteur\n\n❖ Autres                                           Autres\ncouches                                          couches\n\n❖ Physique 1       Physique 1    Physique 2         Physique 2\nmédium 1                         médium 2\n\n❖ HUB\nC’est un répéteur multiports (hub) qui\nretransmet le signal sur plus d’un port\nd’entrée-sortie.\nLorsqu’il reçoit un signal sur un port, il le\nretransmet sur tous les autres ports."
+    },
+    {
+      "id": "8.3",
+      "c": 8,
+      "t": "Pont (bridge) ...",
+      "x": "Construire un réseau local logique\nRelie plusieurs réseaux locaux homogènes\ndistants\nNiveau couche liaison (MAC)\nPonts filtrants\n– Filtrage de données\n– Fonctions de sécurité et de contrôle du trafic\nTransparents aux couches supérieures\n\nSegmentation d’un réseau local\n\nConversion entre différentes méthodes\nd’accès\n\n❖ Autres                                                                 Autres\ncouches                            Pont                                couches"
+    },
+    {
+      "id": "8.4",
+      "c": 8,
+      "t": "Pont ...",
+      "x": "Rôle des ponts\n– Un pont Ethernet connecte des réseaux Ethernet.\n– Exemple : 4 bus Ethernet connectés par 2 ponts\n\nRôle des ponts\n– attendre une trame\n– déterminer le(s) LAN(s) sur lequel(s) la trame doit\nêtre redirigée en utilisant une table de\ncommutation\n– retransmettre la trame sur ce(s) LAN(s)\n\nCommutation = action de mettre en relation\ndeux correspondants (l´émetteur et le\nrécepteur de la trame)\n\nCaractéristiques des ponts\n– Le pont se situe au niveau 2 - Liaison du modèle"
+    },
+    {
+      "id": "8.5",
+      "c": 8,
+      "t": "OSI car : ...",
+      "x": "• Il a une adresse physique (MAC).\n• Il connaît les adresses MAC des machines qu’il relie.\n• Il exécute le protocole CSMA/CD (résolution des\ncollisions).\n• Il comprend et interprète les trames qu’il reçoit.\n– Un pont est un hub intelligent car :\n• il sait comment joindre la machine destinataire d’une\ntrame\n• et il retransmet la trame uniquement sur le bon LAN\n\n❖ Pont\nCaractéristiques des ponts\n– Un pont est dit transparent :\n• Les machines voient tous les LANs connectés comme\nun unique LAN.\n• Les machines n’ont pas connaissance de l’existence des\nponts.\n– Un pont n’a pas de \"carte\" globale du réseau :\nl’acheminement d’une trame à son destinataire\nfinal se fait de proche en proche.\n• La trame passe de pont en pont pour arriver à son\ndestinataire final.\n\n❖ Pont : table de commutation\nLa table de commutation contient une liste\nd’enregistrements (adresse, port)\nUn enregistrement (d,p) est interprète de la façon\nsuivante :\n\n❖ MAC est d doit être retransmise sur le port p.\n2 possibilités à la réception sur un port p d’une trame\ndestinée à d :\n– 1. d n’est pas dans la table ou d = FF:FF:FF:FF:FF:FF => le pont\nretransmet la trame sur tous ses ports à l’exception de p\n– 2. la table contient un enregistrement (d,p') => le pont\nretransmet la trame sur le port p' uniquement (et si p≠p')"
+    },
+    {
+      "id": "8.6",
+      "c": 8,
+      "t": "Pont : table de commutation ...",
+      "x": "Exemple :\n– 4 réseaux Ethernet connectés avec 2 ponts\n\n❖ Pont : Remplissage des tables\nRemplissage manuel (ou statique)\n– L’administrateur du réseau crée un enregistrement\npar machine à l’installation du réseau.\n– Plusieurs inconvénients :\n• Fastidieux\n• erreur(s) possible(s) de l’administrateur\n• nécessite de modifier les tables quand on déplace une\nmachine\n\n❖ Pont : Remplissage des tables\nRemplissage automatique (ou dynamique)\n– Les tables sont initialement vides.\n– A la réception d’une trame sur un port p, le pont\n• regarde l’adresse MAC de l’´émetteur de la trame\n(champ SA)\n=> il sait que la machine d’adresse SA peut être jointe\nen utilisant le port p\n• supprime si besoin l’adresse SA de sa table de\ncommutation\n• et y insère l’enregistrement (SA, p)\n\n❖ Pont : Remplissage des tables\nExemple d’acheminement avec remplissage auto.\n– Hypothèse :\n• M1 transmet sur le LAN1 une trame destinée à M6.\n• La table de commutation de P1 est vide.\n• La table de commutation de P2 contient l’enregistrement\n(M6,3)"
+    },
+    {
+      "id": "8.7",
+      "c": 8,
+      "t": "Pont : Remplissage des tables ...",
+      "x": "Exemple d’acheminement avec remplissage\nautomatique\n– La trame est retransmise\n• par P1 sur tous ses ports ≠ du port de réception : 2 et 3\n• par P2 sur son port 3 uniquement\n\nExemple d’acheminement avec remplissage\nautomatique\n– Etat des tables de commutation après l’acheminement\nde la trame :\n• P1 : (M1, 1)\n• P2 : (M1, 1), (M6,3)\n\n❖ Pont : Algorithme de commutation\nTraitement par un pont d’une trame reçue sur un\nport p :\nextraire les champs DA et SA de la trame\nremplissage de la table\nsi il existe un enregistrement (adr, p') dans la table avec adr\n= SA\nsupprimer cet enregistrement\ninsérer (SA, p) dans la table\nretransmission de la trame\nsi il existe un enregistrement (adr, p') dans la table avec adr\n= DA\nsi p'≠ p\ntransmettre la trame sur le port p'\nsinon\npour tout port p'≠ p\ntransmettre la trame sur le port p'\n\n❖ Pont : Intérêt des ponts\nconnecter des machines\ns’affranchir des contraintes de distance\nd’Ethernet et augmenter la couverture du\nréseau"
+    },
+    {
+      "id": "8.8",
+      "c": 8,
+      "t": "Pont : Intérêt des ponts ...",
+      "x": "meilleures performances grâce à la réduction\ndu domaine de collision\n– Exemple : M4 peut envoyer une trame à M5 pendant\nque M1 envoie une trame à M2. Pas de collision si M5\net M2 sont dans les tables de P2 et P1.\n\nmeilleures performances grâce à la réduction\ndu domaine de collision\n– Moins de collisions => moins de retransmissions\n=> meilleur débit utile\n\nconfidentialité accrue : les machines ne voient\nplus toutes les trames\n– Exemple : M4 et M5 peuvent s'échanger des données\nconfidentielles. Si elles sont dans la table de P2\naucune autre machine ne les recevra.\n\n❖ Pont : Stratégies de commutation\nA partir de quel instant un pont va-t-il relayer une\ntrame reçue ?\nplusieurs stratégies possibles :\n– Store and Forward : réception complète, contrôle d’erreur\npuis retransmission\n– Cut-through : retransmission au plus tôt/dès que possible\n• Fast Forward\n• Fragment-free"
+    },
+    {
+      "id": "8.9",
+      "c": 8,
+      "t": "Store and Forward ...",
+      "x": "retransmission de la trame T après réception de tous\nles bits, vérification du FCS et consultation de la table\nde commutation\n\n❖ Fast Forward\nretransmission de la trame T après réception de\nl’adresse de destination et consultation de la table de\ncommutation\n\n❖ Pont : Stratégies de commutation\nStore and forward: la trame est stockée, analysée puis\nacheminée vers le bon destinataire.\n– l'avantage est d'éliminer les mauvaises trames.\nCut-through : repose sur un traitement des trames en simultané,\nsans stockage intermédiaire.\n– L'avantage est que le commutateur ne dispose que d'un faible\ntampon et que les temps de latences sont inexistants.\n– En revanche, il laisse passer les mauvaises trames et les collisions\nsont transmises.\nFragment-free\n– une variante du mode\n\n❖ Cut -Through\nAdaptive Cut-through\n– Mode de commutation hybride"
+    },
+    {
+      "id": "8.10",
+      "c": 8,
+      "t": "Commutateur (Switch) ...",
+      "x": "Est un dispositif de niveau 2 (jusqu’ à couche\nliaison) qui examine les trames qui lui\nparviennent et les commute en décidant de\nleur(s) port(s) de sortie :\n\nDifférences entre ponts et commutateurs\n– Pont est un terme général pour désigner un\néquipement qui relie\n• différents LANs\n• qui peuvent être de différents types (Ethernet, Wifi,…)\n– Un commutateur (ou switch) relie des LANs ou des\néquipements de même type.\nDans ce cours, on s’intéresse uniquement aux\nréseaux Ethernet. donc : switch <=> pont\n\nNB: Il existe aussi des Switch de niveau 3\n– Ils sont ainsi capables de travailler sur les en-têtes\nde couche 3 (Réseau).\n\n❖ Routeur\nLes routeurs sont destinés à relier plusieurs\nréseaux de technologies différentes.\nIls opèrent essentiellement au niveau de la\ncouche 3 du modèle OSI, c’est-à-dire qu’ils\nassurent le routage des informations à travers\nl’ensemble des réseaux interconnectés."
+    },
+    {
+      "id": "8.11",
+      "c": 8,
+      "t": "Autres                                  ...",
+      "x": "couches                                                                couches\n\n❖ Passerelle\nles passerelles (gateways) sont des\néquipements qui relient des réseaux\ntotalement différents\nelles assurent une compatibilité au niveau des\nprotocoles de couches hautes entre réseaux\nhétérogènes et effectuent, par exemple, des\nconversions vers des protocoles et des\napplications « propriétaires »."
+    },
+    {
+      "id": "9.1",
+      "c": 9,
+      "t": "Couche réseau ...",
+      "x": "Buts de la couche réseau :\n– Acheminer des paquets tout au long d’un\nparcours, d’une source jusqu’à un destinataire.\n– Gère le trafic à travers les nœuds de\ncommunication intermédiaire.\n\n❖ Fonctions principales\nPour acheminer un paquet d’un émetteur vers\nun destinataire, il est impératif de connaître\nprécisément la localisation de l’émetteur et du\ndestinataire.\nPour ce faire, la couche réseau introduit la\nnotion d’adressage.\n\n❖ Fonctions principales\nUne fois la destination connue, il faut\ndéterminer le chemin à parcourir pour s’y\nrendre.\nLa couche réseau introduit donc la notion de\nroutage.\n– Le routage est le choix du meilleur chemin à\nprendre pour aller à la destination.\n\n❖ IP (Internet Protocol)\nIP (Internet Protocol) est la projection des\nconcepts de la couche réseau sur le modèle"
+    },
+    {
+      "id": "9.2",
+      "c": 9,
+      "t": "Internet (TCP/IP) ...",
+      "x": "– Adressage global = Adressage IP\n– Paquet = Datagramme IP\n– Routage = Routage IP\n\n❖ IP (Internet Protocol)\nLe protocole Internet (Internet Protocol ou IP)\n:\n– réalise les fonctionnalités de la couche réseau\nselon le modèle OSI\n– se situe au cœur de l'architecture TCP/IP qui met\nen œuvre un mode de transport fiable (TCP) sur\nun service réseau en mode non connecté\n\n❖ IP (Internet Protocol)\nLe service offert par le protocole IP est dit non\nfiable :\n– remise de paquets non garantie,\n– sans connexion (paquets traités indépendamment\nles uns des autres),\n– pour le mieux (best effort)\n\n❖ IP (Internet Protocol)\nLe protocole IP définit :\n– l'unité de donnée transférée dans les\ninterconnexions (datagramme),\n– la fonction de routage,\n– les règles qui mettent en œuvre la remise de\npaquets en mode non connecté"
+    },
+    {
+      "id": "9.3",
+      "c": 9,
+      "t": "IP (Internet Protocol) ...",
+      "x": "L'unité de transfert de base dans un réseau\ninternet est le datagramme qui est constituée\nd'un en-tête et d'un champ de données\n\n❖ Adressage\nIdentifier de manière unique une interface, un\nposte, une application (un processus), une\nressource, un fichier, un document, un\nutilisateur, sur un réseau\n\n❖ Adressage\nTypes d'adresses :\n– unicast : destination unique\n– multicast : destination à un groupe de stations\n– broadcast : adresse de toutes les stations\n– Anycast : destination la plus proche\n\n❖ Unicast (one to one)\nUne machine (source) envoie un message à\nune machine destination"
+    },
+    {
+      "id": "9.4",
+      "c": 9,
+      "t": "Multicast (one to many) ...",
+      "x": "Diffusion restreinte : une machine envoie\nun message aux machines d’un groupe\n\n❖ Broadcast (one to all)\nDiffusion générale : une machine (source)\nenvoie un message à toutes les machines\n\n❖ Anycast (one to one from many)\nL’adresse pointe vers de multiple destinations,\nmais seule la plus « proche » sera contactée\n\n❖ Adressage\nDifférentes adresses"
+    },
+    {
+      "id": "9.5",
+      "c": 9,
+      "t": "Adressage : adresse physique ...",
+      "x": "Une adresse physique est un identifiant\nphysique enregistré dans la carte réseau.\nLes réseaux locaux Ethernet utilisent une\nadresse physique de 48-bits (6 octets)\nconstituée de 12 chiffres hexadécimaux et\nchaque deux chiffres sont séparés par « : »\n– Exemple :    07:01:02:01:2C:4B\n\n❖ Adressage : Adresses émail, nom, URL,\nLes adresses spécifiques : sont des adresses\nnommées ou adresses faciles à mémoriser ou\nà manipuler\n– URL (Uniform Resource Locator)\n– Adresses émail\nLe passage d’un type d’adresse à un autre\nnécessite une résolution de correspondance\n(par exemple : DNS)\n\n❖ Adressage : Numéro de port\nL’adresse réseau et l’adresse physique sont\nnécessaire pour la livraison des message de\nbout en bout.\nPlusieurs processus tournent sur la même\nstation communiquent simultanément, on a\nbesoin d’une méthode pour étiqueter la\ncommunication de chaque processus\n\n❖ Adressage : Numéro de port\nOn pourrait attribuer un numéro unique à\nchaque logiciel dans l'ordinateur : chaque\nadresse de port désigne un processus"
+    },
+    {
+      "id": "9.6",
+      "c": 9,
+      "t": "Adressage : Numéro de port ...",
+      "x": "Une adresse port de TCP/IP est codé sur 16 bit\n\n❖ Adressage : Adresse logique\nLa notion d'adresse logique définit une\ndécomposition hiérarchique à un niveau : une\nadresse logique est ainsi constituée d'une\ncomposante numéro de réseau ainsi que\nd'une composante numéro d'hôte dans le\nréseau.\nLes adresses logiques permettent d'avoir\nune vision logique de l'inter-réseau.\n– Adresse IP\n– Adresse IPX\n\n❖ Adressage : conversion\nExemple\n\n❖ Adressage IP\nChaque machine (host), raccordée au réseau\nlogique IP, est identifiée par un identifiant\nlogique ou adresse IP (@IP) indépendant de\nl'adressage physique utilisé dans le réseau réel\nLe réseau logique IP masquant le réseau\nphysique"
+    },
+    {
+      "id": "9.7",
+      "c": 9,
+      "t": "Adressage IP ...",
+      "x": "Pour assurer l'acheminement des données, il\nest nécessaire de définir des mécanismes de\nmise en relation de l'adresse logique avec\nl'adresse physique connue correspondante\n(résolution d'adresses)\nLe protocole IP doit assurer le routage dans le\nréseau logique IP. A cet effet, il doit pouvoir\nidentifier le réseau logique IP concerné (Net\n\nL'adresse IP est composée de deux champs\n– NET\\_ID : identifiant du réseau IP (utilisé pour le\nroutage)\n– HOST\\_ID : identifiant de la machine dans le réseau\n\nReprésentation d’une adresse IP :\n– Notation décimale pointée\n• Exemple : 158.64.1.25\n– Les 4 octets qui constituent l’adresse sont séparés\npar un point\n– Chaque octet peut prendre une valeur de 0 à 255.\n– Exemple :\n• 1100 0000 0010 1001 0000 0110 0001 0100\n• C0 29 06 14\n• 192.41.6.20\n\nExemple : Représentation d’une adresse IP"
+    },
+    {
+      "id": "9.8",
+      "c": 9,
+      "t": "Adressage IP ...",
+      "x": "Adresse IP = 32 bits = 4 octets (représentée\npar 4 valeurs décimales [0-255] séparées par\nun .)\n– Exemple : 212.214.40.30\n5 classes d'adressage pour des besoins\ndifférents\nCertaines adresses IP sont réservées à des\nusages particuliers\n\nClasses d’adressage\n\nClasse A:\n– Adresses de 0.0.0.0 à 127.255.255.255\n– 128 réseaux différents\n– 16,7 millions d’hôtes différents par réseau\n\nClasse B:\n– Adresses de 128.0.0.0 à 191.255.255.255\n– 16384 réseaux différents\n– 65536 d’hôtes différents par réseau"
+    },
+    {
+      "id": "9.9",
+      "c": 9,
+      "t": "Adressage IP ...",
+      "x": "Classe C:\n– Adresses de 192.0.0.0 à 223.255.255.255\n– Plus de 2 millions de réseaux\n– 256 d’hôtes différents par réseau\n\nClasse D:\n– Adresses de 224.0.0.0 à 239.255.255.255\n– Adresses multicast utilisées pour envoyer des\ndatagrammes à plusieurs destinataires\nsimultanément.\nClasse E:\n– Adresses de 240.0.0.0 à 255.255.255.255\n– Destinée à un usage expérimental\n\n❖ Allocation de l’espace des adresses IP\nLes blocs des adresses IP sont distribués par\nl’IANA/ICANN aux cinq Registres Internet Régionaux\n(RIR) :\n– AFRINIC : (Afrique Registre Internet Régional) pour\nl'Afrique.\n– APNIC (Asia Pacific Network Information Center) pour les\nzones Asie et Pacifique.\n– ARIN (American Registry for Internet Numbers) pour les\nzones Amérique du Nord et une partie des Caraïbes\n– LACNIC (Latin American and Caribbean Internet Addresses\n\n❖ Registry) pour l’Amérique du Sud.\n– RIPE NCC (Européen Network Coordination Center) pour\nl’Europe et une partie de l'Asie , notamment au Moyen-"
+    },
+    {
+      "id": "9.10",
+      "c": 9,
+      "t": "Allocation de l’espace des adresses IP ....",
+      "x": "RIR\n\nRIR affectent les blocs des adresses IP aux\n\n❖ Internet Registry) relevant de leur zone\ngéographique\n• Les LIR sont généralement des\nopérateurs de Réseaux de\n\n❖ Télécommunications ou des\nfournisseurs d'accès Internet\nles LIR assignent des blocs\nà des clients."
+    },
+    {
+      "id": "9.11",
+      "c": 9,
+      "t": "Allocation de l’espace des adresses IP ....",
+      "x": "Au niveau du Maroc\n– 18 LIR sont déclarés auprès de l’AFRINIC\n• 5 opérateurs de télécommunication\n» Cimecom, Itissalat AlMaghrib, Médi Telecom et Wana\n\n❖ Vert (SADV)\n• CNRST (Centre National pour la Recherche Scientifique et\n\n❖ Technique)\n• La société Corebach Backbone SARL, la société Datapacket\n\n❖ EXPEREO MAROC, la société Maroc Datacenter MDC, la\nsociété N+ONE, UM6P ainsi que cinq prestataires des noms\nde domaine .ma\n» Genious Communication, Hostoweb, Medafrica Systems,"
+    },
+    {
+      "id": "9.12",
+      "c": 9,
+      "t": "MTDS et Pixi Media ...",
+      "x": "observatoire de l’utilisation des adresses ip au maroc (Situation à fin décembre 2024) https://www.anrt.ma\n\n❖ Allocation de l’espace des adresses IP\nRépartition des adresses IPv4 entre les LIR\nmarocains\n\n❖ Adressage IP\nCertaines adresses ont une signification\nparticulière :\n– Broadcast: adresse utilisée pour diffuser un\npaquet à toutes les stations d’un LAN\n– Rebouclage local\n– adresse utilisée au démarrage de la machine\n(0.0.0.0)\n\n❖ Adresses spéciales\nDiffusions locale et distante\n– 255.255.255.255 : adresse de broadcast sur le\nréseau IP local.\n– <NET\\_ID><111…111> : adresse de broadcast\ndirigée vers le réseau de numéro NET\\_ID"
+    },
+    {
+      "id": "9.13",
+      "c": 9,
+      "t": "Adresses spéciales ...",
+      "x": "Rebouclage local (loopback) : 127.x.y.z\n– généralement 127.0.0.1 (localhost)\n– permet de tester la pile TCP/IP locale sans passer\npar une interface matérielle\n\nl'adresse 0.0.0.0\n– utilisée par le protocole RARP (@IP de démarrage)\n– adresse de la route par défaut dans les routeurs\n\nRésumé :\n\n❖ IPv4\nde de"
+    },
+    {
+      "id": "9.14",
+      "c": 9,
+      "t": "Décomposition des adresses IPv4 ...",
+      "x": "Pour déterminer l’adresse réseau à partir de\nl’adresse IP de destination, on utilise le\nmasque de réseau. on fait un ET logique entre\nl’adresse IP de la machine et le masque de\nréseau.\n\nExemple : 192.168.52.85 avec le masque\n255.255.255.0\n\n❖ Adresses interdites\nOn remarque que l’adresse d’un réseau est\ncomposée du netid et d’un hostid où tous les\nbits sont à 0\n– Exemple : 192.168.52.0 avec un masque\n255.255.255.0\nOn en déduit qu’une adresse de réseau ne\npeut être assignée à une machine pour éviter\ntout risque de confusion. C’est donc une\nadresse interdite.\n\n❖ Adresses interdites\nLorsque l’on met tous les bits à 1 dans le hostid,\non obtient une adresse de broadcast : c’est une\nadresse de diffusion générale à toutes les\nmachines du réseau\n– Exemple : 192.168.52.255 avec un masque\n255.255.255.0. C’est aussi une adresse interdite.\nDans les plages d’adresses assignables à des\nmachines d’un réseau, il y aura toujours deux\nadresses interdites :\n– l’adresse du réseau\n– l’adresse de broadcast."
+    },
+    {
+      "id": "9.15",
+      "c": 9,
+      "t": "Décomposition des adresses IPv4 ...",
+      "x": "Exemple : 147.128.25.48 avec un masque\n255.255.255.0\n\nPour déterminer la partie réseau (netid )\nauquel appartient un équipement, l’opération\nsuivante est réalisée :\n– net-id  adresse IP ET Masque\n• Exemple : 192.168.52.0  192.168.52.85 \\&\n255.255.255.0\nPour déterminer le numéro de l’hôte (hostid )\ndans le réseau, l’opération suivante est\nréalisée :\n– host-id  adresse IP ET \\textasciitilde{}Masque\n• Exemple : 0.0.0.85  192.168.52.85 \\& 0.0.0.255\n\n❖ Notation CIDR (Classless Inter-Domain Routing)\nIl existe une autre notation (nommée CIDR)\npour exprimer l’adresse d’un réseau.\n– l’adresse est suivie d’un chiffre indiquant le\nnombre de bits à \"1\" du masque de réseau.\n\n❖ L’adresse et le masque sont séparés par « / ».\nExemple :\n147.128.25.58/24\n• Le masque 255.255.255.0, équivalent en binaire à\n11111111.11111111.11111111.00000000, sera donc\nreprésenté par /24 (24 bits à la valeur 1)."
+    },
+    {
+      "id": "9.16",
+      "c": 9,
+      "t": "On distingue deux techniques utilisables...",
+      "x": "adresse réseau IP (version 4) :\nL’adressage par classes -première technique-\n– L’ensemble des adresses IP ont été réparties dans 5 classes\n(A à E)\n– Un masque de réseau est fixé pour chaque classe\n– Seules les classes A, B et C sont utilisables pour un\nadressage de machines\n– La classe D est réservée pour l’adressage multicast\n(diffusion à un groupe)\n– La classe E est réservée pour un usage futur\n– Remarque : l’adressage par classes n’est plus utilisé sur le\nréseau public Internet. Il est donc réservé à un usage privé.\n\n❖ Techniques d’adressage d’un réseau IPv4\nL’adressage sans classes nommé CIDR\n(Classless Inter-Domain Routing ) RFC 1519 -\ndeuxième technique-\n– Comme son nom l’indique, l’adressage par classes\nest ici abandonné\n– Il n’y a donc plus de masque fixé par référence à\nune classe\n– Remarque : l’adressage sans classes CIDR est\nnotamment utilisé sur le réseau public Internet.\n\n❖ Types de réseaux\nOn distingue deux types de réseaux\nadressables en IP :\n– le réseau public Internet où chaque équipement\nconnecté doit posséder une adresse unique et\nenregistrée au niveau mondial.\n– les réseaux privés, dans ce cas le choix des\nadresses est libre et ne doivent être uniques que\ndans ce réseau.\n\n❖ Adresses privées\nCertaines plages d’adresses sont réservées à\nun usage privé et ne sont pas attribuées.\nElles ne peuvent pas être utilisées pour\ncommuniquer dans Internet mais devraient\nl’être dans un réseau IP privé.\nLes routeurs d’Internet signaleront\n(normalement) une erreur s’ils reçoivent un\ndatagramme à destination d’une de ces\nadresses."
+    },
+    {
+      "id": "9.17",
+      "c": 9,
+      "t": "Adresses IP privées ...",
+      "x": "Ces plages sont définies dans les RFC 1918 et\n\n❖ RFC 3330, sont :\n– 10.0.0.0 à 10.255.255.255\n– 172.16.0.0 à 172.31.255.255\n– 192.168.0.0 à 192.168.255.255\n– 169.254.0.0 à 169.254.255.255 (utilisées pour\nl'autoconfiguration des hôtes)\n\nRemarque : Pour interconnecter un réseau privé avec Internet, on\nutilisera un routeur NAT (Network Address Translation) qui permet de\nremplacer l’adresse IP source privée par l’adresse publique du routeur.\n\n❖ Sous-réseaux (subneting)\nEn 1984, devant la limitation du modèle de\nclasses, la RFC 917 (Internet subnets) crée le\nconcept de sous-réseau."
+    },
+    {
+      "id": "9.18",
+      "c": 9,
+      "t": "Ceci permet par exemple : ...",
+      "x": "d’utiliser une adresse de classe B comme 256\nsous-réseaux de 254 ordinateurs au lieu d’un\nseul réseau de 65536 ordinateurs, sans\ntoutefois remettre en question la notion de\nclasse d’adresse.\nd’optimiser l’utilisation et la sécurité du\nréseau en le segmentant\nde maîtriser l’adressage à l’intérieur du réseau\n\n❖ Adressage IPv4 des sous-réseaux\nPour segmenter un réseau en sous-réseaux, il\nfaut alors décomposer la partie hostid de\nl’adresse IP en deux parties :\n– une adresse de sous-réseau (subnetid )\n– et une adresse machine (hostid )\n\n❖ Adressage IPv4 des sous-réseaux\nExemple : pour créer 3 sous-réseaux\n– il faudra prendre 2 bits dans la partie hostid et on\ncréera 22 donc 4 sous-réseaux :\n• 00 pour le sous-réseaux n°0\n• 01 pour le sous-réseaux n°1\n• 10 pour le sous-réseaux n°2\n• 11 pour le sous-réseaux n°3\n\n❖ Masque de sous-réseaux\nÉvidemment, le masque de départ change et\ndoit maintenant englober la partie netid et la\npartie subnetid.\nCe nouveau masque se nomme masque de\nsous-réseaux."
+    },
+    {
+      "id": "9.19",
+      "c": 9,
+      "t": "Masque de sous-réseaux ...",
+      "x": "Exemple : pour le réseau 192.168.1.0/24\ndécoupé en 4 sous-réseaux\n– netid = 24 bits\n– subnetid = 2 bits\n– hostid = 32 - 24 - 2 = 6 bits\n\n❖ Le masque de sous-réseau sera : 24 + 2 = 26 bits\nsoit 255.255.255.192\n\nle netmask permet de savoir si la machine\nsource et destination sont sur le même sous-\nréseau\n\nExemple :"
+    },
+    {
+      "id": "9.20",
+      "c": 9,
+      "t": "Masque ...",
+      "x": "l'adresse de\nsous-réseau\nl'adresse de\nl'Hôte dans ce\nsous-réseau.\n\n❖ Plage d’adresses des sous-réseaux\nLe nombre de machines adressables dans\nchaque sous-réseau sera de 2 nb bits hostid - 2\nadresses interdites.\n\n❖ Plage d’adresses des sous-réseaux\nExemple : pour le réseau 192.168.1.0/24 découpé\nen 4 sous-réseaux\n– Le nombre de machines adressables dans chaque\nsous-réseau sera de : 26-2 adresses interdites = 62\nadresses\n• sous-réseaux n°0 192.168.1.0/26 : 192.168.1.1 à\n192.168.1.62 (broadcast =192.168.1.63)\n• sous-réseaux n°1 192.168.1.64/26 : 192.168.1.65 à\n192.168.1.126 (broadcast =192.168.1.127)\n• sous-réseaux n°2 192.168.1.128/26 : 192.168.1.129 à\n192.168.1.190 (broadcast =192.168.1.191)\n• sous-réseaux n°3 192.168.1.192/26 : 192.168.1.193 à\n192.168.1.254 (broadcast =192.168.1.255)\n\n❖ Masque de sous-réseaux\nExercice : On attribue le réseau 132.45.0.0/16. Il\nfaut redécouper ce réseaux en 8 sous-réseaux.\n1. Combien de bits supplémentaires sont\nnécessaires pour définir huit sous-réseaux ?\n2. Quel est le masque réseau qui permet la création\nde huit sous-réseaux ?\n3. Quelle est l'adresse réseau de chacun des huit\nsous-réseaux ainsi définis ?\n4. Quelle est la plage des adresses utilisables du\nsous-réseau numéro 3 ?\n5. Quelle est l'adresse de diffusion du sous-réseau\nnuméro 4 ?"
+    },
+    {
+      "id": "9.21",
+      "c": 9,
+      "t": "Masque de sous-réseaux ...",
+      "x": "Exercice : le réseau 132.45.0.0/16.\n1. Combien de bits supplémentaires sont\nnécessaires pour définir huit sous-réseaux ?\nCorrection :\n\n❖ Netmask: 255.255.0.0 = 16    11111111. 11111111. 00000000.00000000\n1. Pour découper l'adresse réseau de départ en huit\nsous-réseaux, 3 bits supplémentaires sont\nnécessaires (23 = 8).\n\nExercice : le réseau 132.45.0.0/16.\n2. Quel est le masque réseau qui permet la création\nde huit sous-réseaux ?\nCorrection :\n\n❖ Netmask: 255.255.224.0 = 19 11111111. 11111111. 111 00000.00000000\n2. Le nouveau masque réseau est 255.255.224.0"
+    },
+    {
+      "id": "9.22",
+      "c": 9,
+      "t": "Masque de sous-réseaux ...",
+      "x": "Exercice : le réseau 132.45.0.0/16.\n3. Quelle est l'adresse réseau de chacun des huit\nsous-réseaux ainsi définis ?\n• Correction :\n3. Pour obtenir la liste des huit adresses de\nsous-réseaux, on construit la table des\ncombinaisons binaires sur les 3 bits\nsupplémentaires du masque réseau\n\n• Correction :\n\nExercice : le réseau 132.45.0.0/16.\n4. Quelle est la plage des adresses utilisables du\nsous-réseau numéro 3 ?\nCorrection :\n4. Adresse du sous-réseau numéro 3 : 132.45.96.0\n\nExercice : le réseau 132.45.0.0/16.\n5. Quelle est l'adresse de diffusion du sous-réseau\nnuméro 4 ?\nCorrection :\n5. Adresse de diffusion du sous-réseau numéro 4 :\n132.45.159.255"
+    },
+    {
+      "id": "9.23",
+      "c": 9,
+      "t": "Configuration réseau ...",
+      "x": "Sous Windows (IPv4)\n\n❖ VLSM\nVLSM = Variable Length Subnet Mask\n– Masque de sous-réseau à longueur variable\nPermet à un réseau classless d'utiliser\nplusieurs masques de sous-réseaux\nAvoir des sous-réseaux de tailles différentes.\nEn variant la longueur du masque\nObtention des sous-réseaux plus appropriés aux\nbesoins.\n\n❖ VLSM\nAvec la technique VLSM, un administrateur\nréseau peut utiliser :\n– un masque long sur les réseaux qui ne comportent\npas beaucoup d’hôtes\n– un masque court sur les sous-réseaux qui\ncomportent beaucoup d’hôtes.\n\n❖ VLSM\nExemple : une entreprise souhaite utiliser\nl'adresse de réseau 192.168.1.0/24.\n– Bâtiment A :\n• Premier étage : 25 machines\n• Deuxième étage : 25 machines\n• Troisième étage : 25 machines\n– Bâtiment B :\n• Premier étage : 50 machines\n• Deuxième étage : 50 machines"
+    },
+    {
+      "id": "9.24",
+      "c": 9,
+      "t": "VLSM : Exemple ...",
+      "x": "Il faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts\n– Un sous-réseau de 50 hosts\n– Un sous-réseau de 25 hosts\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts\n/25         126\n– Un sous-réseau de 25 hosts                 /26         62\n– Un sous-réseau de 2 hosts                  /27         30\n/28         14\n/29         6\n/30         2\n\nIl faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts? 62 OK => / 26\n– Un sous-réseau de 50 hosts\n– Un sous-réseau de 25 hosts\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts           /25       126\n– Un sous-réseau de 25 hosts           /26       62\n/27       30\n– Un sous-réseau de 2 hosts\n/28      14\n/29      6\n/30      2"
+    },
+    {
+      "id": "9.25",
+      "c": 9,
+      "t": "VLSM : Exemple ...",
+      "x": "Il faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 50 hosts? 62 OK => / 26\n– Un sous-réseau de 25 hosts\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts           /25       126\n– Un sous-réseau de 25 hosts           /26       62\n/27       30\n– Un sous-réseau de 2 hosts\n/28       14\n/29       6\n/30       2\n\nIl faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 25 hosts? 30 OK\n\n❖ Masque Nb hosts\n=> / 27                                   /25       126\n– Un sous-réseau de 25 hosts               /26       62\n/27       30\n– Un sous-réseau de 25 hosts\n/28       14\n– Un sous-réseau de 2 hosts                /29       6\n/30       2"
+    },
+    {
+      "id": "9.26",
+      "c": 9,
+      "t": "VLSM : Exemple ...",
+      "x": "Il faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 25 hosts => /27\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts? 30 OK    /25       126\n=> / 27                               /26       62\n/27       30\n– Un sous-réseau de 25 hosts\n/28       14\n– Un sous-réseau de 2 hosts            /29       6\n/30       2\n\nIl faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 25 hosts => /27\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts => /27    /25       126\n– Un sous-réseau de 25 hosts? 30 OK    /26       62\n/27       30\n=> / 27\n/28       14\n– Un sous-réseau de 2 hosts            /29       6\n/30       2"
+    },
+    {
+      "id": "9.27",
+      "c": 9,
+      "t": "VLSM : Exemple ...",
+      "x": "Il faut découper 192.168.1.0/24 en :\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 50 hosts => /26\n– Un sous-réseau de 25 hosts => /27\n\n❖ Masque Nb hosts\n– Un sous-réseau de 25 hosts => /27                    /25       126\n– Un sous-réseau de 25 hosts => /27                    /26       62\n/27       30\n– Un sous-réseau de 2 hosts? 2 OK\n/28       14\n=> /30                                                /29       6\n/30       2\n\n192.168.1.0\n/24\n192.168.1.0 192.168.1.64 192.168.1.128 192.168.1.192                     /26\n\n❖ Étage 1 Bat. B Étage 2 Bat. B\n192.168.1.128 192.168.1.160 192.168.1.192 192.168.1.224                  /27"
+    },
+    {
+      "id": "9.28",
+      "c": 9,
+      "t": "Étage 1 Bat. A   Étage 2 Bat. A    Étage...",
+      "x": "192.168.1.224             192.168.1.228, 192.168.1.232   /30\n\n❖ Introduction\nIP version 1,2 et 3 : n’ont jamais formellement été affectées.\nJanvier 1980 : le premier RFC décrivent IPv4 (RFC 760)\nAu début gaspillage important d’adresse\n– par exemple: assignation d’une classe A à une entreprise\n1993 : épuisement des classes B\nPrévision de saturation pour 1994 !\nMesures d’économie\n– CIDR (Classless Internet Domain Routing)\n• Allouer dans les anciennes classes A \\& B\n– NAT et adressage privé\nNaissance de IPv6 en 1996\nA la fin de l'année 2025, le déploiement d'IPv6 est encore limité, la\nproportion d'utilisateurs Google en IPv6 étant estimée à 49 \\%\n(Google IPv6 statistics)\n\n❖ IPv6\nGoogle statistics\n\n❖ IPv6\nAu niveau du Maroc\n– A fin décembre 2024, vingt-six (26) plages\nd’adresses IPv6 sont attribuées au Maroc (vs 13 à\nfin 2023).\nSource : Observatoire de l’utilisation des adresses IP au Maroc (Situation à fin décembre 2024) https://www.anrt.ma"
+    },
+    {
+      "id": "9.29",
+      "c": 9,
+      "t": "IPv4 vs IPv6 ...",
+      "x": "IPv6 a été conçu comme une évolution de IPv4 et non\ncomme un changement radical du protocole IP.\n– Par conséquent, les applications fonctionnant sous IPv4\ndevraient fonctionner normalement sous IPv6.\nLes changements entre IPv4 et IPv6 peuvent être\nclassées de la manière suivante :\n– capacités d’adressage\n• La taille des adresses passe de 32 à 128 bits ;\n– introduction d’un nouveau type d’adressage appelé\nanycast\n• un paquet envoyé à une adresse anycast est délivré à une des\nmachines appartenant au groupe désigné par l’adresse\n\n– simplification du format de l’entête de paquet\n• objectif : réduire le coût de traitement des entêtes\n• certains champs ont été supprimés et d’autres sont\nrendus optionnels ;\n– possibilités de définition de la qualité de service\ndemandée par certains types d’applications (les\napplications temps réel notamment)\n– capacités d’authentification et de confidentialité\n• IPsec\n\n❖ Adresses IPv6 sur 128 bits\nAdresses IPv6 sur 128 bits (16 octets)\n– soit 2128 = 340 282 366 920 938 463 463 374 607\n431 768 211 456 adresses disponibles\n≈3,4. 1038 adresses possibles\n(contre 232 =4294967296 ≈ 4,2. 109 adresses\npossibles en IPv4)\nEn théorie : 6,67. 1017 adresses au millimètre\ncarré de la surface terrestre.\n\n❖ Types d’adresses\nPas de broadcast\nIPv6 définit trois types d’adresses :\n– Unicast: une adresse pour chaque interface\n(équipement)\n– Multicast: une adresse désigne un groupe\nd’interfaces.\n– Anycast: un paquet envoyé à une adresse Anycast\nest remis à l'interface « la plus proche » parmi le\ngroupe d'interfaces désigné par cette adresse"
+    },
+    {
+      "id": "9.30",
+      "c": 9,
+      "t": "Représentation des adresses ...",
+      "x": "Format binaire :\n0010000000000001 0000011001100000\n0000000000000000 0000000000000000\n0000000100101001 0000000000100000\n0000001001010100 0000000000000000\nFormat canonique (hexadécimal)\n– 2001:0660:0000:0000:0129:0020:0254:0001\n\nDans un champ, il n’est pas nécessaire d’écrire\nles zéros places en tête :\n– 2001:660:0:0:129:20:254:1\nFormat compressé : plusieurs champs nuls\nconsécutifs peuvent être abrégés par « : : »\n(une seule abréviation maximum par adresse)\n\nExemples :\n– fe80:0:0:0:216:76ff:fe04:f24a\nè fe80::216:76ff:fe04:f24a\n– 2001:660:7307:31:129:20:0:0\nè 2001:660:7307:31:129:20::\n– 2001:0:0:18:0:0:0:1\nè 2001::18:0:0:0:1 ou 2001:0:0:18::1\nè 2001::18::1 incorrect\n– 1:0:0:0:0:0:0:1 è 1::1\n– 0:0:0:0:0:0:0:1 è ::1\n– 0:0:0:0:0:0:0:0 è ::\n\nFormat mixte : qui intervient lors de\nl’utilisation conjointe d’adresses IPv4 et IPv6\n– x : x : x : x : x : x : d.d.d.d\n– Exemples :\n• 0:0:0:0:0:0:192.168.2.14\n• 0:0:0:0:0:FFFF:212.117.12.3"
+    },
+    {
+      "id": "9.31",
+      "c": 9,
+      "t": "Représentation des adresses ...",
+      "x": "IPv6 reprend la notation du CIDR :\n\n❖ Adresse IPv6 / Nombre de bits du préfixe réseau\n– Attention : L'adresse est en hexadécimale alors\nque l'étendue exprime un nombre de bits.\n• Ex: 2001:660:3003::/48\n\n❖ URL et adresses IPv6\nURL (Uniform Resource Locator) également\nappelé adresse Web permet de localiser une\nressource sur Internet.\nIl est possible d’utiliser une adresse IP dans\n\n❖ L’URL\n– En IPv4 : ex. http://82.80.15.80:80/\n– En IPv6 : ex. http://2001:1:4F3A::206:AE14:80\n• Ambiguïté! Donc, l’adresse doit être tapée entre les\ncrochets [ et ].\n• Exemple:\nhttp:// [2001:1:4F3A::206:AE14]:80/index.html"
+    },
+    {
+      "id": "9.32",
+      "c": 9,
+      "t": "Des adresses IPv6 ...",
+      "x": "Une machine ne possède pas une, mais des adresses\n\nChaque adresse peut être utilisé suivant un contexte\nparticulier :\n– Adresse de «lien local» obtenu par configuration\nautomatique\n– Adresse «globale» (routable dans Internet)\n– Adresse «locale» au sens réseau («privée»)\n– Adresse de boucle (équivalent au loopback 127 de IPv4)\n– Adresse IPv4 «mappée» pour pouvoir communiquer avec\ndes machines IPv4\n– Possibilité d’avoir une adresse IPv6 temporaire\n– ....\n\n❖ Types d’adresses IPv6\nExemple d’adresses IPv6\n2001:DB8:8001::80\n– Notation hexadécimale (base 16)\n2001:DB8:8001::80/64\n– Le préfixe réseau est 2001:DB8:8001::/64\n– L’identifiant de la machine est 80\nPar défaut, les premiers 64 bits représente le\npréfixe réseau, et les derniers 64 bits\nl’identifiant de la machine.\n\n❖ Adresse non-spécifiée\nL'adresse 0:0:0:0:0:0:0:0 est appelée adresse non\nspécifiée.\n– en abrégé ::\nCette adresse ne doit jamais être allouée à un hôte et\nindique l'absence d'adresse.\nUn hôte en cours d'initialisation et qui ne dispose pas\nencore d'autre adresse peut utiliser l'adresse non\nspécifiée en tant qu'adresse source.\nCette adresse ne doit jamais être une adresse de\ndestination."
+    },
+    {
+      "id": "9.33",
+      "c": 9,
+      "t": "Adresse de loopback ...",
+      "x": "Toute machine doit avoir une interface dite de\nboucle (loopback)\nEquivalent IPv4 : 127.0.0.1/32\nUne adresse unique en IPv6: ::1/128\n\n❖ Identifiant d'interface\nComment obtenir l'identifiant d'interface sur\n64 bits ?\n– manuellement (pour qu’elle ne change pas)\n– à partir de l'adresse de niveau 2 de l'interface\n– aléatoirement (pour des raisons de\nconfidentialité)\n– à partir d’une clé publique pour au contraire\nauthentifier la machine de l’interlocuteur de\nmanière sûre\n\n❖ Rappel Adresse Ethernet (Norme IEEE\n802)\n3 octets Poids fort : constructeur\n– 2 bits particuliers U (Universel) et G (Multicast)\n3 octets Poids faible : identifiant unique chez\nle constructeur\n– Exemple : c8:bc:c8:d1:99:2f\n\n❖ EUI-64 dérivé d'une adresse MAC\najout de FFFE au milieu et\ninversion du 7ieme bit"
+    },
+    {
+      "id": "9.34",
+      "c": 9,
+      "t": "EUI-64 dérivé d'une adresse MAC ...",
+      "x": "Exemple :\n\n❖ Adresses unicast lien-local\nExemple :\n– Carte Ethernet d'adresse : 00:16:76:04:f2:4a\nèAdresse lien-local : fe80::216:76ff:fe04:f24a\n\n❖ Configuration réseau\nSous Windows (IPv6)\n\n❖ Résolution d’adresses\nLa communication entre machines ne peut\ns'effectuer qu'à travers l'interface physique\nLes applications ne connaissant que des adresses\nlogiques IP\n– comment établir le lien adresse IP / adresse physique\n?\nLa couche IP doit établir une correspondance\nentre l’adresse IP dans le réseau logique et\nl’adresse physique.\n– Ce mécanisme s’appelle mécanisme de résolution\nd’adresses."
+    },
+    {
+      "id": "9.35",
+      "c": 9,
+      "t": "ARP : Address Resolution Protocol ...",
+      "x": "Pour les réseaux permettant la diffusion, la\nméthode privilégiée est ARP (Address\n\n❖ Resolution Protocol), définie dans la RFC 826.\nARP = Protocole de résolution d’adresse\n\nARP a l'avantage d'être à la fois dynamique et\ndécentralisée :\n– les changements d'association adresse IP/adresse\n\n❖ MAC sont automatiquement et rapidement pris\nen compte\n– aucun serveur n'est nécessaire et une panne\nd'une station n'a aucun impact global"
+    },
+    {
+      "id": "9.36",
+      "c": 9,
+      "t": "ARP : Address Resolution Protocol ...",
+      "x": "ARP a été originellement défini pour IP et\n\n❖ Ethernet. Mais il est plus général et peut être\nutilisé sur tout type de réseau permettant la\ndiffusion, pour le compte de différents\nprotocoles réseau (dont IP)\nIP sur Ethernet utilise systématiquement ARP\n\n❖ ARP : Technique utilisée\nDiffusion d’une requête à destination de toutes\nles machines du réseau (broadcast Ethernet)\nLa requête ARP contient l’adresse IP du\ndestinataire\n– (mais pas physique, inconnue)\nLe requête consiste à demander à toutes les\nmachines du réseau :\n– « si vous êtes le propriétaire de cette adresse IP,\nveuillez me répondre»\nLe propriétaire de l’adresse IP répond en\nfournissant son adresse matérielle.\n\n❖ ARP : Technique utilisée\nExemple : une station/routeur S a un\ndatagramme à transmettre à une\nstation/routeur D du même réseau."
+    },
+    {
+      "id": "9.37",
+      "c": 9,
+      "t": "ARP : Technique utilisée ...",
+      "x": "S envoie en broadcast une requête ARP\nsignifiant qu'il souhaite obtenir l'adresse\nphysique correspondant à D\n\nla requête est reçue et traitée par toutes les\nstations du réseau\n\nseule la station d'adresse D répond en\nenvoyant en unicast à S une réponse ARP\ncontenant l'adresse physique demandée\n\nFormat d’un paquet ARP"
+    },
+    {
+      "id": "9.38",
+      "c": 9,
+      "t": "Format d’un paquet ARP ...",
+      "x": "Type de réseau\n– précise le réseau physique utilisé et donc le type\nd'adresse recherchée\n• Type de réseau vaut 0x0001 pour Ethernet\nProtocole\n– précise la couche réseau utilisée et donc le type d'adresse\nà partir duquel la résolution doit être opérée\n• Protocole vaut 0x0800 pour IP\n\nla taille du datagramme ARP dépend des\nprotocoles en jeu :\n– la taille (en octets) des adresses physiques (comme\n\n❖ Ethernet) est indiquée par le champ Longueur\nadresses physiques (L. @phy)\n– la taille (en octets) des adresses protocole (comme IP)\nest indiquée par le champ Longueur adresses\nprotocole (L. @pro)\nles requêtes et les réponses ont le même format ;\nle champ Opération indique s'il s'agit d'une\nrequête (Opération vaut 1) ou d'une réponse\n(Opération vaut 2)\n\nqu'il s'agisse d'une requête ou d'une réponse .\n– adresse physique source contient l'adresse physique de\nl'émetteur du datagramme\n– adresse protocole source contient son adresse réseau\nadresse physique destination est :\n– inconnue pour une requête (00:00:00:00:00:00\npour Ethernet)\n– celle du destinataire pour une réponse\nadresse protocole destination contient\nl'adresse réseau du destinataire (dans une\nrequête, c'est l'adresse à résoudre)\nExemple : Requête ARP pour IP sur Ethernet V2\nSituation (Requête ARP) :\nadresses de    l'émetteur           la cible"
+    },
+    {
+      "id": "9.39",
+      "c": 9,
+      "t": "Ethernet :        08:00:05:0e:ab:51 ...",
+      "x": "recherchée\n– Trame Ethernet V2 (en hexadécimal)\nExemple : Requête ARP pour IP sur Ethernet V2\nRequête ARP en binaire :\nExemple : Réponse ARP pour IP sur Ethernet V2\nSituation (réponse ARP):\nadresses de: l'émetteur de la réponse destinataire de la réponse\n\n❖ Ethernet :         08:00:07:5c:10:0a\n08:00:05:0e:ab:51\n– Trame Ethernet V2 (en hexadécimal)\nExemple : Réponse ARP pour IP sur Ethernet V2\nRéponse ARP en hexadécimal:\n\n❖ Mécanisme de cache\nPour limiter le nombre de requête ARP\n– A la réception d’une réponse, la correspondance\nl'adresse MAC et l'adresse IP est mise dans une\ntable, un timer d’effacement est lancé\n– Timer associé à une adresse de quelques minutes\n(dépend des implémentations)\n– Si la correspondance est dans la table, l’adresse\n\n❖ MAC est fournie à IP sans émission de requête sur\nle réseau"
+    },
+    {
+      "id": "9.40",
+      "c": 9,
+      "t": "Cache ARP ...",
+      "x": "Chaque station maintient un cache des adresses\nles plus récemment utilisées dans une table\nd'association d'adresse.\nLe cache ARP :\n– contient une liste d'associations (adresse MAC,\nadresse IP)\n– évite d'émettre une nouvelle requête lorsque\nl'association a déjà été obtenue\n– le délai normal d’expiration d’une entrée dans le\ncache est de 20 minutes après la création de cette\nentrée\n– chaque fois qu'une association est confirmée, sa\ndurée de vie est remise à 20 min\n\nTraitement de la requête\n– les requêtes étant envoyées en broadcast, toutes\nles stations les traitent\n– or elles incluent l'adresse MAC et l'adresse IP de\nl'émetteur\n– en recevant une requête, les stations mettent à\njour leur cache avec les infos sur l’émetteur\n\nExemple :\n\n❖ Résolution intra-réseaux\nLorsqu’une machine doit envoyer un\ndatagramme à une machine appartenant au\nmême réseau"
+    },
+    {
+      "id": "9.41",
+      "c": 9,
+      "t": "Résolution inter-réseaux ...",
+      "x": "Lorsqu’une machine doit envoyer un\ndatagramme à une machine appartenant à un\nautre réseau, la résolution s’effectue en deux\ntemps\nExemple de la résolution inter-réseaux\n\n❖ Proxy ARP\nGénéralement, une station émettrice peut\nsavoir si la destination se trouve:\n– sur le même réseau: dans ce cas elle lance une\nrequête ARP (je cherche @MAC de la station de\ndestination ayant @IP ) sans passer par le routeur\n– sur un autre réseau: dans ce cas elle lance une\nrequête ARP (je cherche @MAC de la passerelle\nayant @IP )\n\n❖ Proxy ARP\nMais supposant, les cas suivants : si la station\némettrice\n– Se trompe et juge locale une adresse IP externe\n• Cet accident pouvant résulter d’une erreur de configuration du\nmasque réseau de l’émetteur.\n– ou n’a pas l’@IP de la passerelle, et la destination se\ntrouve sur un autre réseau :\ndans ces cas elle lance une requête ARP (je cherche\n@MAC de la station de destination ayant @IP ).\nè Le routeur isole la requête et répond à la place de la\ndestination : Il agit comme un Proxy ARP\n\n❖ Proxy ARP\nExemple :"
+    },
+    {
+      "id": "9.42",
+      "c": 9,
+      "t": "Le routeur (Proxy ARP) répond ...",
+      "x": "à toute requête ARP visant les\ndestinations 141.23.56.21,\n141.23.56.22 et 141.23.56.23\n\n❖ Gratuitous ARP (ou ARP gratuit)\nLors du lancement d'une station celle-ci peut\némettre gratuitement (sans nécessité) un\nmessage de demande de résolution d'adresse\nsur sa propre adresse:\n– elle s'assure que son adresse IP est unique.\n– les autres stations apprennent son adresse\nphysique.\n– les autres stations mettent à jour leur entrée :\n• la station a changée de carte de communication donc\nd‘adresse physique.\n\n❖ Commandes ARP\nOn peut consulter la table ARP à l’aide de la\ncommande : arp -a\n\n❖ Commande ARP : gestion du cache ARP\narp ip-addr :\n– résout l'adresse de la station passée en paramètre\narp -a :\n– visualise le contenu de la table\narp -s ip-addr mac-addr :\n– ajoute une entrée dans la table d'association\nd'adresse\narp -d ip-addr :\n– supprime une entrée de la table d'association\nd'adresse"
+    },
+    {
+      "id": "9.43",
+      "c": 9,
+      "t": "Format du datagramme IPv4 ...",
+      "x": "Version ( 4 bits) :\n– Numéro de version du protocole IP\n– La version actuelle est 4 (IPv4), 0100 en binaire\n– Une transition vers IPv6 est en cours.\n\nLongueur En-tête (4 bits) :\n– Champ IHL (Internet Header Length)\n– Longueur de l’en-tête en mots de 32 bits\n– Nécessaire puisque la longueur du champs\n«options » est variable\n• La valeur minimale est 5, sans options.\n• La valeur maximale est de 15, soit 60 octets au\nmaximum pour l’en-tête IP.\n\nLongueur Totale (16 bits) :\n– Indique la longueur totale, en octets, du\ndatagramme en-tête compris (20 < Longueur\n\nOptions (variable) :\n– Liées au routage ou à la qualité de service\n– La plupart des datagrammes ne contiennent pas\nd’options"
+    },
+    {
+      "id": "9.44",
+      "c": 9,
+      "t": "Format du datagramme IPv4 ...",
+      "x": "Informations liées au routage\n– Adresses IP de la source et de la destination\n– TOS (8 bits) : Type Of Service, critères de qualité de\nservice\n• TOS (RFC 1349) a été redéfini et remplacé par le champ DS\n(Differntied Services, RFC 2474). DS comporte deux champs:\n– DSCP Differentiated Service Code Point, 6 bits utilisé pour\nindiquer le type de service (Voix sur IP, vidéo, jeu, message, …)\n– ECN Explicit Congestion Notification, 2 bis utilisé pour la gestion\nde l'engorgement\n– TTL (8 bits) : Time To Live, durée de vie du\ndatagramme dans le réseau\n\n❖ TTL (Time To Live)\nTTL ou Durée de Vie : compteur qui sert à\nlimiter la durée de vie des datagrammes.\nLorsqu’un datagramme traverse un routeur,\ncelui-ci décrémente la valeur du TTL.\n– Ceci permet d’empêcher que des datagrammes\nn’errent sans fin (boucle sans fin) dans le réseau.\nEn effet, un paquet pourrait «jouer »au ping\npong entres routeurs et ce en fonction des\ninformations de routage que ces derniers\npossèdent (état des lignes, métriques, …)\n\n❖ TTL (Time To Live)\nLe paquet est délivré\n\n❖ TTL (Time To Live)\nLe paquet est détruit"
+    },
+    {
+      "id": "9.45",
+      "c": 9,
+      "t": "Format du datagramme IPv4 ...",
+      "x": "Informations liées à la fragmentation\n– Identifiant de datagramme (16 bits) :\n• Il permet à l’hôte destinataire de déterminer à quel\ndatagramme appartient un fragment reçu.\n• Tous les fragments d’un datagramme contiennent la\nmême valeur d’identification.\n\nInformations liées à la fragmentation\n– FLAG (3 bits dont le premier n’est pas utilisé) :\nindication d’état de fragmentation\n• DF (Don’t Fragment): un bit qui permet de demander\naux routeurs intermédiaires de ne pas fragmenter le\ndatagramme. Dans certains cas, le destinataire n’est pas\nen mesure de recomposer les datagrammes qui\nseraient fragmentés.\n• MF (More Fragments): ce bit est positionné à 1 pour\ntous les fragments sauf le dernier.\n\nInformations liées à la fragmentation\n– Déplacement dans le fragment :\n• indique la position (déplacement, offset) du fragment\ndans le datagramme courant (même identification).\n• Tous les fragments (à l’exception du dernier) doivent\navoir un multiple de 8 octets.\n• Ce champ contient 13 bits, soit une valeur maximale de\n8.192 (= 2\\textasciicircum{}13) fragments par message (unité du niveau\n4).\n• 8.192 x 8 = 65.536 octets au total.\n\n❖ Fragmentation\nExemple :"
+    },
+    {
+      "id": "9.46",
+      "c": 9,
+      "t": "Fragmentation ...",
+      "x": "Pour assurer le réassemblage, IP doit attendre\nl’arrivée de tous les fragments.\nLes opérations de fragmentation et de\nréassemblage sont coûteuses en terme de\npuissance de calcul et de mémoire.\nDe plus, en mode datagramme, la perte d’un\nseul fragment provoque une reprise par la\ncouche TCP de la totalité du segment\nfragmenté.\n\n❖ Format du datagramme IPv4\nProtocole:\n– spécifie à quel processus de la couche transport\ndoit on passer le datagramme\n• 6 : TCP\n• 17 : UDP\n• 1 : ICMP\n\n❖ Format du datagramme IPv4\nSomme de contrôle d’en-tête :\n– permet de détecter les erreurs générées par des\nmots mémoire erronés dans un routeur.\n– Cette somme de contrôle doit être recalculée dans\nchaque routeur. Pourquoi ?\n• car au moins le TTL change à chaque passage dans un\nrouteur.\n\n❖ ICMP\nICMP = Internet Control Message Protocol\n(RFC 792)\nICMP est un module obligatoire d'IP\nIl assure deux fonctions principales :\n– informer la source d’une erreur réseau (message\nd’erreur)\n– formuler une demande d’état à un système\n(message d’information)"
+    },
+    {
+      "id": "9.47",
+      "c": 9,
+      "t": "ICMP ...",
+      "x": "les messages ICMP sont de deux natures :\n– les messages d'erreurs : suite à une erreur\nconstatée sur un datagramme (qui entraîne le plus\nsouvent sa destruction)\n– les messages d'interrogation/information :\nmessages divers contribuant au (ou informant sur\nle) bon fonctionnement des équipements\n\nLes messages ICMP sont encapsulés dans un\ndatagramme IP (champ Protocole =1)\n\nmais IP utilisant ICMP, les deux se situent au\nmême niveau\n\nIP est un service non fiable\nles causes rendant impossible la remise d'un\ndatagramme peuvent être nombreuses\n– panne de ligne de transmission, ou d'un processeur\n– destinataire déconnecté\n– TTL insuffisant\n– congestion des routeurs intermédiaires\n– checksum erroné\n– mauvaises tables de routage\n– …\nnéanmoins, les erreurs ne sont pas toutes\ndétectables"
+    },
+    {
+      "id": "9.48",
+      "c": 9,
+      "t": "ICMP ...",
+      "x": "lorsqu'une erreur (dans la remise d'un datagramme) est\ndétectée par un routeur ou la station destinataire, un\nrapport d'erreur (message ICMP) est envoyé à l'émetteur\nd'origine) du datagramme\n\nle message inclut au moins 28 octets (l'en-tête et\nles 64 premiers bits) du datagramme ayant causé\nl'erreur, contenant les en-têtes des protocoles de\nniveau supérieur, ce qui permet notamment de\ndéterminer le processus émetteur pour l'informer\nil n'est envoyé qu'à l'émetteur du datagramme\nqui, parfois, n'y peut rien (exemple d'une\nmauvaise table de routage d'un routeur\nintermédiaire)\naucun message d'erreur n'est envoyé si le\ndatagramme en cause contient un message ICMP\nde la catégorie erreur\n\n❖ Structure générale\nType (1 octet) : type de service ICMP\nCode (1 octet) : subdivision du type de service\nTotal de contrôle (2 octets) : protection du\ncontenu du message ICMP (même algorithme\nque IP)\n\n❖ Structure générale\nAutres champs (4 octets), selon la valeur du\nchamp Type (numéro de séquence,\nidentificateur, adresse IP…)\nDonnées ICMP:\n– données (Echo), adresse IP, masque d’adresse,\ndate...\n– en-tête IP et 8 premiers octets du datagramme en\nerreur (messages d’erreur)"
+    },
+    {
+      "id": "9.49",
+      "c": 9,
+      "t": "Format du message ICMP ...",
+      "x": "Type\n– 0 Réponse d'écho\n– 3 Destination inconnue\n– 4 Limitation du débit par la source\n– 5 Redirection (changement de route)\n– 8 Requête d'écho\n– 11 TTL de datagramme expiré\n– 12 Paramètre IP inintelligible\n– 13 Requête d'horodatage\n– 14 Réponse d'horodatage\n– 17 Requête de masque d'adresse\n– 18 Réponse de masque d'adresse\n\nle champ Code (8 bits) est utilisé pour préciser\nle message\n– Code d'erreur, fonction de type :\n• Type 3 (Destination inaccessible)\n» Réseau inaccessible.\n» Host\n» Protocole\n• Type 5 (Redirection)\n» Par réseau\n» Par Host\n\nSomme de contrôle\n– le champ Total de Contrôle (ou checksum) : est\ncodé sur 16 bits porte sur (contrôle) la totalité du\nmessage ICMP\n– calculée de la même manière que le checksum IP\n\n❖ Destination inaccessible (Destination Unreachable)\nMessage ICMP renvoyé par un routeur ou par\nl’hôte destinataire si un datagramme ne peut\npas être remis"
+    },
+    {
+      "id": "9.50",
+      "c": 9,
+      "t": "Destination inaccessible (Destination Un...",
+      "x": "Champ Code permettant de distinguer plusieurs cas.\nExemples :\n\n❖ Code     Signification\n0       Réseau inaccessible\n1       Hôte inaccessible\n2       Protocole inaccessible\n3       Port inaccessible\n4       Fragmentation nécessaire et flag DF (Don’t\n\n❖ Fragment) activé\n5       Echec du routage par la source\n…\n\n❖ Expiration de délai (Time exceeded)\nMessage envoyé par un routeur lorsque après\navoir décrémenté le champ TTL d’un\ndatagramme, la durée de vie est nulle et le\ndatagramme est écarté\n– rappel : un routeur décrémente le champ TTL chaque\nfois qu’il traite un datagramme. Cela évite que, s’il\nexiste des chemins en boucle, du fait de tables de\nroutage erronées, ou modifiées suite à des pannes de\nliens, un datagramme circule sans fin\nAutre cas : message envoyé par l’hôte de\ndestination dont le temporisateur de\nréassemblage expire avant réception de tous les\nfragments d’un datagramme"
+    },
+    {
+      "id": "9.51",
+      "c": 9,
+      "t": "Expiration de délai (Time exceeded) ...",
+      "x": "Le format du message ICMP de délai expiré est\nle suivant :\n\nle champ Code :\n– 0 : le TTL a expiré sur un routeur. Le message est\némis sur le routeur ayant détruit le datagramme ;\n– 1 : le délai de réassemblage des fragments a\nexpiré sur l’ordinateur destinataire. Le message\nest émis par cet ordinateur.\n\n❖ Test d'accessibilité\nICMP : Format du message d’écho/reply\n– Type : (8 bits) Sa valeur indique s’il s’agit d’une demande ou d’une réponse\nd’ECHO :\n• 0 : réponse à une demande d’ECHO\n• 8 : demande d’ECHO\n• Code : (8 bits) est toujours à 0\n\n❖ Test d'accessibilité\nICMP : Format du message d’écho/reply\n• Somme de contrôle : 16 bits champs de contrôle\n• Identificateur : Permet l’indentification (unique) de la demande\n• Numéro de Séquence : incrémenté à chaque demande"
+    },
+    {
+      "id": "9.52",
+      "c": 9,
+      "t": "Test d'accessibilité ...",
+      "x": "ICMP : Format du message d’écho/reply\n• Données : est composé de données optionnelles de longueur\nvariable émises par la requête d'écho et devant être renvoyées par\nle destinataire si présentes\n\n❖ Routage\nOn appelle \"routage\" toute technique basée\nsur des adresses de niveau 3 réseau\npermettant d'aiguiller une trame quelconque\némise par un nœud d'un sous-réseau vers un\nnœud de destination pouvant être situé sur un\nautre sous-réseau.\nDes dispositifs matériels (comportant des\nlogiciels) permettant d'effectuer cette tâche\ns'appellent des Routeurs."
+    },
+    {
+      "id": "10.1",
+      "c": 10,
+      "t": "Routage ...",
+      "x": "Routeurs\n\nC’est quoi un routeur : c’est un élément\nd’interconnexion de niveau 3 qui achemine\n(route) les données vers un destinataire\nidentifié par son adresse de niveau 3\n\n❖ Routeur\nUn routeur est une machine possédant\nplusieurs interfaces.\nIl est connecté à plusieurs réseaux en même\ntemps et peut faire passer un paquet d'un\nréseau à un autre.\n\n❖ Routeur\nUn routeur assure deux tâches essentielles :\n– La commutation de paquets (datagram\nforwarding) : choisir la meilleure interface de\nsortie en fonction de la destination d’un paquet et\ndes informations de la table de routage\n– La gestion des protocoles de routage : échanger\ndes informations avec d’autres routeurs pour\nmaintenir et faire évoluer sa table de routage\n• Dans le cas d’un routage statique, cette fonction peut\nêtre absente"
+    },
+    {
+      "id": "10.2",
+      "c": 10,
+      "t": "Routage ...",
+      "x": "les routeurs acheminent les paquets selon des\ninformations contenues dans des tables dites\ntables de routage\n\n❖ Routage : Tables de routage\nLes informations contenues dans cette table\nsont:\n\n❖ Au réseau de destination   Adresse du prochain   Interface utilisée pour\nrouteur               envoyer les paquets\nElle est composée de plusieurs lignes.\n– Chaque ligne correspond à une route vers un\nréseau\n\nMachines et routeurs participent au routage :\n– Ils possèdent tous deux une table de routage,\n– les machines doivent déterminer si le datagramme\ndoit être délivré sur le réseau physique sur lequel\nelles sont connectées ou bien si le datagramme\ndoit être acheminé vers un routeur, elle doit\nidentifier le routeur appropriée.\n– les routeurs effectuent le choix de routage vers\nd’autres routeurs afin d’acheminer le datagramme\nvers sa destination finale."
+    },
+    {
+      "id": "10.3",
+      "c": 10,
+      "t": "Routage ...",
+      "x": "La table de routage est présente dans les\nhôtes comme dans les routeurs.\n– La différence entre la table de routage d'un hôte\net celle d'un routeur, réside dans le fait qu'un hôte\nne route que des datagrammes émis par lui-\nmême, alors que le routeur transmet les\ndatagrammes provenant d'autres nœuds IP.\n\n❖ Mise à jour des tables de routage\nConfigurer les routeurs afin que les paquets\nempruntent le meilleur chemin disponible\n– Plus-court-chemin au sens d’une métrique de coût\n• nombre de routeurs traversés\n• délai\n• en km, distance réelle\n• coût financier\n• etc.\n– Une route par préfixe IP (au moins)\n\n❖ Mise à jour des tables de routage\nChangement fréquents dans la table de\nroutage\n– Disparition / apparition d'équipements\n– Évolution du coût des routes\nComment remplir ou mettre à jour des tables\nde routage ?\n– Routage statique : configuration manuelle des\ntables de routage\n– Routage dynamique : configuration automatique\npar un protocole de routage\n\n❖ Routage statique (ou routage fixe)\nPrincipe : configurer chaque routeur à la main\n– Construire, dans chaque routeur, une table\nindiquant, pour chaque destination, l’adresse du\nrouteur suivant.\n– Cette table est construite par\nl’administrateur du réseau lors\nde configuration du réseau et à\nchaque changement de\ntopologie.\n– Une fois configurées, les routes\nne bougent plus (statiques)"
+    },
+    {
+      "id": "10.4",
+      "c": 10,
+      "t": "Routage statique (ou routage fixe) ...",
+      "x": "Avantage :\n– Le routeur n’a pas à consacrer une partie de ses\nressources à l’entretien d’un protocole de routage\n(CPU, mémoire, …)\n– Aucun bouclage de chemin n’est à craindre\nInconvénient :\n– il n’existe pas de solution de secours en cas de rupture\nd’un lien.\n– Toute modification (par ex: la panne d’un équipement\nou d’une interface ) requiert la remise à jour manuelle\ndes tables de la plupart des routeurs\n\nDomaines d’emploi\n– Les petits réseaux\n– Réseaux dans lesquels il n’existe pas de\nredondance dans les routes\n\n❖ Routage dynamique\nPrincipe : les routeurs discutent entre eux\n– Toute modification du réseau est connue de tous\nles routeurs\n– Une fois configurés, les routeurs mettent à jour\nautomatiquement leurs tables de routage\n\n❖ Routage dynamique\nLe protocole de routage consiste à définir\ncomment sont échangées les informations de\nroutage, et donc à :\n– découvrir les autres routeurs du réseau\n– construire les tables de routage\n– maintenir les tables de routage à jour"
+    },
+    {
+      "id": "10.5",
+      "c": 10,
+      "t": "Routage dynamique ...",
+      "x": "Deux grandes familles de protocoles de\nroutage IGP :\n– Routage à vecteur de distance (distance vector) :\nbasés sur algorithme de Bellman-Ford\n– Routage à état de lien (link state) : basés sur\nalgorithme de Dijkstra\n\n❖ Routage à plat, routage hiérarchique\nProblème : nombre de réseau aujourd’hui très\ngrand\n– table de routage trop importante\nSolution:\n– le réseau est découpé en domaines appelés systèmes\nautonomes (AS, Autonomus System).\n– Chaque domaine est identifié, les messages\nn’appartenant pas au domaine sont éliminés\n– Domaine sous la responsabilité d’une autorité unique\n• Diminution de la taille de la table de routage\n• Architecture indépendante des autres systèmes autonome\n\n❖ Routage à plat, routage hiérarchique\nCe mode de découpage des réseaux conduit à\ndéfinir deux familles de protocoles de routage\n\n❖ Routage à plat, routage hiérarchique\nDeux familles de protocoles de routage :\n– IGP: protocole de routage entre routeurs d'un AS\n(intra AS)\n• Interior Gateway Protocol.\n• Exemples :\n» Distance-vecteur : RIP, IGRP\n» État des liens : OSPF, IS-IS\n– EGP: protocole de routage entre AS (inter AS)\n• Exterior gateway Protocol.\n• Exemple : BGP."
+    },
+    {
+      "id": "10.6",
+      "c": 10,
+      "t": "Algorithmes vecteur distance ...",
+      "x": "Principe des algorithmes vecteur distance\n– Routage vecteur distance ou routage de Bellman-Ford\n– Chaque nœud du réseau maintient une table de\nroutage qui comporte une entrée par nœud du réseau\net le coût pour joindre ce nœud.\n– Une route est composée de :\n• L’adresse du réseau de destination\n• L’adresse du routeur pour atteindre le réseau de destination\n(next hop)\n• La métrique (coût) : nombre de sauts= nombre de routeurs à\ntraverser pour atteindre le réseau de destination\n\n– Périodiquement chaque nœud diffuse sa table de\nroutage à ses voisins.\n– Le nœud destinataire apprend ainsi ce que son\nvoisin est capable de joindre.\n– En réception, le routeur compare les routes reçues\navec les siennes, il met à jour sa propre table de\nroutage si :\n• Une route reçue est nouvelle\n• Une route reçue est meilleure (métrique inférieure) :\n» il incrémente le coût de cette entrée du coût affecté au\nlien par lequel il vient de recevoir cette route\n\n❖ Algorithmes vecteur distance: Exemple\nÉtape 1 : Initialisation\n\n❖ Algorithmes vecteur distance: Exemple\nÉtape 2 : Premier échange"
+    },
+    {
+      "id": "10.7",
+      "c": 10,
+      "t": "Algorithmes vecteur distance: Exemple .....",
+      "x": "Étape 2 : Premier échange\n\nÉtape 2 : Second échange\n\nÉtape 2 : Second échange\n\n❖ W       B           2       W       C       1       X           B       2\nLe routage dans le réseau a atteint sa stabilité\nconvergence des tables"
+    },
+    {
+      "id": "10.8",
+      "c": 10,
+      "t": "Algorithmes vecteur distance ...",
+      "x": "Avantages :\n– Simplicité de l'algorithme (charge CPU faible)\n– Totalement décentralisé\n– Les bonnes nouvelles se propagent rapidement\nInconvénients :\n– Convergence lente pour les grands réseaux\n– La taille des informations de routage est\nproportionnelle au nombre de réseaux\n– Bouclage, éventuellement à l'infini\n– Pas de chemins multiples\n\n❖ Algorithmes à état des liens\nIdée de base : Plutôt que d’envoyer uniquement\nla distance vers chaque destination, diffuser sur\ntous les routeurs une carte complète du réseau\nProblèmes à résoudre : Comment construire\ncette carte ?\n– chaque nœud découvre ses voisins et détermine le\ncoût du lien qui les relie ;\n– le lien est testé régulièrement et en cas de\nmodification de son coût, le nœud diffuse cette\ninformation dans le réseau, sous la forme (A, B, c), le\nlien du nœud A vers le nœud B a un coût de c;\n\n❖ Algorithmes à état des liens\n– chaque nœud entretient une table où figure:\n• pour chaque lien, son coût (matrice de coûts).\n• À l’aide de ces informations, chaque nœud peut\nreconstituer la cartographie complète du réseau ;\n– à partir de la matrice des coûts, chaque nœud\ndétermine alors sa table de routage (algorithme\nde Dijkstra).\n\n❖ PING\nL’utilitaire PING\n– PING = Packet INternet Groper\n– permet de tester l’accessibilité d’un système et\nd’évaluer le temps aller et retour entre le système\nsource et le système cible.\n– Envoi d’un message ICMP echo vers la machine cible\n– Et attente d’une réponse ICMP reply"
+    },
+    {
+      "id": "10.9",
+      "c": 10,
+      "t": "PING ...",
+      "x": "Exemple :\n\nFormat du message ICMP echo/reply\n– demande d'echo (Type = 8)\n– réponse à une demande d'echo (Type = 0)\n\nles implémentations sous Unix de ping placent\nl’ID du processus dans le champ identification\n– Le numéro de séquence commence à 0\n– Le programme enregistre à quelle heure il a\nenvoyé un message\n– Lorsqu’il récupère une réponse à sa requête il\npeut en déduire le temps d’aller - retour\n\n❖ PING : Scénario de débogage\nPing sur l'adresse de bouclage (127.0.0.1)\n– Fonctionnement correct de TCP/IP"
+    },
+    {
+      "id": "10.10",
+      "c": 10,
+      "t": "PING : Scénario de débogage ...",
+      "x": "Ping sur l'adresse de bouclage (127.0.0.1)\n– Fonctionnement correct de TCP/IP\nPing sur l'adresse de l'hôte\n– Fonctionnement correct de l'interface réseau\nPing sur une adresse du réseau (ou du sous\nréseau)\n– Problèmes de médias\nPing sur la passerelle par défaut\n– Problèmes de masques, d'adresse de passerelle\n\nPing sur la passerelle par défaut\n– Problèmes de masques, d'adresse de passerelle\n\nPing au delà de la passerelle\n– Problèmes de routeurs\n\nPing sur l'adresse de bouclage (127.0.0.1)\n– Fonctionnement correct de TCP/IP\nPing sur l'adresse de l'hôte\n– Fonctionnement correct de l'interface réseau\nPing sur une adresse du réseau (ou du sous\nréseau)\n– Problèmes de médias\nPing sur la passerelle par défaut\n– Problèmes de masques, d'adresse de passerelle\nPing au delà de la passerelle\n– Problèmes de routeurs\nPing avec noms de machine\n– Configuration de DNS"
+    },
+    {
+      "id": "10.11",
+      "c": 10,
+      "t": "Traceroute (Tracert) ...",
+      "x": "L’utilitaire Traceroute conçu par Van Jacobson\nIl permet de découvrir la route empruntée par\nun datagramme entre une source et une\nmachine cible.\nBien que le protocole IP soit en mode\ndatagramme et qu’aucune stabilité de route\nne soit garantie, on constate en pratique que\ndes datagrammes successifs empruntent la\nmême route.\n\nExemple :\n\nFonctionnement\n– envoi d'un paquet IP avec TTL=1\n– attend ICMP délai expiré\n– envoi d'un paquet IP avec TTL=2, …\n\n❖ Windwos : IPCONFIG\nIpconfig\n– affiche un résumé des propriétés IP des cartes\nréseaux\n– L’option /all : affiche la configuration TCP/IP complète\nde toutes les cartes"
+    },
+    {
+      "id": "10.12",
+      "c": 10,
+      "t": "Linux : ifconfig / ip ...",
+      "x": "ifconfig / ip\n\n❖ Route\nRoute\n– Manipule les tables de routage du réseau\n\n❖ Netstat\nStatistiques relatives à IP, TCP, UDP, ICMP\nDatagrammes émis, reçus, erreurs éventuelles\n\n❖ Netstat\n-a   affichage toutes les informations sur l'état\ndes connexions,\n-i   affichage des statistiques,\n-c   rafraîchissement périodique de l'état du\nréseau,\n-n   affichage des informations en mode\nnumérique sur l'état des connexions,\n-r   affichage des tables de routage,\n-t   informations sur les sockets TCP\n-u   informations sur les sockets UDP."
+    },
+    {
+      "id": "10.13",
+      "c": 10,
+      "t": "Linux : ss (socket statistics) ...",
+      "x": "La commande ss\n\n❖ Auto-configuration\nIntérêt :\n– Limiter le travail de l’administrateur\nsystème/réseau\n– Aucune action nécessaire sur une machine pour\nson installation et sa configuration réseau\n– Permet à une machine d’obtenir\nautomatiquement son adresse IP afin de\nconfigurer son accès au réseau\n– Utiliser par les fournisseurs d’accès pour attribuer\ndes adresses aux clients\n\n❖ Auto-configuration\nDifférents protocoles\n– RARP (Reverse Address Resolution Protocol)\n– BOOTP (Boot Protocol) : amélioration de RARP\n– DHCP (Dynamic Host Configuration Protocol) :\nextension de BOOTP pour gérer des adresses IP de\nmanière dynamique\n\n❖ RARP - Reverse ARP\nRARP = Reverse Address Resolution Protocol\n(RFC903)\nFonction inverse de ARP :\n– permet de connaître l'adresse IP d'une station à\npartir de son adresse physique.\nUtilisé lors de leur démarrage par :\n– les stations sans disque (Terminal X-windows)\n– les stations nomades (mobiles)"
+    },
+    {
+      "id": "10.14",
+      "c": 10,
+      "t": "RARP - Reverse ARP ...",
+      "x": "Contrairement à ARP :\n– où chaque station doit répondre en son propre nom\nPour RARP :\n– il faut un processus (serveur) sur au moins une des\nstations du réseau local : rarpd\n– qui connaisse (qui attribue) ces associations : (fichier\n/etc/ethers sous Unix)\nLe format des messages RARP est le même que\ncelui de ARP :\n– opération = 3 pour requête RARP\n– opération = 4 pour réponse RARP\n\nFormat d’un paquet ARP\n\nLe client (la machine qui s’initialise) interroge\nen broadcast le serveur RARP qui lui fournit\nson adresse IP\n\nIl est possible que plusieurs serveurs RARP\nexistent d'où la génération de plusieurs\nréponses à la requête.\n– La première réponse est considérée.\n– La présence de plusieurs serveurs est intéressante\ndans le cas de panne d'un serveur, mais cela\nengendre du trafic supplémentaire.\nInconvénients de RARP\nUn serveur ne peut desservir qu'un seul LAN.\nLe paquet RARP occupe 28 octets. Or le champ de données de\nla trame doit occuper au minimum 46 octets\n– Les 18 octets manquants sont comblés par les bits de bourrage du"
+    },
+    {
+      "id": "10.15",
+      "c": 10,
+      "t": "PAD. ...",
+      "x": "– On aurait pu mettre à profit ces octets pour compléter la configuration\n\n❖ IP de la machine cliente.\nRARP est en couche 3. les fonctions correspondantes sont\nassurées par le système d'exploitation de la machine, client ou\nserveur, ce qui complique son implémentation puis son\névolution.\nL'administration du serveur est contraignante.\n\n❖ BOOTP - BOOTstrap Protocol\nLe protocole BOOTP : BOOTstrap Protocol\n– RFC 951 mis à jour par la RFC 1542\nBOOTP permet à une machine sans disque de\nconnaître l’intégralité des paramètres de\nconfiguration du réseau\n– adresse, masque, passerelle par défaut....\n– Adresse IP d’un serveur d’image\n• Depuis ce serveur, charger l’image mémoire initiale\nexécutable.\n\n❖ BOOTP - BOOTstrap Protocol\nL’objectif de BOOTP est de pallier les\ninconvénients de RARP.\n– Permet d’obtenir des informations supplémentaires:\n• Masque\n• Adresse du routeur par défaut\n• Serveur de nom (DNS)\n– BOOTP utilise IP et UDP\n• port 67 pour le serveur, port 68 pour le client\n– agents de relais BOOTP, qui propagent les messages\ndiffusés vers le serveur BOOTP\n– BOOTP est un protocole d'application\nInconvénients BOOTP\nAffectation statique des paramètres de\nconfiguration\nIntervention manuelle de l’administrateur\nnécessaire en cas de déplacement d’un hôte\n(mise à jour d’une base de données)\nNécessité d’une configuration dynamique\npour les réseaux qui évoluent et/ou les\nordinateurs portables"
+    },
+    {
+      "id": "10.16",
+      "c": 10,
+      "t": "DHCP ...",
+      "x": "Le protocole DHCP : Dynamic Host\n\n❖ Configuration Protocol\n– (RFC 2131 mis à jour par les RFC 3396 et 4361)\nDHCP est une extension de BOOTP\n– même format des messages\n– Mêmes ports UDP\n– agents relais DHCP possibles\nallocation dynamique des adresses IP\n\nPrincipe :\n– Lorsqu'un hôte se connecte au réseau, le serveur DHCP est contacté et\nune adresse est demandée. Le serveur DHCP choisit une adresse dans\nune plage d'adresses configurée (nommée pool) et affecte cette\nadresse à l'hôte pour une durée définie.\n• Remarque : le DHCP pour IPv6 (DHCPv6) fournit des services similaires pour les\nclients IPv6. Toutefois, DHCPv6 ne fournit pas d'adresse de passerelle par défaut.\n\n❖ Cela ne peut être obtenu que de manière dynamique à partir du message annoncé\npar le routeur."
+    },
+    {
+      "id": "10.17",
+      "c": 10,
+      "t": "Allocation des adresses IP par DHCP ...",
+      "x": "DHCP propose 3 mécanismes d’allocation des\nadresses :\n– allocation automatique\n• association permanente entre une station et son\nadresse\n• déterminée lors de la première connexion\n– allocation dynamique\n• l’association est limitée dans le temps\n• la réutilisation des adresses est possible\n– allocation manuelle\n• l’association est déterminée par l’administrateur\n\n❖ Processus d’acquisition d’adresse\nAu démarrage, le client DHCP diffuse une demande de\nbail DHCPDISCOVER et se met en attente des réponses\ndes serveurs DHCP\nLes serveurs DHCP répondent par DHCPOFFER : le\nclient choisit l’une de ces réponses (souvent, la\npremière) et envoie DHCPREQUEST au serveur\ncorrespondant\n– DHCPREQUEST contient l’adresse IP offerte\nLe serveur DHCP accuse réception par DHCPACK, qui\nindique la durée du bail.\nLe client peut alors utiliser cette adresse. S’il termine\nson activité avant la fin du bail, il peut restituer\nl’adresse IP par DHCPRELEASE\n\n❖ Processus d’acquisition d’adresse\nFonctionnement :\n\n❖ Problématique ?\nRéseau :\n– service de remise de paquets de machine\nà machine\nComment passer de ce service à un canal de\ncommunication de processus à processus ?\nLa couche transport permet de faire\ncommuniquer directement deux processus\n(applications. programmes) qui s’exécutent sur\ndeux machines quelconques du réseau."
+    },
+    {
+      "id": "10.18",
+      "c": 10,
+      "t": "Services offerts par la couche Transport...",
+      "x": "Créer des connexions logiques entre\napplications s’exécutant sur des hôtes distants\nFragmentation et réassemblage des messages\n\n❖ Unité de données de protocole (PDU) appelé\nsegment (TCP) ou datagramme (UDP)\nProtocoles de la couche Transport s’exécutent\nuniquement aux extrémités.\n\nMultiplexage des données issues de\ndifférentes applications sur une connexion de\nniveau réseau avec démultiplexage au moyen\nde paramètres dans l’en-tête des segments (n°\nde ports)\nService Transport VS Service Réseau\n– Couche réseau: transfert de données entre\nmachines\n– Couche transport : transfert de données entre\nprocessus applicatifs\n\nService Transport VS Service Réseau"
+    },
+    {
+      "id": "10.19",
+      "c": 10,
+      "t": "Services offerts par la couche Transport...",
+      "x": "TCP/UDP\n\n❖ TCP\nMode connecté: TCP (Transport Control Protocol)\n– Transport fiable\n– Phase de connexion / de transfert des données /\ndéconnexion\n– Contrôle de flux\n– Contrôle des erreurs + acquittements +\nretransmission\n– Garantie du séquencement\n– Segmentation des messages\n– Usage : Applications critiques\n\n❖ TCP\nMode connecté: TCP (Transport Control Protocol)\n\n❖ TCP\nMode connecté: TCP (Transport Control Protocol)"
+    },
+    {
+      "id": "10.20",
+      "c": 10,
+      "t": "TCP ...",
+      "x": "Format du segment TCP\n\nApplications utilisant le protocole TCP\n\n❖ UDP\nMode non connecté: UDP (User Datagram\n\n❖ Protocol)\n– Transport non fiable\n– Overhead réduit par rapport à TCP (8 octets / 20\noctets)\n– Envoi direct des informations\n– Support du multi-point\n– Pas de garantie de séquencement\n– Contrôle des erreurs\n– Usage : Applications multimédias"
+    },
+    {
+      "id": "10.21",
+      "c": 10,
+      "t": "UDP ...",
+      "x": "Mode non connecté: UDP\n\n❖ UDP : mode message\nMode message\n\nFormat des datagramme UDP\n\nApplications utilisant le protocole UDP"
+    },
+    {
+      "id": "10.22",
+      "c": 10,
+      "t": "TCP vs UDP ...",
+      "x": "Exigences d'applications\n\nExigences d'applications\n\n❖ UDP / TCP-Identification des services\nles adresses IP désignent les machines entre\nlesquelles les communications sont établies.\n\n❖ Lorsqu'un processus désire entrer en communication\navec un autre processus, il doit adresser le processus\ns'exécutant sur cette machine.\nL'adressage de ce processus est effectué selon un\nconcept abstrait, les ports, indépendant du système\nd'exploitation des machines car :\n– les processus sont créés et détruits dynamiquement\nsur les machines,\n– L'émission d'un message se fait sur la base d'un port\nsource et d’un port destinataire."
+    },
+    {
+      "id": "10.23",
+      "c": 10,
+      "t": "UDP / TCP-Identification des services .....",
+      "x": "Les processus disposent d'une interface\nsystème leur permettant de spécifier un port\nou d'y accéder (socket).\n\n❖ UDP / TCP: les ports RFC 1700\nLes numéros de ports sont inclus dans le header du segment\net sont inversés dans chaque réponse.\n– Nombre codé sur 16-bit : 0 à 65535\n– Un port source et un port destination\n\n❖ UDP / TCP: les ports RFC 1700\nTrois catégories de ports TCP et UDP sont :\n– Ports référencés ou encore ports bien connus (Well known\nports)\n• De 0 à 1023\n• certaines applications bien connues ont des ports réservés\n• Exemples :\n» Num (décimal)   Application\n» 80              Serveur web\n» 7               Serveur echo\n» 53              Serveur DNS\n» 67              Serveur BOOTP/DHCP\n» 68              Client BOOTP/DHCP\n» 69              Serveur TFTP\n» 123             Serveur NTP\n\n❖ UDP / TCP: les ports RFC 1700\n– les ports enregistrés\n• De 1024 à 49151\n• Listés par l’IANA\n• ils sont enregistrés (mais peuvent être utilisés)\n– les ports dynamiques\n• De 49152 à 65535\n• Ils sont à usage privée\n• Ils peuvent être assignés dynamiquement aux applications."
+    },
+    {
+      "id": "10.24",
+      "c": 10,
+      "t": "UDP / TCP: les ports RFC 1700 ...",
+      "x": "Numéros de ports reconnus (Well known ports)\n\n❖ Numéro de port   Protocole   Application\n20               TCP         FTP (File Transfer Protocol) - Données\n21               TCP         File Transfer Protocol (FTP) - Contrôle\n22               TCP         SSH (Secure Shell)\n23               TCP         Telnet\n25               TCP         Protocole SMTP\n53               UDP, TCP    Service de noms de domaine (Domain Name Service, DNS)\n67               UDP         Serveur DHCP (Dynamic Host Configuration Protocol)\n68               UDP         Client DHCP (Dynamic Host Configuration Protocol)\n69               UDP         Protocole TFTP (Trivial File Transfer Protocol)\n80               TCP         Protocole HTTP (Hypertext Transfer Protocol)\n110              TCP         Protocole POP3 (Post Office Protocol version 3)\n143              TCP         IMAP (Internet Message Access Protocol)\n161              UDP         Protocole SNMP (Simple Network Management Protocol)\n443              TCP         protocole HTTPS (Hypertext Transfer Protocol Secure)\n\n❖ Introduction\nLa couche application est la couche la plus\nproche du système terminal, des utilisateurs.\nElle est la plus élevée du modèle TCP/IP\nElle est la source et la destination finale de\ntoutes les données à transporter\nElle ne fournit pas les règles d’implantation\nElle utilise les services de communication\nfournis par les protocoles de couche inférieure\n(TCP, UDP)\n\n❖ Introduction\nUn protocole de niveau application doit\nspécifier:\n– le type et le contenu des messages échangés\n– Les règles déterminant quand ces messages\ndoivent être envoyés/reçus\n– Agent utilisateur (user agent) : interface entre\nl’utilisateur et le protocole"
+    },
+    {
+      "id": "10.25",
+      "c": 10,
+      "t": "Introduction ...",
+      "x": "Classes d’application\n\nLe terme Application est générique, il peut\névoquer :\n– L’application au sens exécutable\n– Le service offert à l’utilisateur\n– Le protocole\n\nConfusion/ambiguïté\n– Serveur = machine qui offre un service (des\nservices)\n– Serveur = processus d’application qui offre un\nservice (des services)\nServeur  un démon pour accepter les\nrequêtes des clients\n\n❖ Couche Application TCP/IP\nContient les protocoles de haut niveau :\n– HTTP (consultation page web)\n– TELNET (terminal virtuel)\n– FTP (transfert de fichiers)\n– SMTP (courrier électronique)\n– DNS (service de nommage)\n– SNMP (administration de réseau)\n–…"
+    },
+    {
+      "id": "10.26",
+      "c": 10,
+      "t": "DNS : Quel besoin? ...",
+      "x": "Problème : les adresses IP ne sont pas faciles à\nmémoriser\nSolution : faire une table de correspondance\n– exemples :\n• Sous Unix : /etc/hosts\n• Sous Windwos :\nC:\\textbackslash\\{\\}WINDOWS\\textbackslash\\{\\}system32\\textbackslash\\{\\}drivers\\textbackslash\\{\\}etc\\textbackslash\\{\\}hosts\n\nFichier hosts.txt\n\n❖ Jusqu'en 1984 : fichier hosts.txt\ninadapté à grande échelle\n– temps de diffusion des infos (par ftp !)\n– système centralisé\n– quelques centaines de machines dans les années\n– plusieurs millions aujourd'hui\ncorrespondance statique\nne contient que des infos réduites\ncollision rapide de noms\n\n❖ Mockapetris- RFC 882 et 883 puis 1034 et 1035\n(1987)\nsystème hiérarchisé et distribué\nmodèle en arborescence gestion décentralisée\ndes bases de données\nchaque site est maître de ses données\ninformations complémentaires : relais de\nmessagerie, ...\ncorrespondance dynamique\nlimite les risques de collisions de noms"
+    },
+    {
+      "id": "10.27",
+      "c": 10,
+      "t": "Rôle du DNS ...",
+      "x": "établir une correspondance entre\n– adresses IP, par exemple 157.21.56.89\n– noms de domaines, www.monsite.ma\nrésoudre des noms en adresses IP => Résolution\net inversement => Résolution inverse\net plus généralement, trouver des informations à\npartir d’un nom de domaine (par exemple liste\ndes échangeurs de courrier).\n\n❖ Système réparti sur des centaines de milliers de\nserveurs DNS\n\n❖ Un système distribué\nAucun serveur ne connaît toutes les\ncorrespondances :\nnom de domaine <==> adresse IP\n– si un serveur ne connaît pas une correspondance,\nil interroge un autre serveur jusqu’à atteindre le\nserveur détenant l’information\n\n❖ Espace de noms hiérarchique et distribués\nAmbiguïté de noms\n– Solution : espace de noms hiérarchique et\ndistribués"
+    },
+    {
+      "id": "10.28",
+      "c": 10,
+      "t": "Espace de noms hiérarchique et distribué...",
+      "x": "Les noms sont organisés selon une structure\narborescente hiérarchique (arbre inversé)\nappelée espace de nommage\n\nLa racine est au sommet\n– son nom de domaine est vide\n– est symbolisée par un point « • ».\nLe nombre de niveaux est limité à 127.\nChaque nœud de l'arbre est identifié par un label\nchaque label est limité à 63 caractères.\nUn nom ne peut dépasser 255 caractères\nIl n’y a pas de distinction Minuscule/Majuscule.\nDeux nœuds « frères » ne doivent pas avoir le\nmême nom\n\nDeux nœuds différents peuvent avoir le même\nnom dans deux domaines différents :\ntic.exemple.edu tic.monsite.ma\n\nLe premier niveau de l’arbre :\n– Top Level Domain (TLD) ou domaines de niveau\nsupérieurs\n– géré pas l’ICANN (Internet Corporation for"
+    },
+    {
+      "id": "10.29",
+      "c": 10,
+      "t": "Assigned Names and Numbers) ...",
+      "x": "– deux types de TLD :\n• “generic TLD”. .com, .org, .gov, .net,. . .\n• “coutries TLD”. .ma, .fr, .de, .uk,. . .\n\n❖ TLD génériques\nExemples:\n– com : organisations commerciales\n– edu : établissements d’enseignement\n– gov : établissements gouvernementaux\n– mil : organisations militaires américaines (États-Unis, army.mil)\n– net : organisations du réseau Internet\n– org : organisations non commerciales et non gouvernementales\nà but non lucratif\n– int : organisations internationales\n– arpa : domaine réservé à la résolution de nom inversée ;\n– aero : domaine réservé aux entreprises du secteur aéronautique\n– biz : pour les entreprises commerciales\n– coop : pour les coopératives\n\n❖ TLD géographiques\nExemples :\n– .ma : Morocco\n– .fr : France\n– .us: United States\n– .ca : canada\n– .au : Australie\n– .uk : United Kingdom\n\n❖ Espace de noms hiérarchique et distribués\nL'ICANN a ensuite délègue la gestion des sous-domaines\ndes TLD à des entreprises ou organisations\ngouvernementales :\n– com et net à la société VeriSign\n– fr et re (île de la réunion) à l'AFNIC (Association Française pour\nle Nommage Internet en Coopération)\n– ma à l’ANRT (Agence Nationale de Réglementation des"
+    },
+    {
+      "id": "10.30",
+      "c": 10,
+      "t": "Télécommunications) ...",
+      "x": "– etc.\nCes gestionnaires vendent (parfois via des registrars) les\nsous-domaines de leurs TLD et en délèguent la gestion à\nleurs acheteurs :\n– google.com\n– free.fr\n– gouv.fr\n\n❖ Espace de noms hiérarchique et\ndistribués\nLe propriétaire d'un sous-domaine peut\nensuite le décliner à sa guise afin de nommer\ndes ordinateurs et/ou de créer des sous-sous-\ndomaines :\n– www.free.fr (ordinateur)\n– smtp.free.fr (ordinateur)\n– hd.free.fr (sous-sous-domaine)"
+    },
+    {
+      "id": "11.1",
+      "c": 11,
+      "t": "Espace de noms hiérarchique et distribué...",
+      "x": "Un nom de domaine est la séquence de labels\ndepuis un nœud de l'arbre, jusqu'à la racine.\nChaque label est séparé par un point\nIl se lit de droite à gauche\nUn nœud est désigné par l’arborescence\ncomplète de son nom (FQDN, Fully Qualified\n\n❖ Domain Name)\nExemple : Domaine de Domaine de\n3éme niveau\n2éme niveau   TLD : Top Level Domain\nla racine\nmail.monsite.ma.\n\nUn domaine est un sous-arbre entier de\nl’espace de nommage\nUn sous-domaine est domaine enfant d’un\nautre\n\n❖ Domaine\nma"
+    },
+    {
+      "id": "11.2",
+      "c": 11,
+      "t": "Zone DNS ...",
+      "x": "Un domaine et ses sous-domaines sont\nregroupés sous l’autorité d’un serveur de\nnoms\nOn parle alors de zone\nOn peut déléguer une partie de sa zone à un\nautre serveur\nCela crée une nouvelle zone\n\nChaque zone est servie par plusieurs serveurs\nde noms\n– serveur primaire pour la zone : source de la zone\n– serveur secondaire pour la zone : copie\n(automatique) de la zone\nUn serveur peut servir plusieurs zones\n\nmonsite.ma\n\n❖ Résolution inverse\nRetrouver à partir d'un numéro IP le nom d'une\nmachine associée\nl'arborescence se trouve sous le domaine\nin-addr.arpa\n– Domaine enfant du domaine arpa\n– sous ip6.arpa pour ipv6\nl'arborescence est subdivisée à partir de la\nnotation classique sur 4 octets des numéros IPv4\nChaque niveau est identifié par un octet de\nl’adresse IP.\n<truncated 21188 bytes>\nNOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need."
+    }
+  ],
+  "quiz": []
+}
