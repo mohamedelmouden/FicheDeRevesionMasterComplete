@@ -3,6 +3,39 @@ import { motion, AnimatePresence } from 'framer-motion'
 import './styles.css'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { 
+  BookOpen, Terminal, Database, Globe, Shield, 
+  Cpu, Hash, Network, BrainCircuit, Lightbulb,
+  Info, AlertTriangle, CheckCircle, Target, Bookmark,
+  Book, BookMarked
+} from 'lucide-react';
+
+const SubjIcon = ({id, size=24}) => {
+  switch(id) {
+    case 'c': return <Terminal size={size} />;
+    case 'java': return <Cpu size={size} />;
+    case 'python': return <Hash size={size} />;
+    case 'web': return <Globe size={size} />;
+    case 'bd': return <Database size={size} />;
+    case 'reseaux': return <Network size={size} />;
+    case 'uml': return <BookOpen size={size} />;
+    case 'secu': return <Shield size={size} />;
+    case 'ia': return <BrainCircuit size={size} />;
+    case 'maths': return <Target size={size} />;
+    case 'linux': return <Terminal size={size} />;
+    default: return <Book size={size} />;
+  }
+}
+
+const AlertIcon = ({type, size=18}) => {
+  switch(type) {
+    case 'def': return <BookMarked size={size} />;
+    case 'warn': return <AlertTriangle size={size} />;
+    case 'sum': return <CheckCircle size={size} />;
+    case 'concept': return <Lightbulb size={size} />;
+    default: return <Info size={size} />;
+  }
+}
 const mods=import.meta.glob('./data/*.json',{eager:true})
 const ORDER=['c','java','python','web','bd','reseaux','uml','secu','ia','maths','linux']
 const SUBJ=Object.values(mods).map(m=>m.default).sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id))
@@ -72,13 +105,13 @@ const MarkdownComponents = {
             const text = firstP.props.children;
             const m = text.match(/^\[ALERT\|(.*?)\|(.*?)\|(.*?)\]\s*/);
             if (m) {
-                type = m[1]; icon = m[2]; title = m[3];
+                type = m[1]; title = m[3];
                 const remainingText = text.substring(m[0].length);
-                if (remainingText.trim()) bodyChildren = [<p key="p0" style={{marginBottom: 12, lineHeight: 1.6, color: '#ddd'}}>{remainingText}</p>, ...children.slice(1)];
+                if (remainingText.trim()) bodyChildren = [<p key="p0">{remainingText}</p>, ...children.slice(1)];
                 else bodyChildren = children.slice(1);
                 
                 return <div className={`alert ${type}`} {...props}>
-                  <div className="alert-h"><span>{icon}</span> <b>{title}</b></div>
+                  <div className="alert-h"><AlertIcon type={type} /> <b>{title}</b></div>
                   <div className="alert-b">{bodyChildren}</div>
                 </div>;
             }
@@ -87,12 +120,12 @@ const MarkdownComponents = {
             if (typeof textNode === 'string') {
                 const m = textNode.match(/^\[ALERT\|(.*?)\|(.*?)\|(.*?)\]\s*/);
                 if (m) {
-                    type = m[1]; icon = m[2]; title = m[3];
+                    type = m[1]; title = m[3];
                     let clonedP = {...firstP, props: {...firstP.props, children: [...firstP.props.children]}};
                     clonedP.props.children[0] = textNode.substring(m[0].length);
                     bodyChildren = [clonedP, ...children.slice(1)];
                     return <div className={`alert ${type}`} {...props}>
-                      <div className="alert-h"><span>{icon}</span> <b>{title}</b></div>
+                      <div className="alert-h"><AlertIcon type={type} /> <b>{title}</b></div>
                       <div className="alert-b">{bodyChildren}</div>
                     </div>;
                 }
@@ -100,27 +133,28 @@ const MarkdownComponents = {
         }
     }
     
-    return <blockquote style={{borderLeft: '4px solid var(--theme-c)', paddingLeft: 15, color: '#ccc', margin: '10px 0'}} {...props}>{children}</blockquote>;
+    return <blockquote {...props}>{children}</blockquote>;
   },
   code: ({node, inline, className, children, ...props}) => {
     const match = /language-(\w+)/.exec(className || '');
     if (!match && (!className || !className.includes('language-'))) {
-        return <code style={{background: 'rgba(255,255,255,0.1)', padding: '2px 6px', borderRadius: 4, fontFamily: 'monospace', color: '#fff'}} {...props}>{children}</code>;
+        return <code {...props}>{children}</code>;
     }
-    return <pre style={{background: 'rgba(0,0,0,0.3)', padding: 15, borderRadius: 8, overflowX: 'auto', border: '1px solid rgba(255,255,255,0.05)', marginTop: 10, marginBottom: 10}} {...props}><code style={{fontFamily: 'monospace', fontSize: 13, lineHeight: 1.4, color: '#e2e8f0'}} className={className}>{children}</code></pre>;
+    return <pre {...props}><code className={className}>{children}</code></pre>;
   },
-  ul: ({node, children, ...props}) => <ul style={{marginLeft: 25, listStyleType: 'disc', marginBottom: 15}} {...props}>{children}</ul>,
-  ol: ({node, children, ...props}) => <ol style={{marginLeft: 25, listStyleType: 'decimal', marginBottom: 15}} {...props}>{children}</ol>,
-  li: ({node, children, ...props}) => <li style={{marginBottom: 6, color: '#ddd'}} {...props}>{children}</li>,
-  h1: ({node, children, ...props}) => <h2 style={{marginTop: 25, marginBottom: 15, color: 'var(--theme-c)', fontSize: '1.5em', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: 5}} {...props}>{children}</h2>,
-  h2: ({node, children, ...props}) => <h3 style={{marginTop: 20, marginBottom: 10, fontSize: '1.25em', color: 'var(--theme-c)'}} {...props}>{children}</h3>,
-  h3: ({node, children, ...props}) => <h4 style={{marginTop: 15, marginBottom: 10, fontSize: '1.1em', color: '#fff'}} {...props}>{children}</h4>,
-  p: ({node, children, ...props}) => <p style={{marginBottom: 12, lineHeight: 1.6, color: '#ddd'}} {...props}>{children}</p>,
-  a: ({node, children, ...props}) => <a style={{color: 'var(--theme-c)', textDecoration: 'underline'}} {...props}>{children}</a>,
-  strong: ({node, children, ...props}) => <strong style={{color: '#fff', fontWeight: 600}} {...props}>{children}</strong>,
-  table: ({node, children, ...props}) => <table style={{width: '100%', marginBottom: 15, borderCollapse: 'collapse'}} {...props}>{children}</table>,
-  th: ({node, children, ...props}) => <th style={{textAlign: 'left', padding: '8px 12px', borderBottom: '2px solid rgba(255,255,255,0.1)', color: 'var(--theme-c)'}} {...props}>{children}</th>,
-  td: ({node, children, ...props}) => <td style={{padding: '8px 12px', borderBottom: '1px solid rgba(255,255,255,0.05)', color: '#ddd'}} {...props}>{children}</td>,
+  ul: ({node, children, ...props}) => <ul {...props}>{children}</ul>,
+  ol: ({node, children, ...props}) => <ol {...props}>{children}</ol>,
+  li: ({node, children, ...props}) => <li {...props}>{children}</li>,
+  h1: ({node, children, ...props}) => <h1 {...props}>{children}</h1>,
+  h2: ({node, children, ...props}) => <h2 {...props}>{children}</h2>,
+  h3: ({node, children, ...props}) => <h3 {...props}>{children}</h3>,
+  h4: ({node, children, ...props}) => <h4 {...props}>{children}</h4>,
+  p: ({node, children, ...props}) => <p {...props}>{children}</p>,
+  a: ({node, children, ...props}) => <a {...props}>{children}</a>,
+  strong: ({node, children, ...props}) => <strong {...props}>{children}</strong>,
+  table: ({node, children, ...props}) => <div style={{overflowX: 'auto'}}><table {...props}>{children}</table></div>,
+  th: ({node, children, ...props}) => <th {...props}>{children}</th>,
+  td: ({node, children, ...props}) => <td {...props}>{children}</td>
 }
 
 function Body({text}) {
@@ -193,7 +227,10 @@ function Graph({S,chap,setChap,sec,setSec,p}){
    })}
    </AnimatePresence>
   </svg>
-  <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:orbX,top:orbY}}><i/><span>{S.name}</span></motion.div>
+  <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:orbX,top:orbY}}>
+    <i style={{display:'grid', placeItems:'center', color:'#fff'}}><SubjIcon id={S.id} size={28} /></i>
+    <span>{S.name}</span>
+  </motion.div>
   {chs.map((c,i)=>{
     const pos = getChapPos(i);
     return <motion.button initial={{opacity:0, x:'-50%', y:'-50%'}} animate={{opacity:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.03}} key={c.c} className={'chap glass '+(i===ci?'sel':'')} style={{left:pos.x,top:pos.y, zIndex:2}} onClick={()=>{setChap(c.c);setSec(null)}}>
@@ -280,16 +317,38 @@ export default function App(){
     <AnimatePresence mode="wait">
     <motion.div key={S?S.id:'main'} initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} exit={{opacity:0, scale:0.95}} transition={{duration:0.3}} className="w-full h-full" style={{display:'flex', flexDirection:'column', minHeight:'100%'}}>
     {!S?<div className="graph" style={{height:700,width:860, margin:'auto'}}>
-     <svg width="860" height="700">{SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57;return <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1, delay:0.2}} key={s.id} d={`M430 350 L${430+R*1.55*Math.cos(a)} ${350+R*1.2*Math.sin(a)}`} style={{'--c':s.color}} />})}</svg>
-     <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:430,top:350}}><i/><span>Fiche Master</span></motion.div>
+     <svg width="860" height="700">{SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57;return <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1, delay:0.2}} key={s.id} d={curve(430, 350, 430+R*1.55*Math.cos(a), 350+R*1.2*Math.sin(a))} style={{'--c':s.color, fill: 'none', stroke: s.color, strokeWidth: 1.5, opacity: 0.6}} />})}</svg>
+     <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:430,top:350, width:260, height:260, border:'none', background:'none', display:'grid', placeItems:'center'}}>
+      <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:360}} transition={{duration:25, repeat:Infinity, ease:'linear'}}>
+         <circle cx="130" cy="130" r="120" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="2" strokeDasharray="15 25" />
+         <circle cx="130" cy="130" r="105" fill="none" stroke="rgba(100,150,255,0.4)" strokeWidth="1.5" strokeDasharray="50 15 15 15" />
+      </motion.svg>
+      <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:-360}} transition={{duration:35, repeat:Infinity, ease:'linear'}}>
+         <circle cx="130" cy="130" r="125" fill="none" stroke="rgba(200,180,100,0.25)" strokeWidth="1" strokeDasharray="8 20" />
+      </motion.svg>
+      <motion.img 
+        src="/favicon.png" 
+        style={{gridArea:'1/1', width:150, height:150, zIndex:10, objectFit:'contain'}}
+        animate={{ 
+           scale: [1, 1.04, 1],
+           filter: [
+             'drop-shadow(0 0 12px rgba(200,220,255,0.2))',
+             'drop-shadow(0 0 30px rgba(200,220,255,0.5))',
+             'drop-shadow(0 0 12px rgba(200,220,255,0.2))'
+           ]
+        }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
+     </motion.div>
      {SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57,d=s.sections.filter(x=>p.done[s.id+':'+x.id]).length
       return <motion.button initial={{opacity:0, scale:0.5, x:'-50%', y:'-50%'}} animate={{opacity:1, scale:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.08}} key={s.id} className="sn glass hub" style={{left:430+R*1.55*Math.cos(a),top:350+R*1.2*Math.sin(a),'--c':s.color}} onClick={()=>open(s.id)}>
-       <b>{s.name}</b><small>{s.sections.length} sections · {s.quiz.length} QCM</small><u style={{width:100*d/s.sections.length+'%'}}/></motion.button>})}
+       <b>{s.name}</b><small>{s.sections.length} sections · {s.quiz.length} QCM</small><u style={{width:100*d/s.sections.length+'%'}}/>
+      </motion.button>})}
     </div>:<Graph S={S} chap={chap??S.sections[0].c} setChap={setChap} sec={sec} setSec={setSec} p={p}/>}
     </motion.div>
     </AnimatePresence>
    </section>
-   <Panel key={sid+(sec?.id||'')} S={S} sec={sec} p={p} toggle={toggle} open={open} onQuiz={()=>setQuiz(true)}/>
+   {S && <Panel key={sid+(sec?.id||'')} S={S} sec={sec} p={p} toggle={toggle} open={open} onQuiz={()=>setQuiz(true)}/>}
   </main>
   <AnimatePresence>
   {quiz&&S&&<Quiz S={S} onClose={()=>setQuiz(false)} savedState={p.quizProgress?.[S.id]} onUpdate={updateQuiz}/>}
