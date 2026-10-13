@@ -7,7 +7,7 @@ import {
   BookOpen, Terminal, Database, Globe, Shield, 
   Cpu, Hash, Network, BrainCircuit, Lightbulb,
   Info, AlertTriangle, CheckCircle, Target, Bookmark,
-  Book, BookMarked
+  Book, BookMarked, ChevronLeft, ChevronRight, ArrowLeft
 } from 'lucide-react';
 
 const SubjIcon = ({id, size=24}) => {
@@ -16,7 +16,7 @@ const SubjIcon = ({id, size=24}) => {
     case 'java': return <Cpu size={size} />;
     case 'python': return <Hash size={size} />;
     case 'web': return <Globe size={size} />;
-    case 'bd': return <Database size={size} />;
+    case 'bases-de-donnees': return <Database size={size} />;
     case 'reseaux': return <Network size={size} />;
     case 'uml': return <BookOpen size={size} />;
     case 'secu': return <Shield size={size} />;
@@ -37,13 +37,11 @@ const AlertIcon = ({type, size=18}) => {
   }
 }
 const mods=import.meta.glob('./data/*.json',{eager:true})
-const ORDER=['c','java','python','web','bd','reseaux','uml','secu','ia','maths','linux']
+const ORDER=['c','java','python','web','bases-de-donnees','reseaux','uml','secu','ia','maths','linux']
 const SUBJ=Object.values(mods).map(m=>m.default).sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id))
 const ALL=SUBJ.flatMap(s=>s.sections.map(x=>({...x,sid:s.id})))
 const curve=(a,b,c,d)=>{const k=(c-a)*.55;return `M${a} ${b}C${a+k} ${b},${c-k} ${d},${c} ${d}`}
 const load=()=>{try{return JSON.parse(localStorage.getItem('rev')||'{}')}catch{return{}}}
-const find=(q)=>{const t=q.toLowerCase().split(/\s+/).filter(w=>w.length>2);if(!t.length)return[]
- return ALL.map(s=>({s,n:t.reduce((n,w)=>n+(s.t.toLowerCase().includes(w)?8:0)+(s.x.toLowerCase().split(w).length-1),0)})).filter(r=>r.n>0).sort((a,b)=>b.n-a.n).slice(0,8).map(r=>r.s)}
 
 function preprocessMarkdown(text) {
   let lines = text.split('\n');
@@ -51,9 +49,18 @@ function preprocessMarkdown(text) {
   let inAlert = false;
   let inCode = false;
   
+  let inFence = false;
   for(let i=0; i<lines.length; i++) {
     let l = lines[i];
-    let m = l.match(/^\s*([❖➔➣◆☞★✿])\s*(.*)/);
+    if (/^\s*```/.test(l)) {
+      if (inCode) { out.push('```\n'); inCode = false; }
+      if (inAlert) { inAlert = false; out.push(''); }
+      inFence = !inFence;
+      out.push(l.trim());
+      continue;
+    }
+    if (inFence) { out.push(l); continue; }
+    let m = l.match(/^\s*([❖➔➣◆☞★✿✎➤])\s*(.*)/);
     
     let isCode = /^\s*\d{1,3}\s{2,}\S/.test(l) || (/^\s{3,}\S/.test(l)&&/[{};]|#include|gcc|echo|ls|cat|cd|mkdir/.test(l));
     if (/^\s*$/.test(l) || /^\s*#/.test(l) || /^\s*[-*]\s/.test(l)) isCode = false;
@@ -191,7 +198,7 @@ function Quiz({S,onClose,savedState,onUpdate}){
 }
 
 function Graph({S,chap,setChap,sec,setSec,p}){
- const chs=useMemo(()=>{const m={};S.sections.forEach(s=>(m[s.c]??=[]).push(s));return Object.entries(m).map(([c,l])=>({c:+c,l}))},[S])
+ const chs=useMemo(()=>{const m={};S.sections.forEach(s=>(m[s.c]??=[]).push(s));return Object.entries(m).map(([c,l])=>({c:+c,l,name:S.chapters?.[c]||`Chapitre ${c}`}))},[S])
  const ci=Math.max(0,chs.findIndex(x=>x.c===chap)),cur=chs[ci]
  
  const chapGap = 58, secGap = 42;
@@ -204,7 +211,7 @@ function Graph({S,chap,setChap,sec,setSec,p}){
  const getChapPos = (i) => {
    const y = (H - chapH)/2 + i * chapGap + chapGap/2;
    const dy = y - H/2;
-   const x = 280 - (dy * dy) / 2000; // Organic convex arc shape
+   const x = 280 - (dy * dy) / 2000;
    return { x, y };
  };
  
@@ -233,13 +240,16 @@ function Graph({S,chap,setChap,sec,setSec,p}){
   </motion.div>
   {chs.map((c,i)=>{
     const pos = getChapPos(i);
-    return <motion.button initial={{opacity:0, x:'-50%', y:'-50%'}} animate={{opacity:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.03}} key={c.c} className={'chap glass '+(i===ci?'sel':'')} style={{left:pos.x,top:pos.y, zIndex:2}} onClick={()=>{setChap(c.c);setSec(null)}}>
-     <b>{c.l.length}</b><small>Chap. {c.c}</small></motion.button>
+    const doneCh = c.l.filter(s=>p.done[S.id+':'+s.id]).length;
+    const pctCh = Math.round(100*doneCh/c.l.length);
+    return <motion.button initial={{opacity:0, x:'-50%', y:'-50%'}} animate={{opacity:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.03}} key={c.c} className={'chap glass '+(i===ci?'sel':'')} style={{left:pos.x,top:pos.y, zIndex:2}} onClick={()=>{setChap(c.c);setSec(null)}} title={c.name}>
+     <b>{c.l.length}</b><small>{c.name.length > 22 ? c.name.slice(0,20)+'…' : c.name}</small>
+     <div className="chap-bar"><div style={{width:pctCh+'%'}}/></div>
+  </motion.button>
   })}
   <AnimatePresence>
   {cur.l.map((s,i)=>{
     const pos = getSecPos(i);
-    // Golden angle approximation for well-distributed distinct colors
     const hue = (i * 137.508) % 360; 
     const color = `hsl(${hue}, 80%, 65%)`;
     return <motion.button initial={{opacity:0, x:'-50%', y:'-50%'}} animate={{opacity:1, x:'-50%', y:'-50%'}} exit={{opacity:0, scale:0.9, x:'-50%', y:'-50%'}} transition={{delay:i*0.02}} key={s.id} className={'sn glass '+(sec?.id===s.id?'sel':'')} style={{left:pos.x,top:pos.y, width: 340, '--c': color}} onClick={()=>setSec(s)}>
@@ -249,44 +259,122 @@ function Graph({S,chap,setChap,sec,setSec,p}){
  </div>
 }
 
-function Panel({S,sec,p,toggle,open,onQuiz}){
+/* ===== Dashboard Panel (no section selected) ===== */
+function Dashboard({S,p,onQuiz}){
  const list=S?S.sections:ALL
  const done=list.filter(s=>p.done[(s.sid||S.id)+':'+s.id]).length,pct=Math.round(100*done/list.length)
  const nq=S?S.quiz.length:SUBJ.reduce((n,s)=>n+s.quiz.length,0)
- const curIdx = (S && sec) ? S.sections.findIndex(x => x.id === sec.id) : -1;
- const nextSec = (curIdx !== -1 && curIdx < S.sections.length - 1) ? S.sections[curIdx + 1] : null;
- const handleNext = () => {
-   if (!p.done[S.id+':'+sec.id]) toggle(S.id+':'+sec.id);
-   if (nextSec) open(S.id, nextSec);
-   else open(S.id, null);
- };
- return <aside className={`panel glass ${sec ? 'expanded' : ''}`}>
-  <div className="pin">
-  <AnimatePresence mode="wait">
-  <motion.div key={sec?sec.id:(S?S.id:'home')} initial={{opacity:0, y:15}} animate={{opacity:1, y:0}} exit={{opacity:0, y:-15}} transition={{duration:0.25}}>
-  {sec?<>
-   <small className="tag">{S.name} · {sec.id}</small><h2>{sec.t}</h2>
-   <div className="body"><Body text={sec.x}/></div></>:<>
-   <small className="tag">{S?S.name:'Vue d’ensemble'}</small><h2>{S?'Révision – '+S.name:'Fiche Master · Concours Informatique'}</h2>
-   <div className="ring" style={{'--p':pct+'%'}}><b>{pct}%</b><small>Acquis</small></div>
-   <div className="stats">
-    <div className="glass"><b>{list.length}</b><small>Sections</small></div>
-    <div className="glass"><b>{nq}</b><small>QCM</small></div>
-    <div className="glass"><b>{done}</b><small>Acquises</small></div>
-    <div className="glass"><b>{S?p.best[S.id]??'–':SUBJ.length}</b><small>{S?'Meilleur QCM %':'Matières'}</small></div></div>
-   <div className="row">{S&&S.quiz.length>0&&<button className="btn" onClick={onQuiz}>{p.quizProgress?.[S.id]?.i > 0 ? 'Reprendre le QCM' : 'Lancer le QCM'}</button>}</div>
-   {!S&&<p className="hint">Choisis une matière sur la carte, explore les chapitres puis les sections. Les QCM viennent directement de la fiche.</p>}</>}
-  </motion.div>
-  </AnimatePresence>
+ const chs=useMemo(()=>{
+   if(!S) return [];
+   const m={};S.sections.forEach(s=>(m[s.c]??=[]).push(s));
+   return Object.entries(m).map(([c,l])=>({c:+c,l,name:S.chapters?.[c]||`Chapitre ${c}`}));
+ },[S])
+
+ return <aside className="dashboard glass">
+  <div className="dash-header">
+    <div className="dash-icon" style={{background:`linear-gradient(135deg, ${S?.color||'#8b9cff'}33, transparent)`}}>
+      <SubjIcon id={S?.id||'home'} size={32} />
+    </div>
+    <div>
+      <small className="tag">{S?S.name:'Vue d\'ensemble'}</small>
+      <h2>{S?S.name:'Fiche Master · Concours'}</h2>
+    </div>
   </div>
-  {sec && (
-   <div style={{marginTop:'14px'}}>
-    <button className="btn" style={{margin:0, width:'100%', padding:'14px', fontSize:'15px', fontWeight:'bold'}} onClick={handleNext}>
-     {nextSec ? 'Valider et Passer au suivant ➔' : 'Valider et Terminer la matière ✔'}
-    </button>
-   </div>
-  )}
+  
+  <div className="dash-progress">
+    <div className="dash-progress-bar">
+      <motion.div initial={{width:0}} animate={{width:pct+'%'}} transition={{duration:0.8}} style={{background:S?.color||'#8b9cff'}}/>
+    </div>
+    <span className="dash-pct">{pct}% acquis</span>
+  </div>
+  
+  <div className="dash-stats">
+    <div className="dash-stat glass"><b>{list.length}</b><small>Sections</small></div>
+    <div className="dash-stat glass"><b>{nq}</b><small>QCM</small></div>
+    <div className="dash-stat glass"><b>{done}</b><small>Acquises</small></div>
+    <div className="dash-stat glass"><b>{S?p.best[S.id]??'–':SUBJ.length}</b><small>{S?'Meilleur %':'Matières'}</small></div>
+  </div>
+
+  {S&&S.quiz.length>0&&<button className="btn dash-quiz-btn" onClick={onQuiz}>
+    {p.quizProgress?.[S.id]?.i > 0 ? '▶ Reprendre le QCM' : '🎯 Lancer le QCM'}
+  </button>}
+
+  {S && chs.length > 0 && <div className="dash-chapters">
+    <h4>Chapitres</h4>
+    {chs.map(ch => {
+      const doneCh = ch.l.filter(s=>p.done[S.id+':'+s.id]).length;
+      const pctCh = Math.round(100*doneCh/ch.l.length);
+      return <div key={ch.c} className="dash-ch-item">
+        <div className="dash-ch-info">
+          <span className="dash-ch-name">{ch.name}</span>
+          <span className="dash-ch-count">{ch.l.length} sections · {pctCh}%</span>
+        </div>
+        <div className="dash-ch-bar"><div style={{width:pctCh+'%', background:S.color}}/></div>
+      </div>
+    })}
+  </div>}
+  
+  {!S&&<p className="hint">Choisis une matière sur la carte, explore les chapitres puis les sections.</p>}
  </aside>
+}
+
+/* ===== Full-width Reader View (section selected) ===== */
+function Reader({S, sec, p, toggle, open}) {
+  const curIdx = S.sections.findIndex(x => x.id === sec.id);
+  const prevSec = curIdx > 0 ? S.sections[curIdx - 1] : null;
+  const nextSec = curIdx < S.sections.length - 1 ? S.sections[curIdx + 1] : null;
+  const chapName = S.chapters?.[String(sec.c)] || `Chapitre ${sec.c}`;
+  
+  const handleNext = () => {
+    if (!p.done[S.id+':'+sec.id]) toggle(S.id+':'+sec.id);
+    if (nextSec) open(S.id, nextSec);
+    else open(S.id, null);
+  };
+
+  return <motion.div 
+    className="reader" 
+    initial={{opacity:0, y:20}} 
+    animate={{opacity:1, y:0}} 
+    exit={{opacity:0, y:-20}}
+    transition={{duration:0.3}}
+  >
+    <div className="reader-topbar">
+      <button className="reader-back" onClick={() => open(S.id, null)}>
+        <ArrowLeft size={18} /> Retour
+      </button>
+      <div className="reader-breadcrumb">
+        <span>{S.name}</span>
+        <ChevronRight size={14} />
+        <span>{chapName}</span>
+        <ChevronRight size={14} />
+        <span className="reader-bc-current">{sec.id}</span>
+      </div>
+      <div className="reader-progress">
+        {curIdx + 1} / {S.sections.length}
+      </div>
+    </div>
+
+    <div className="reader-content glass">
+      <div className="reader-head">
+        <small className="tag">{chapName} · Section {sec.id}</small>
+        <h1>{sec.t}</h1>
+      </div>
+      <div className="reader-body">
+        <Body text={sec.x} />
+      </div>
+    </div>
+
+    <div className="reader-nav-bottom">
+      {prevSec ? (
+        <button className="btn ghost reader-nav-btn" onClick={() => open(S.id, prevSec)}>
+          <ChevronLeft size={16} /> {prevSec.t.slice(0,30)}{prevSec.t.length>30?'…':''}
+        </button>
+      ) : <div/>}
+      <button className="btn reader-nav-btn" onClick={handleNext}>
+        {nextSec ? <>Valider et Suivant <ChevronRight size={16} /></> : 'Valider et Terminer ✔'}
+      </button>
+    </div>
+  </motion.div>
 }
 
 export default function App(){
@@ -308,47 +396,51 @@ export default function App(){
  return <div className={`app ${theme}`} style={{'--c':S?.color||'#8b9cff'}}>
   <div className="bar glass">
    <button onClick={()=>setTheme(t=>t==='dark'?'light':'dark')} title="Changer le thème">
-     {theme==='dark'?'☀️ Mode Clair':'🌙 Mode Sombre'}
+     {theme==='dark'?'☀️':'🌙'}
    </button>
    <button onClick={()=>open(null)} className={!S?'on':''}>◉ Carte</button>
    {SUBJ.map(s=><button key={s.id} className={sid===s.id?'on':''} onClick={()=>open(s.id)} title={s.name}>{s.name.split(' ')[0]}</button>)}</div>
   <main>
-   <section className={`stage ${sec ? 'shrunk' : ''}`}>
-    <AnimatePresence mode="wait">
-    <motion.div key={S?S.id:'main'} initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} exit={{opacity:0, scale:0.95}} transition={{duration:0.3}} className="w-full h-full" style={{display:'flex', flexDirection:'column', minHeight:'100%'}}>
-    {!S?<div className="graph" style={{height:700,width:860, margin:'auto'}}>
-     <svg width="860" height="700">{SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57;return <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1, delay:0.2}} key={s.id} d={curve(430, 350, 430+R*1.55*Math.cos(a), 350+R*1.2*Math.sin(a))} style={{'--c':s.color, fill: 'none', stroke: s.color, strokeWidth: 1.5, opacity: 0.6}} />})}</svg>
-     <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:430,top:350, width:260, height:260, border:'none', background:'none', display:'grid', placeItems:'center'}}>
-      <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:360}} transition={{duration:25, repeat:Infinity, ease:'linear'}}>
-         <circle cx="130" cy="130" r="120" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="2" strokeDasharray="15 25" />
-         <circle cx="130" cy="130" r="105" fill="none" stroke="rgba(100,150,255,0.4)" strokeWidth="1.5" strokeDasharray="50 15 15 15" />
-      </motion.svg>
-      <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:-360}} transition={{duration:35, repeat:Infinity, ease:'linear'}}>
-         <circle cx="130" cy="130" r="125" fill="none" stroke="rgba(200,180,100,0.25)" strokeWidth="1" strokeDasharray="8 20" />
-      </motion.svg>
-      <motion.img 
-        src="/favicon.png" 
-        style={{gridArea:'1/1', width:150, height:150, zIndex:10, objectFit:'contain'}}
-        animate={{ 
-           scale: [1, 1.04, 1],
-           filter: [
-             'drop-shadow(0 0 12px rgba(200,220,255,0.2))',
-             'drop-shadow(0 0 30px rgba(200,220,255,0.5))',
-             'drop-shadow(0 0 12px rgba(200,220,255,0.2))'
-           ]
-        }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
+   <AnimatePresence mode="wait">
+   {sec && S ? (
+     <Reader key={sec.id} S={S} sec={sec} p={p} toggle={toggle} open={open} />
+   ) : (
+     <motion.div key={S?S.id:'main'} initial={{opacity:0, scale:0.95}} animate={{opacity:1, scale:1}} exit={{opacity:0, scale:0.95}} transition={{duration:0.3}} className="main-layout">
+       <section className="stage">
+         {!S?<div className="graph" style={{height:700,width:860, margin:'auto'}}>
+          <svg width="860" height="700">{SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57;return <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1, delay:0.2}} key={s.id} d={curve(430, 350, 430+R*1.55*Math.cos(a), 350+R*1.2*Math.sin(a))} style={{'--c':s.color, fill: 'none', stroke: s.color, strokeWidth: 1.5, opacity: 0.6}} />})}</svg>
+          <motion.div initial={{scale:0, x:'-50%', y:'-50%'}} animate={{scale:1, x:'-50%', y:'-50%'}} className="orb" style={{left:430,top:350, width:260, height:260, border:'none', background:'none', display:'grid', placeItems:'center'}}>
+           <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:360}} transition={{duration:25, repeat:Infinity, ease:'linear'}}>
+              <circle cx="130" cy="130" r="120" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="2" strokeDasharray="15 25" />
+              <circle cx="130" cy="130" r="105" fill="none" stroke="rgba(100,150,255,0.4)" strokeWidth="1.5" strokeDasharray="50 15 15 15" />
+           </motion.svg>
+           <motion.svg viewBox="0 0 260 260" style={{gridArea:'1/1', width:'100%', height:'100%', position:'absolute'}} animate={{rotate:-360}} transition={{duration:35, repeat:Infinity, ease:'linear'}}>
+              <circle cx="130" cy="130" r="125" fill="none" stroke="rgba(200,180,100,0.25)" strokeWidth="1" strokeDasharray="8 20" />
+           </motion.svg>
+           <motion.img 
+             src="/favicon.png" 
+             style={{gridArea:'1/1', width:150, height:150, zIndex:10, objectFit:'contain'}}
+             animate={{ 
+                scale: [1, 1.04, 1],
+                filter: [
+                  'drop-shadow(0 0 12px rgba(200,220,255,0.2))',
+                  'drop-shadow(0 0 30px rgba(200,220,255,0.5))',
+                  'drop-shadow(0 0 12px rgba(200,220,255,0.2))'
+                ]
+             }}
+             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+           />
+          </motion.div>
+          {SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57,d=s.sections.filter(x=>p.done[s.id+':'+x.id]).length
+           return <motion.button initial={{opacity:0, scale:0.5, x:'-50%', y:'-50%'}} animate={{opacity:1, scale:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.08}} key={s.id} className="sn glass hub" style={{left:430+R*1.55*Math.cos(a),top:350+R*1.2*Math.sin(a),'--c':s.color}} onClick={()=>open(s.id)}>
+            <b>{s.name}</b><small>{s.sections.length} sections · {s.quiz.length} QCM</small><u style={{width:100*d/s.sections.length+'%'}}/>
+           </motion.button>})}
+         </div>:<Graph S={S} chap={chap??S.sections[0].c} setChap={setChap} sec={sec} setSec={setSec} p={p}/>}
+       </section>
+       {S && <Dashboard key={sid} S={S} p={p} onQuiz={()=>setQuiz(true)}/>}
      </motion.div>
-     {SUBJ.map((s,i)=>{const a=i/SUBJ.length*6.283-1.57,d=s.sections.filter(x=>p.done[s.id+':'+x.id]).length
-      return <motion.button initial={{opacity:0, scale:0.5, x:'-50%', y:'-50%'}} animate={{opacity:1, scale:1, x:'-50%', y:'-50%'}} transition={{delay:i*0.08}} key={s.id} className="sn glass hub" style={{left:430+R*1.55*Math.cos(a),top:350+R*1.2*Math.sin(a),'--c':s.color}} onClick={()=>open(s.id)}>
-       <b>{s.name}</b><small>{s.sections.length} sections · {s.quiz.length} QCM</small><u style={{width:100*d/s.sections.length+'%'}}/>
-      </motion.button>})}
-    </div>:<Graph S={S} chap={chap??S.sections[0].c} setChap={setChap} sec={sec} setSec={setSec} p={p}/>}
-    </motion.div>
-    </AnimatePresence>
-   </section>
-   {S && <Panel key={sid+(sec?.id||'')} S={S} sec={sec} p={p} toggle={toggle} open={open} onQuiz={()=>setQuiz(true)}/>}
+   )}
+   </AnimatePresence>
   </main>
   <AnimatePresence>
   {quiz&&S&&<Quiz S={S} onClose={()=>setQuiz(false)} savedState={p.quizProgress?.[S.id]} onUpdate={updateQuiz}/>}

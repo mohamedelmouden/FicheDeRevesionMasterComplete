@@ -6,104 +6,104 @@
     {
       "id": "1.1",
       "c": 1,
+      "t": "Ce qui tombe dans les concours",
+      "x": "## Ce qui tombe dans les anciens concours\n- Définitions : BD, SGBD, DBA\n- Architecture 3 niveaux (ANSI/SPARC)\n- Modèles de données : relationnel, hiérarchique, réseau\n- Propriétés ACID\n- Indépendance logique et physique"
+    },
+    {
+      "id": "1.2",
+      "c": 1,
       "t": "Chapitre 1: Introduction aux BD",
       "x": "Concepts de Base de Données\n### Chapitre 1: Introduction aux BD\n"
     },
     {
-      "id": "1.2",
+      "id": "1.3",
       "c": 1,
       "t": "Introduction.",
       "x": "Plan\n### Introduction.\n\n### Définitions.\n\nBase de données versus fichiers.\n### Objectifs du SGBD.\n\nComposants du SGBD.\nFonctions du SGBD.\n### Les types des SGBDs.\n\nArchitecture du SGBD.\nDémarche de construction d'une BD.\nUn peu d'histoire."
     },
     {
-      "id": "1.3",
+      "id": "1.4",
       "c": 1,
       "t": "Introduction",
       "x": "### Introduction\n\nLes bases de données sont actuellement au cœur du système d'information des entreprises. Les systèmes de gestion de bases de données peuvent maintenant être installés sur tous les types d'ordinateurs y compris les ordinateurs personnels.\nMais attention, souvent on désigne, par abus de langage, sous le nom \"bases de données\" des ensembles de données qui n'en sont pas.\nQu'est-ce donc une base de données?\nQue peut-on attendre d'un système de gestion de bases de données?\nComment est ce qu'on peut gérer une base de données?"
     },
     {
-      "id": "1.4",
+      "id": "1.5",
       "c": 1,
       "t": "Définitions",
       "x": "### Définitions\n\nDéfinition intuitive: une base de données est un ensemble d'informations (fichiers), partagé par plusieurs utilisateurs. Ces informations sont interrogées et mises à jour par l'intermédiaire d'un logiciel.\n### Exemples d'application:\n\n• Annuaire électronique\n• Catalogue électronique d'une bibliothèque"
     },
     {
-      "id": "1.5",
+      "id": "1.6",
       "c": 1,
       "t": "Définitions",
       "x": "### Définitions\n\nDéfinition: une base de données est un ensemble structuré de données (1) enregistrées sur des supports accessibles par l'ordinateur (2) pour satisfaire simultanément plusieurs utilisateurs (3) de manière sélective (4) en un temps opportun(5).\n• (1) : Organisation et description de données\n• (2) : Stockage sur disque\n• (3) : Partage des données\n• (4) : Confidentialité\n• (5) : Performance"
     },
     {
-      "id": "1.6",
+      "id": "1.7",
       "c": 1,
       "t": "Définitions",
       "x": "### Définitions\n\nUne base de données: peut être définie comme une collection de données enregistrées ensemble, sans redondances inutiles, pour servir plusieurs applications.\nLes données y sont enregistrées de telle manière qu'elles soient indépendantes des programmes qui les utilisent.\nCes données sont structurées pour permettre des opérations, parfois très complexes, de lecture, suppression, déplacement, tri, comparaison, etc."
     },
     {
-      "id": "1.7",
+      "id": "1.8",
       "c": 1,
       "t": "Définitions",
       "x": "### Définitions\n\nDéfinition : Le logiciel qui permet d'interagir avec une BD est un Système de Gestion de Base de Données (SGBD)"
     },
     {
-      "id": "1.8",
+      "id": "1.9",
       "c": 1,
       "t": "Définitions",
       "x": "### Définitions\n\nLe SGBD: Toutes les opérations sur une base de données sont permises grâce au SGBD: Système de Gestion de Bases de Données, qui définit, manipule et contrôle les données.\nDifférents modèles de SGBD existent, mais depuis de nombreuses années, c'est le modèle relationnel (SGBDR) qui s'est imposé comme standard.\nLes logiciels les plus connus du marchés sont tous de ce type (Access, Oracle, SQLServer, Informix, Sybase, MySQL, DB2, etc.)."
     },
     {
-      "id": "1.9",
+      "id": "1.10",
       "c": 1,
       "t": "Base de données = Fichiers ?",
       "x": "Base de données = Fichiers ?\nTravailler directement sur un fichier présente plusieurs inconvénients :\nManipulation de données lourde et compliquée. Il faut être expert en programmation.\nLe programmeur doit connaître la localisation physique des fichiers, la structure physique des enregistrements, le mode d'accès à ces fichiers.\nToute modification de la structure des enregistrements (ajout d'un champ par exemple) entraîne la réécriture de tous les programmes qui manipulent ces fichiers."
     },
     {
-      "id": "1.10",
+      "id": "1.11",
       "c": 1,
       "t": "Base de données = Fichiers ?",
       "x": "Base de données = Fichiers ?\nUn SGBD est un intermédiaire entre les utilisateurs et les fichiers physiques.\nUn SGBD facilite\nla gestion de données, avec une représentation intuitive simple sous forme de tables.\nla manipulation de données. On peut insérer, modifier les données et les structures sans modifier les programmes qui manipulent la base de données"
     },
     {
-      "id": "1.11",
+      "id": "1.12",
       "c": 1,
       "t": "Objectifs des SGBDs",
       "x": "### Objectifs des SGBDs\n\nIl faut pouvoir accéder aux données sans savoir programmer ce qui signifie des langages \"quasi naturels\".\nEfficacité des accès aux données: doivent permettre d'obtenir des réponses aux interrogations en un temps \"raisonnable\".\nAdministration centralisée des données: Des visions différentes des données (entre autres) se résolvent plus facilement si les données sont administrées de façon centralisée.\nNon-redondance des données: Afin d'éviter les problèmes lors des mises à jour, chaque donnée ne doit être présente qu'une seule fois dans la base"
     },
     {
-      "id": "1.12",
+      "id": "1.13",
       "c": 1,
       "t": "Objectifs des SGBDs",
       "x": "### Objectifs des SGBDs\n\nCohérence des données: Les données sont soumises à un certain nombre de contraintes d'intégrité qui définissent un état cohérent de la base.\nPartageabilité des données: Il s'agit de permettre à plusieurs utilisateurs d'accéder aux mêmes données au même moment."
     },
     {
-      "id": "1.13",
+      "id": "1.14",
       "c": 1,
       "t": "Objectifs des SGBDs",
       "x": "### Objectifs des SGBDs\n\nSécurité des données: Les données doivent pouvoir être protégées contre les accès non autorisés.\nRésistance aux pannes: Que se passe-t-il si une panne survient au milieu d'une modification."
     },
     {
-      "id": "1.14",
+      "id": "1.15",
       "c": 1,
       "t": "Concepts de base",
       "x": "Concepts de base\nPour assurer ces objectifs, trois niveaux de description des données ont été définis par la norme ANSI/SPARC"
     },
     {
-      "id": "1.15",
+      "id": "1.16",
       "c": 1,
       "t": "Concepts de base",
       "x": "Concepts de base\nNiveau interne: Description du stockage des données au niveau des unités de stockage, des fichiers.\nNiveau conceptuel: Description de la structure de toutes les données qui existent dans la base.\nNiveau externe: Description pour chaque utilisateur de sa perception des données."
     },
     {
-      "id": "1.16",
-      "c": 1,
-      "t": "SGBD:",
-      "x": "Composantes d'une BD: Logiciel\n### SGBD:\n\nGère le niveau logique et physique de la base.\nSelon l'architecture ANSI/SPARC."
-    },
-    {
       "id": "1.17",
       "c": 1,
       "t": "Composantes d'une BD: Matériel",
-      "x": "Composantes d'une BD: Matériel\nOrdinateur générique avec son CPU, RAM, disque pour la BD, bandes pour la sauvegarde."
+      "x": "Composantes d'une BD: Logiciel\n### SGBD:\n\nGère le niveau logique et physique de la base.\nSelon l'architecture ANSI/SPARC.\n\n### Composantes d'une BD: Matériel\nComposantes d'une BD: Matériel\nOrdinateur générique avec son CPU, RAM, disque pour la BD, bandes pour la sauvegarde."
     },
     {
       "id": "1.18",
@@ -132,80 +132,74 @@
     {
       "id": "1.22",
       "c": 1,
-      "t": "Définition et description des données - Niveau logique",
-      "x": "### Définition et description des données - Niveau logique\n\nPermet la description des objets, des propriétés des objets (attributs), des liens entre les objets, des contraintes."
+      "t": "Définition et description des données - Niveau physique",
+      "x": "### Définition et description des données - Niveau logique\n\nPermet la description des objets, des propriétés des objets (attributs), des liens entre les objets, des contraintes.\n\n### Définition et description des données - Niveau physique\n### Définition et description des données - Niveau physique\n\nDescription informatique des données et de leur organisation en termes de fichiers, d'index, de méthodes d'accès."
     },
     {
       "id": "1.23",
       "c": 1,
-      "t": "Définition et description des données - Niveau physique",
-      "x": "### Définition et description des données - Niveau physique\n\nDescription informatique des données et de leur organisation en termes de fichiers, d'index, de méthodes d'accès."
+      "t": "Définition et description des données - Niveau externe",
+      "x": "### Définition et description des données - Niveau externe\n\nDescription des données vues par un utilisateur (ou un groupe d'utilisateurs).\n\n### Manipulation et restitution des données\nManipulation et restitution des données\nInsertion, Suppression, Modification, Interrogation.\nS.Q.L (Structured Query Language) est le Langage standard."
     },
     {
       "id": "1.24",
       "c": 1,
-      "t": "Définition et description des données - Niveau externe",
-      "x": "### Définition et description des données - Niveau externe\n\nDescription des données vues par un utilisateur (ou un groupe d'utilisateurs)."
+      "t": "Contrôle",
+      "x": "Contrôle\nPartage de données: accès à la même information par plusieurs utilisateurs en même temps.\nIntégrité des données grâce à la définition de contraintes sur les données.\n\nContrôle\nConfidentialité: Des droits doivent être gérés sur les données.\nSécurité: Les SGBD fournissent des mécanismes pour assurer cette sécurité."
     },
     {
       "id": "1.25",
       "c": 1,
-      "t": "Manipulation et restitution des données",
-      "x": "Manipulation et restitution des données\nInsertion, Suppression, Modification, Interrogation.\nS.Q.L (Structured Query Language) est le Langage standard."
+      "t": "L'architecture des SGBD",
+      "x": "### Modèles de SGBD\n\nmodèle hiérarchique, modèle réseau, modèle relationnel, modèle objet.\n\n### L'architecture des SGBD\nL'architecture des SGBD\nArchitecture Centralisée et Client/Serveur."
     },
     {
       "id": "1.26",
-      "c": 1,
-      "t": "Contrôle",
-      "x": "Contrôle\nPartage de données: accès à la même information par plusieurs utilisateurs en même temps.\nIntégrité des données grâce à la définition de contraintes sur les données."
-    },
-    {
-      "id": "1.27",
-      "c": 1,
-      "t": "Contrôle",
-      "x": "Contrôle\nConfidentialité: Des droits doivent être gérés sur les données.\nSécurité: Les SGBD fournissent des mécanismes pour assurer cette sécurité."
-    },
-    {
-      "id": "1.28",
-      "c": 1,
-      "t": "Modèles de SGBD",
-      "x": "### Modèles de SGBD\n\nmodèle hiérarchique, modèle réseau, modèle relationnel, modèle objet."
-    },
-    {
-      "id": "1.29",
-      "c": 1,
-      "t": "L'architecture des SGBD",
-      "x": "L'architecture des SGBD\nArchitecture Centralisée et Client/Serveur."
-    },
-    {
-      "id": "1.30",
       "c": 1,
       "t": "L'architecture des SGBD",
       "x": "L'architecture des SGBD\nArchitecture Client-Serveur: données sur le serveur partagées entre N clients."
     },
     {
-      "id": "1.31",
+      "id": "1.27",
       "c": 1,
       "t": "Démarche de construction d'une BD",
       "x": "Démarche de construction d'une BD\nInterview → Document → Modélisation (Entité association) → Schéma conceptuel → Transformation en relationnel → Schéma Logique → Schéma physique → BD"
     },
     {
-      "id": "1.32",
+      "id": "1.28",
       "c": 1,
       "t": "Un peu d'histoire",
-      "x": "Un peu d'histoire"
+      "x": "Un peu d'histoire\n\nUn peu d'histoire"
+    },
+    {
+      "id": "1.29",
+      "c": 1,
+      "t": "À mémoriser absolument",
+      "x": "✿ À RETENIR\n### ACID\n- **A**tomicité : tout ou rien\n- **C**ohérence : état valide → état valide\n- **I**solation : transactions indépendantes\n- **D**urabilité : résultats permanents\n\n### Niveaux ANSI/SPARC\n- **Externe** : vues utilisateurs\n- **Conceptuel** : structure logique globale\n- **Interne** : stockage physique"
+    },
+    {
+      "id": "1.30",
+      "c": 1,
+      "t": "Pièges fréquents",
+      "x": "☞ Attention – Piège Fréquent\n- **BD ≠ SGBD** : La BD est les données, le SGBD est le logiciel qui les gère.\n- **Redondance** : L'objectif principal du modèle relationnel est de minimiser la redondance."
+    },
+    {
+      "id": "1.31",
+      "c": 1,
+      "t": "Astuces de rapidité",
+      "x": "★ Astuce Concours\n- **ACID** : Retenez l'acronyme, il tombe souvent en QCM.\n- **Exemples SGBD** : Oracle, MySQL, PostgreSQL, SQL Server."
     },
     {
       "id": "2.1",
       "c": 2,
-      "t": "METHODE MERISE",
-      "x": "### METHODE MERISE\n"
+      "t": "Ce qui tombe dans les concours",
+      "x": "## Ce qui tombe dans les anciens concours\n- Méthode Merise : MCD, MLD, MPD\n- Entités, associations, cardinalités\n- Règles de passage MCD → MLD\n- Dépendances fonctionnelles\n- Formes normales (1FN, 2FN, 3FN, BCNF)"
     },
     {
       "id": "2.2",
       "c": 2,
-      "t": "Introduction",
-      "x": "### Introduction\n\nLa méthode MERISE, basée sur le modèle entité-association, est un outil simple et efficace, très répandue chez les développeurs français."
+      "t": "METHODE MERISE",
+      "x": "### METHODE MERISE\n\n\n### Introduction\n### Introduction\n\nLa méthode MERISE, basée sur le modèle entité-association, est un outil simple et efficace, très répandue chez les développeurs français."
     },
     {
       "id": "2.3",
@@ -229,151 +223,145 @@
       "id": "2.6",
       "c": 2,
       "t": "Le dictionnaire des données",
-      "x": "### Le dictionnaire des données\n\nDocument qui regroupe toutes les données conservées dans la base.\nPour chaque donnée: code mnémonique, désignation."
+      "x": "### Le dictionnaire des données\n\nDocument qui regroupe toutes les données conservées dans la base.\nPour chaque donnée: code mnémonique, désignation.\n\n### Le dictionnaire des données\n\nTypes de données: Alphabétique (A), Numérique (N), Alphanumérique (AN), Date, Booléen.\nLa taille s'exprime en nombre de caractères ou de chiffres."
     },
     {
       "id": "2.7",
       "c": 2,
       "t": "Le dictionnaire des données",
-      "x": "### Le dictionnaire des données\n\nTypes de données: Alphabétique (A), Numérique (N), Alphanumérique (AN), Date, Booléen.\nLa taille s'exprime en nombre de caractères ou de chiffres."
-    },
-    {
-      "id": "2.8",
-      "c": 2,
-      "t": "Le dictionnaire des données",
       "x": "### Le dictionnaire des données\n"
     },
     {
-      "id": "2.9",
+      "id": "2.8",
       "c": 2,
       "t": "Élément de base du modèle entité-association",
       "x": "### Élément de base du modèle entité-association\n\nLes entités: regroupements d'informations avec des attributs.\nLes associations: liens logiques entre les entités, quantifiés par des cardinalités."
     },
     {
-      "id": "2.10",
+      "id": "2.9",
       "c": 2,
       "t": "Les entités",
       "x": "### Les entités\n\nCe sont des regroupements d'informations. Les attributs doivent être des informations variables mais communes à une même classe d'objets.\nUne propriété qui identifie de manière unique est appelée un identifiant."
     },
     {
+      "id": "2.10",
+      "c": 2,
+      "t": "Les entités",
+      "x": "### Les entités\n\nChaque entité correspond à une table dans la base de données.\n\n### Les entités\n\nUne entité peut avoir des sous-classes. Par exemple l'adresse peut constituer une entité à part entière."
+    },
+    {
       "id": "2.11",
-      "c": 2,
-      "t": "Les entités",
-      "x": "### Les entités\n\nChaque entité correspond à une table dans la base de données."
-    },
-    {
-      "id": "2.12",
-      "c": 2,
-      "t": "Les entités",
-      "x": "### Les entités\n\nUne entité peut avoir des sous-classes. Par exemple l'adresse peut constituer une entité à part entière."
-    },
-    {
-      "id": "2.13",
       "c": 2,
       "t": "Les attributs",
       "x": "### Les attributs\n\nLes attributs sont les caractéristiques décrivant les entités. On doit préciser le type de données attendu pour chaque attribut."
     },
     {
-      "id": "2.14",
+      "id": "2.12",
       "c": 2,
       "t": "Les associations",
       "x": "### Les associations\n\nLes liens entre les entités sont appelés des associations. Une association est représentée par un rectangle arrondi relié par des traits aux entités concernées."
     },
     {
-      "id": "2.15",
+      "id": "2.13",
       "c": 2,
       "t": "Cardinalités",
       "x": "### Cardinalités\n\nLes cardinalités représentent combien de fois une association peut se produire entre deux entités.\nFormat: minimum, maximum. Les plus répandues: 0,N ; 1,N ; 0,1 ; 1,1."
     },
     {
-      "id": "2.16",
+      "id": "2.14",
       "c": 2,
       "t": "Cardinalité minimale",
-      "x": "### Cardinalité minimale\n\nExprimée par 0 ou 1. Traduit si une occurrence est obligatoirement associée à une autre ou pas."
+      "x": "### Cardinalité minimale\n\nExprimée par 0 ou 1. Traduit si une occurrence est obligatoirement associée à une autre ou pas.\n\n### Cardinalité maximale\n### Cardinalité maximale\n\nValeur 1 pour participation unique, N pour participation multiple."
     },
     {
-      "id": "2.17",
-      "c": 2,
-      "t": "Cardinalité maximale",
-      "x": "### Cardinalité maximale\n\nValeur 1 pour participation unique, N pour participation multiple."
-    },
-    {
-      "id": "2.18",
+      "id": "2.15",
       "c": 2,
       "t": "Définition:",
       "x": "Clef d'une entité\n### Définition:\n\nC'est un attribut (ou ensemble d'attributs) qui permet de distinguer un élément de manière unique et sans ambiguïté.\nOn note qu'un attribut est une clef en le soulignant dans le schéma."
     },
     {
-      "id": "2.19",
+      "id": "2.16",
       "c": 2,
       "t": "LA QUALITÉ D'UNE CLEF",
       "x": "### LA QUALITÉ D'UNE CLEF\n\nDe manière générale il convient de limiter les clefs composées. Préférer une clef numérique.\nLa clef informatique doit être: purement numérique, unique, obligatoire, générée automatiquement, invisible pour l'utilisateur."
     },
     {
-      "id": "2.20",
+      "id": "2.17",
       "c": 2,
       "t": "TECHNIQUE DE LA DOUBLE CLEF",
-      "x": "### TECHNIQUE DE LA DOUBLE CLEF\n\nIntroduire une clef « informatique » et une clef « utilisateur »."
+      "x": "### TECHNIQUE DE LA DOUBLE CLEF\n\nIntroduire une clef « informatique » et une clef « utilisateur ».\n\n### Topologie des associations\n### Topologie des associations\n\nTrois types d'associations binaires: [1,n], [n,n] et [1,1].\nPour trouver le type, il suffit de considérer les cardinalités maximales."
     },
     {
-      "id": "2.21",
-      "c": 2,
-      "t": "Topologie des associations",
-      "x": "### Topologie des associations\n\nTrois types d'associations binaires: [1,n], [n,n] et [1,1].\nPour trouver le type, il suffit de considérer les cardinalités maximales."
-    },
-    {
-      "id": "2.22",
+      "id": "2.18",
       "c": 2,
       "t": "Attributs d'association",
       "x": "### Attributs d'association\n\nIl arrive que l'on doive munir d'attributs des associations.\nSi le type est n:m, les attributs vont dans la table de jointure.\nSi 1:n, les attributs glissent vers l'entité côté 1:1.\nSi 1:1, les attributs glissent vers l'une ou l'autre des entités."
     },
     {
-      "id": "2.23",
+      "id": "2.19",
       "c": 2,
       "t": "Entité temporelle",
       "x": "### Entité temporelle\n\nUne entité temporelle possède souvent un seul attribut (date)."
     },
     {
-      "id": "2.24",
+      "id": "2.20",
       "c": 2,
       "t": "Relations ternaires et réflexives",
       "x": "### Relations ternaires et réflexives\n\nRelation ternaire: relie trois entités. Si une cardinalité max est 1, mieux vaut décomposer en 2 binaires.\nRelation réflexive: les deux pattes sont liées à une même entité."
     },
     {
-      "id": "2.25",
+      "id": "2.21",
       "c": 2,
       "t": "Passage MCD vers MLD",
       "x": "### Passage MCD vers MLD\n\nRègle 1: Toute entité du MCD devient une relation dont la clef est l'identifiant.\nRègle 2 (1:1): Les tables doivent avoir la même clef.\nRègle 3 (1:n): La clef côté 0,n migre vers la table côté 0,1 comme clef étrangère.\nRègle 4 (n:m): Une table de jointure avec clef primaire = conjonction des deux clefs.\nRègle 5: Placement des attributs d'association selon le type de relation."
     },
     {
-      "id": "2.26",
+      "id": "2.22",
       "c": 2,
       "t": "Modèle physique de données MPD",
       "x": "### Modèle physique de données MPD\n\nLe MPD est une représentation de l'organisation des données tenant compte du SGBDR retenu sous forme de tables comportant des colonnes.\nIl reprend la structure du MLD et introduit les types de données."
     },
     {
+      "id": "2.23",
+      "c": 2,
+      "t": "À mémoriser absolument",
+      "x": "✿ À RETENIR\n### Cardinalités\n| Notation | Signification |\n|----------|---------------|\n| (0,1) | 0 ou 1 |\n| (1,1) | exactement 1 |\n| (0,n) | 0 ou plusieurs |\n| (1,n) | au moins 1 |\n\n### Passage MCD → MLD\n- **1:N** → La clé de l'entité côté 1 migre comme FK vers l'entité côté N\n- **N:M** → Création d'une table d'association avec les deux FK\n- **1:1** → FK dans l'entité avec cardinalité (0,1) ou (1,1)\n\n### Formes normales\n- **1FN** : attributs atomiques\n- **2FN** : 1FN + pas de dépendance partielle\n- **3FN** : 2FN + pas de dépendance transitive\n- **BCNF** : tout déterminant est une clé candidate"
+    },
+    {
+      "id": "2.24",
+      "c": 2,
+      "t": "Pièges fréquents",
+      "x": "☞ Attention – Piège Fréquent\n- **Cardinalité (1,1) vs (0,1)** : (1,1) = participation totale. (0,1) = participation partielle.\n- **Table d'association** : Sa clé primaire est la concaténation des FK.\n- **3FN** : Attention aux dépendances transitives (A→B→C implique une violation si B n'est pas clé)."
+    },
+    {
+      "id": "2.25",
+      "c": 2,
+      "t": "Astuces de rapidité",
+      "x": "★ Astuce Concours\n- **Relation N:M** → toujours une table intermédiaire.\n- **Vérifier la normalisation** : Listez toutes les DF, puis vérifiez chaque forme normale."
+    },
+    {
       "id": "3.1",
+      "c": 3,
+      "t": "Ce qui tombe dans les concours",
+      "x": "## Ce qui tombe dans les anciens concours\n- SELECT, FROM, WHERE, ORDER BY\n- Jointures : INNER, LEFT, RIGHT, FULL\n- Fonctions d'agrégation : COUNT, SUM, AVG, MIN, MAX\n- GROUP BY et HAVING\n- Sous-requêtes\n- CREATE TABLE, ALTER, DROP\n- INSERT, UPDATE, DELETE"
+    },
+    {
+      "id": "3.2",
       "c": 3,
       "t": "Introduction à SQL",
       "x": "### Introduction à SQL\n\nSQL (Structured Query Language) est le langage standard des SGBD relationnels.\nPremière norme SQL1 en 1987, SQL2 en 1992, SQL3 en 1999.\nLes principaux SGBD Open Source: MySQL, Firebird, PostgreSQL."
     },
     {
-      "id": "3.2",
+      "id": "3.3",
       "c": 3,
       "t": "Modèle de données",
       "x": "### Modèle de données\n\nLa table relationnelle contient des enregistrements (lignes/rows). Une table est composée de colonnes.\nClé primaire: ensemble minimal de colonnes identifiant chaque enregistrement de manière unique.\nClé étrangère: référence une clé primaire d'une autre table."
     },
     {
-      "id": "3.3",
-      "c": 3,
-      "t": "Oracle - Introduction",
-      "x": "### Oracle - Introduction\n\nAccès via SQL*Plus, SQL Developer, TOAD.\nVariables d'environnement: SET pour affecter, SHOW pour consulter."
-    },
-    {
       "id": "3.4",
       "c": 3,
       "t": "SQL de Base - LDD (Langage de Définition de Données)",
-      "x": "### SQL de Base - LDD (Langage de Définition de Données)\n\nCREATE DATABASE bd_est;\nDROP DATABASE bd_est;\nSHOW DATABASES;"
+      "x": "### Oracle - Introduction\n\nAccès via SQL*Plus, SQL Developer, TOAD.\nVariables d'environnement: SET pour affecter, SHOW pour consulter.\n\n### SQL de Base - LDD (Langage de Définition de Données)\n### SQL de Base - LDD (Langage de Définition de Données)\n\nCREATE DATABASE bd_est;\nDROP DATABASE bd_est;\nSHOW DATABASES;"
     },
     {
       "id": "3.5",
@@ -391,392 +379,552 @@
       "id": "3.7",
       "c": 3,
       "t": "Types des colonnes Oracle",
-      "x": "### Types des colonnes Oracle\n\nCaractères: CHAR, VARCHAR2, CLOB, LONG\nNumériques: NUMBER(precision, scale)\nDate/heure: DATE, TIMESTAMP\nBinaires: BLOB, BFILE, RAW"
+      "x": "### Types des colonnes Oracle\n\nCaractères: CHAR, VARCHAR2, CLOB, LONG\nNumériques: NUMBER(precision, scale)\nDate/heure: DATE, TIMESTAMP\nBinaires: BLOB, BFILE, RAW\n\n### Caractères détaillés\n### Caractères détaillés\n\nCHAR: taille fixe. VARCHAR2: taille variable jusqu'à 4000 (ou 32767 avec EXTENDED).\nNCHAR, NVARCHAR2: Unicode."
     },
     {
       "id": "3.8",
       "c": 3,
-      "t": "Caractères détaillés",
-      "x": "### Caractères détaillés\n\nCHAR: taille fixe. VARCHAR2: taille variable jusqu'à 4000 (ou 32767 avec EXTENDED).\nNCHAR, NVARCHAR2: Unicode."
+      "t": "Valeurs numériques",
+      "x": "### Valeurs numériques\n\nNUMBER(precision, scale) pour entiers et réels.\nBINARY_FLOAT et BINARY_DOUBLE pour les flottants (depuis Oracle 10g).\n\n### Date/heure\n### Date/heure\n\nDATE: siècle, année, mois, jour, heure, minutes, secondes.\nTIMESTAMP: plus précis (fraction de seconde).\nINTERVAL types pour les différences entre moments."
     },
     {
       "id": "3.9",
-      "c": 3,
-      "t": "Valeurs numériques",
-      "x": "### Valeurs numériques\n\nNUMBER(precision, scale) pour entiers et réels.\nBINARY_FLOAT et BINARY_DOUBLE pour les flottants (depuis Oracle 10g)."
-    },
-    {
-      "id": "3.10",
-      "c": 3,
-      "t": "Date/heure",
-      "x": "### Date/heure\n\nDATE: siècle, année, mois, jour, heure, minutes, secondes.\nTIMESTAMP: plus précis (fraction de seconde).\nINTERVAL types pour les différences entre moments."
-    },
-    {
-      "id": "3.11",
       "c": 3,
       "t": "Structure d'une table (DESC)",
       "x": "### Structure d'une table (DESC)\n\nDESC[RIBE] [schéma.]élément\nCOMMENT ON TABLE/COLUMN pour documenter."
     },
     {
-      "id": "3.12",
+      "id": "3.10",
       "c": 3,
       "t": "Modification de table (ALTER TABLE)",
       "x": "### Modification de table (ALTER TABLE)\n\nALTER TABLE + ADD: ajouter une colonne.\nALTER TABLE + MODIFY: modifier le type d'une colonne.\nALTER TABLE + DROP COLUMN: supprimer une colonne.\nRENAME: renommer une table."
     },
     {
-      "id": "3.13",
+      "id": "3.11",
       "c": 3,
       "t": "Exemples ALTER TABLE",
       "x": "### Exemples ALTER TABLE\n\nALTER TABLE etudiant ADD (note NUMBER(5));\nALTER TABLE etudiant MODIFY nom VARCHAR(50) NOT NULL;\nALTER TABLE etudiant DROP COLUMN nom;\nRENAME Pilote TO Naviguant;"
     },
     {
-      "id": "3.14",
+      "id": "3.12",
       "c": 3,
       "t": "Suppression de table",
       "x": "### Suppression de table\n\nDROP TABLE Nom_de_la_table [CASCADE CONSTRAINTS][PURGE];\nTRUNCATE TABLE Nom_de_la_table; -- Supprime les données, conserve la structure"
     },
     {
-      "id": "3.15",
+      "id": "3.13",
       "c": 3,
       "t": "Manipulation des données - INSERT",
       "x": "### Manipulation des données - INSERT\n\nINSERT INTO nomTable (champ1, champ2,…) VALUES ('valeur1', 'valeur2',…);\nPossibilité d'insérer avec une sous-requête.\nUtilisation de DEFAULT et de scripts avec variables de substitution."
     },
     {
-      "id": "3.16",
+      "id": "3.14",
       "c": 3,
       "t": "L'ordre SELECT - Projection",
       "x": "### L'ordre SELECT - Projection\n\nSELECT colonne1, colonne2 FROM table;\nSELECT * FROM table;\nRenommage avec AS: SELECT Ville AS City FROM personne;\nDISTINCT pour éliminer les doublons."
     },
     {
-      "id": "3.17",
+      "id": "3.15",
       "c": 3,
       "t": "L'ordre SELECT - Expressions et fonctions",
-      "x": "### L'ordre SELECT - Expressions et fonctions\n\nColonnes calculées: SELECT Prix, (Prix / 6.5596) AS Prix_Euros FROM vente;\nFonctions: UPPER(), AVG(), COUNT(*), SUM(), MIN(), MAX()."
+      "x": "### L'ordre SELECT - Expressions et fonctions\n\nColonnes calculées: SELECT Prix, (Prix / 6.5596) AS Prix_Euros FROM vente;\nFonctions: UPPER(), AVG(), COUNT(*), SUM(), MIN(), MAX().\n\n### Sélection / Restriction (WHERE)\n### Sélection / Restriction (WHERE)\n\nOpérateurs: =, !=, <, >, <=, >=, IS NULL, LIKE, BETWEEN, IN.\nConnecteurs logiques: AND, OR, NOT.\nSELECT * FROM vente WHERE Prix > 50000;"
     },
     {
-      "id": "3.18",
-      "c": 3,
-      "t": "Sélection / Restriction (WHERE)",
-      "x": "### Sélection / Restriction (WHERE)\n\nOpérateurs: =, !=, <, >, <=, >=, IS NULL, LIKE, BETWEEN, IN.\nConnecteurs logiques: AND, OR, NOT.\nSELECT * FROM vente WHERE Prix > 50000;"
-    },
-    {
-      "id": "3.19",
+      "id": "3.16",
       "c": 3,
       "t": "Agrégats (GROUP BY)",
       "x": "### Agrégats (GROUP BY)\n\nGROUP BY regroupe les lignes par valeurs d'une colonne.\nHAVING filtre le résultat du groupage (contrairement à WHERE qui filtre avant).\nSELECT Marque, COUNT(*) AS Compte FROM voiture GROUP BY Marque HAVING Compte > 1;"
     },
     {
-      "id": "3.20",
+      "id": "3.17",
       "c": 3,
       "t": "Tri (ORDER BY)",
       "x": "### Tri (ORDER BY)\n\nORDER BY colonne [ASC|DESC].\nPlusieurs critères de tri possibles, traités de gauche à droite."
     },
     {
-      "id": "3.21",
+      "id": "3.18",
       "c": 3,
       "t": "Requêtes multi-tables - Jointure interne (INNER JOIN)",
       "x": "### Requêtes multi-tables - Jointure interne (INNER JOIN)\n\nSELECT v.Marque, ve.Prix FROM voiture v JOIN vente ve ON v.NumVoit=ve.NumVoit;\nJointure sur plus de deux tables possible."
     },
     {
-      "id": "3.22",
+      "id": "3.19",
       "c": 3,
       "t": "Jointure externe (OUTER JOIN)",
       "x": "### Jointure externe (OUTER JOIN)\n\nLEFT OUTER JOIN: inclut toutes les lignes de la table de gauche.\nRIGHT OUTER JOIN: inclut toutes les lignes de la table de droite.\nLignes sans correspondance → valeurs NULL."
     },
     {
-      "id": "3.23",
+      "id": "3.20",
       "c": 3,
       "t": "Opérateurs ensemblistes",
       "x": "### Opérateurs ensemblistes\n\nUNION: combine et élimine les doublons.\nUNION ALL: combine sans éliminer les doublons.\nINTERSECT: lignes communes aux deux requêtes.\nMINUS: lignes de la première requête absentes de la seconde."
     },
     {
-      "id": "3.24",
+      "id": "3.21",
       "c": 3,
       "t": "Les vues",
       "x": "### Les vues\n\nCREATE VIEW nom_vue (col1, col2) AS SELECT col1, col2 FROM table;\nTable dynamique recalculée à chaque utilisation.\nMises à jour possibles seulement sur vues mono-table."
     },
     {
-      "id": "4.1",
-      "c": 4,
+      "id": "3.22",
+      "c": 3,
       "t": "Énoncé de l'atelier SQL",
       "x": "### Énoncé de l'atelier SQL\n\nBase de données \"casse\" avec 3 tables: Personne, Voiture, Vente.\nQuestions de 1 à 14 couvrant: création de tables, insertion, projection, restriction, agrégats, jointures, opérateurs ensemblistes, vues."
     },
     {
-      "id": "4.2",
-      "c": 4,
+      "id": "3.23",
+      "c": 3,
       "t": "Création des tables",
       "x": "### Création des tables\n\nCREATE TABLE Personne (NumAch NUMBER(10) PRIMARY KEY, Nom VARCHAR2(50) NOT NULL, Age NUMBER(3) NOT NULL, Ville VARCHAR2(50) NOT NULL, Sexe CHAR(1) NOT NULL, CONSTRAINT chk_age CHECK (Age BETWEEN 0 AND 120), CONSTRAINT chk_sexe CHECK (Sexe IN ('M','F')));\nCREATE TABLE Voiture (NumVoit NUMBER(10) PRIMARY KEY, Marque VARCHAR2(50) NOT NULL, Type VARCHAR2(50) NOT NULL, Couleur VARCHAR2(20) NOT NULL);\nCREATE TABLE Vente (DateVente DATE NOT NULL, Prix NUMBER(10) NOT NULL, NumVoit NUMBER(10) NOT NULL, NumAch NUMBER(10) NOT NULL, CONSTRAINT pk_vente PRIMARY KEY (NumVoit, NumAch), CONSTRAINT fk_vente_voiture FOREIGN KEY (NumVoit) REFERENCES Voiture(NumVoit), CONSTRAINT fk_vente_personne FOREIGN KEY (NumAch) REFERENCES Personne(NumAch));"
     },
     {
-      "id": "4.3",
-      "c": 4,
+      "id": "3.24",
+      "c": 3,
       "t": "Insertion des données",
       "x": "### Insertion des données\n\nINSERT INTO Personne VALUES (1,'Nestor',96,'Paris','M');\nINSERT INTO Personne VALUES (2,'Irma',20,'Lille','F');\nINSERT INTO Personne VALUES (3,'Henri',45,'Paris','M');\nINSERT INTO Personne VALUES (4,'Josette',34,'Lyon','F');\nINSERT INTO Personne VALUES (5,'Jacques',50,'Bordeaux','M');\nINSERT INTO Voiture VALUES (1,'Peugeot','404','Rouge');\nINSERT INTO Voiture VALUES (2,'Citroen','SM','Noire');\nINSERT INTO Voiture VALUES (3,'Opel','GT','Blanche');\nINSERT INTO Voiture VALUES (4,'Peugeot','403','Blanche');\nINSERT INTO Voiture VALUES (5,'Renault','Alpine A310','Rose');\nINSERT INTO Voiture VALUES (6,'Renault','Floride','Bleue');"
     },
     {
-      "id": "4.4",
-      "c": 4,
+      "id": "3.25",
+      "c": 3,
       "t": "Corrections - Projections et restrictions",
       "x": "### Corrections - Projections et restrictions\n\nQ3 - Villes distinctes: SELECT DISTINCT Ville FROM Personne ORDER BY Ville;\nQ4 - CA TTC: SELECT SUM(Prix*1.20) AS CA_TTC FROM Vente;\nQ5 - Âge moyen Paris: SELECT AVG(Age) AS Moyenne_Age FROM Personne WHERE Ville = 'Paris';\nQ6 - Voitures par marque: SELECT Marque, COUNT(*) AS Nb FROM Voiture GROUP BY Marque;"
     },
     {
-      "id": "4.5",
-      "c": 4,
+      "id": "3.26",
+      "c": 3,
       "t": "Corrections - Jointures",
       "x": "### Corrections - Jointures\n\nQ7 - Jointure simple: SELECT p.Nom, v.Marque FROM Personne p JOIN Vente ve ON p.NumAch = ve.NumAch JOIN Voiture v ON v.NumVoit = ve.NumVoit;\nQ9 - Jointure externe: SELECT p.Ville FROM Personne p LEFT OUTER JOIN Vente ve ON p.NumAch = ve.NumAch WHERE ve.NumAch IS NULL;\nQ10 - Agrégat jointure: SELECT v.Marque, AVG(ve.Prix) AS MoyPrix FROM Voiture v JOIN Vente ve ON v.NumVoit = ve.NumVoit GROUP BY v.Marque HAVING AVG(ve.Prix) > 40000;"
     },
     {
-      "id": "5.1",
-      "c": 5,
+      "id": "3.27",
+      "c": 3,
       "t": "Cas pratique: Gestion des Inscriptions Universitaires",
       "x": "### Cas pratique: Gestion des Inscriptions Universitaires\n\nRègles de gestion: Étudiant (numéro, nom, prénom, date naissance), Cours (code, titre, crédits).\nUn étudiant peut s'inscrire à plusieurs cours. Un cours peut être suivi par plusieurs étudiants.\nPour chaque inscription: date d'inscription."
     },
     {
-      "id": "5.2",
-      "c": 5,
+      "id": "3.28",
+      "c": 3,
       "t": "Dérivation MCD → MLD",
       "x": "### Dérivation MCD → MLD\n\nETUDIANT(NumEtu, Nom, Prenom, DateNaiss)\nCOURS(CodeCours, Titre, NbCredits)\nINSCRIPTION(NumEtu#, CodeCours#, DateInscription)"
     },
     {
-      "id": "5.3",
-      "c": 5,
+      "id": "3.29",
+      "c": 3,
       "t": "Requêtes de création",
       "x": "### Requêtes de création\n\nCREATE TABLE ETUDIANT (NumEtu NUMBER(10) PRIMARY KEY, Nom VARCHAR2(50), Prenom VARCHAR2(50), DateNaiss DATE);\nCREATE TABLE COURS (CodeCours VARCHAR2(10) PRIMARY KEY, Titre VARCHAR2(100), NbCredits NUMBER(2));\nCREATE TABLE INSCRIPTION (NumEtu NUMBER(10), CodeCours VARCHAR2(10), DateInscription DATE, PRIMARY KEY(NumEtu, CodeCours), FOREIGN KEY(NumEtu) REFERENCES ETUDIANT, FOREIGN KEY(CodeCours) REFERENCES COURS);"
     },
     {
-      "id": "5.4",
-      "c": 5,
+      "id": "3.30",
+      "c": 3,
       "t": "Requêtes de sélection",
       "x": "### Requêtes de sélection\n\n1. SELECT * FROM ETUDIANT;\n2. SELECT Nom, Prenom FROM ETUDIANT WHERE NumEtu = 2023002;\n3. SELECT * FROM COURS WHERE NbCredits > 4;\n4. SELECT Titre, NbCredits FROM COURS ORDER BY Titre;\n5. SELECT * FROM ETUDIANT WHERE Nom LIKE 'D%';\n6. SELECT COUNT(*) FROM ETUDIANT;\n7. SELECT CodeCours FROM INSCRIPTION WHERE NumEtu = 2023001;\n8. SELECT CodeCours, COUNT(*) AS NbInscrits FROM INSCRIPTION GROUP BY CodeCours;"
     },
     {
-      "id": "6.1",
-      "c": 6,
+      "id": "3.31",
+      "c": 3,
+      "t": "Atelier SQL – Base Casse",
+      "x": "❖ Atelier SQL – Base Casse\n\n### Schéma\n- **Personne** (NumAch, Nom, Age, Ville, Sexe)\n- **Voiture** (NumVoit, Marque, Type, Couleur)\n- **Vente** (DateVente, Prix, NumVoit, NumAch)\n\n```sql\nCREATE TABLE Personne (\n    NumAch NUMBER(10) PRIMARY KEY,\n    Nom VARCHAR2(50) NOT NULL,\n    Age NUMBER(3), Ville VARCHAR2(50), Sexe CHAR(1)\n);\nCREATE TABLE Voiture (\n    NumVoit NUMBER(10) PRIMARY KEY,\n    Marque VARCHAR2(50), Type VARCHAR2(50), Couleur VARCHAR2(20)\n);\nCREATE TABLE Vente (\n    DateVente DATE, Prix NUMBER(10),\n    NumVoit NUMBER(10) REFERENCES Voiture(NumVoit),\n    NumAch NUMBER(10) REFERENCES Personne(NumAch),\n    PRIMARY KEY (NumVoit, NumAch)\n);\n```"
+    },
+    {
+      "id": "3.32",
+      "c": 3,
+      "t": "Atelier SQL – Requêtes et Jointures",
+      "x": "❖ Requêtes SQL – Atelier\n\n**Villes distinctes :**\n```sql\nSELECT DISTINCT Ville FROM Personne ORDER BY Ville;\n```\n\n**CA TTC :**\n```sql\nSELECT SUM(Prix*1.20) AS CA_TTC FROM Vente;\n```\n\n**Jointure :**\n```sql\nSELECT p.Nom, v.Marque\nFROM Personne p\nJOIN Vente ve ON p.NumAch = ve.NumAch\nJOIN Voiture v ON v.NumVoit = ve.NumVoit;\n```\n\n**HAVING :**\n```sql\nSELECT v.Marque, AVG(ve.Prix)\nFROM Voiture v JOIN Vente ve ON v.NumVoit=ve.NumVoit\nGROUP BY v.Marque HAVING AVG(ve.Prix)>40000;\n```\n\n★ Astuce Concours\nHAVING filtre les groupes (après GROUP BY), WHERE filtre les lignes (avant GROUP BY)."
+    },
+    {
+      "id": "3.33",
+      "c": 3,
+      "t": "PL/SQL – Introduction et Variables",
+      "x": "❖ PL/SQL – Introduction\n\n**PL/SQL** = Procedural Language extensions to SQL.\n\n### Structure d'un bloc\n```sql\nDECLARE\n    -- Variables (optionnel)\nBEGIN\n    -- Instructions (OBLIGATOIRE)\nEXCEPTION\n    -- Erreurs (optionnel)\nEND;\n/\n```\n\n### Types de variables\n| Type | Exemple |\n|------|--------|\n| VARCHAR2(n) | nom VARCHAR2(30) := 'Toto'; |\n| NUMBER(l,d) | sal NUMBER(7,2) := 3500.50; |\n| DATE | dt DATE := SYSDATE; |\n| BOOLEAN | ok BOOLEAN := TRUE; |\n\n### Typage dynamique\n```sql\nv_nom emp.ename%TYPE;\nv_emp emp%ROWTYPE;\n```\n\n✿ Théorème / Propriété – %TYPE/%ROWTYPE\nSi la table change, le code PL/SQL s'adapte automatiquement."
+    },
+    {
+      "id": "3.34",
+      "c": 3,
+      "t": "PL/SQL – Boucles et Conditions",
+      "x": "❖ Structures de contrôle PL/SQL\n\n### Boucle FOR\n```sql\nBEGIN\n    FOR i IN 1..10 LOOP\n        DBMS_OUTPUT.PUT_LINE('i = ' || i);\n    END LOOP;\nEND;\n/\n```\n\n### IF-THEN-ELSIF\n```sql\nIF note >= 16 THEN\n    DBMS_OUTPUT.PUT_LINE('Très bien');\nELSIF note >= 12 THEN\n    DBMS_OUTPUT.PUT_LINE('Bien');\nELSE\n    DBMS_OUTPUT.PUT_LINE('Insuffisant');\nEND IF;\n```\n\n### CASE\n```sql\nCASE grade\n    WHEN 'A' THEN 'Excellent'\n    WHEN 'B' THEN 'Bon'\n    ELSE 'Non classé'\nEND CASE;\n```"
+    },
+    {
+      "id": "3.35",
+      "c": 3,
+      "t": "PL/SQL – Les Curseurs",
+      "x": "❖ Les Curseurs PL/SQL\n\nUn **curseur** parcourt les résultats ligne par ligne.\n\n### Curseur explicite\n```sql\nDECLARE\n    CURSOR c_emp IS SELECT ename, sal FROM emp WHERE job='MANAGER';\n    v_nom emp.ename%TYPE;\n    v_sal emp.sal%TYPE;\nBEGIN\n    OPEN c_emp;\n    LOOP\n        FETCH c_emp INTO v_nom, v_sal;\n        EXIT WHEN c_emp%NOTFOUND;\n        DBMS_OUTPUT.PUT_LINE(v_nom||' : '||v_sal);\n    END LOOP;\n    CLOSE c_emp;\nEND;\n/\n```\n\n### Boucle FOR simplifiée\n```sql\nFOR rec IN (SELECT ename FROM emp) LOOP\n    DBMS_OUTPUT.PUT_LINE(rec.ename);\nEND LOOP;\n```\n\n| Attribut | Description |\n|----------|------------|\n| %ISOPEN | Curseur ouvert ? |\n| %FOUND | Ligne trouvée ? |\n| %NOTFOUND | Plus de lignes ? |\n| %ROWCOUNT | Lignes traitées |"
+    },
+    {
+      "id": "3.36",
+      "c": 3,
+      "t": "À mémoriser absolument",
+      "x": "✿ À RETENIR\n### Ordre d'exécution SQL\n1. FROM (+ JOIN)\n2. WHERE\n3. GROUP BY\n4. HAVING\n5. SELECT\n6. ORDER BY\n\n### Jointures\n```sql\n-- INNER JOIN : lignes qui matchent\nSELECT * FROM A INNER JOIN B ON A.id = B.id;\n-- LEFT JOIN : toutes les lignes de A\nSELECT * FROM A LEFT JOIN B ON A.id = B.id;\n```\n\n### WHERE vs HAVING\n- `WHERE` filtre les **lignes** (avant GROUP BY)\n- `HAVING` filtre les **groupes** (après GROUP BY)"
+    },
+    {
+      "id": "3.37",
+      "c": 3,
+      "t": "Pièges fréquents",
+      "x": "☞ Attention – Piège Fréquent\n- **HAVING sans GROUP BY** : HAVING ne s'utilise qu'avec GROUP BY !\n- **NULL** : `WHERE col = NULL` ne fonctionne PAS. Utiliser `WHERE col IS NULL`.\n- **DISTINCT** : `SELECT DISTINCT` élimine les doublons, mais ralentit la requête.\n- **LEFT JOIN** : Les colonnes de la table droite sont NULL quand il n'y a pas de correspondance."
+    },
+    {
+      "id": "3.38",
+      "c": 3,
+      "t": "Astuces de rapidité",
+      "x": "★ Astuce Concours\n- **Sous-requête vs jointure** : Souvent interchangeables. La jointure est généralement plus performante.\n- **COUNT(*)** vs **COUNT(col)** : `COUNT(*)` compte toutes les lignes. `COUNT(col)` ignore les NULL.\n- **Alias** : Utilisez des alias courts pour la lisibilité : `FROM Personne p JOIN Vente v`."
+    },
+    {
+      "id": "4.1",
+      "c": 4,
+      "t": "Ce qui tombe dans les concours",
+      "x": "## Ce qui tombe dans les anciens concours\n- Structure d'un bloc PL/SQL (DECLARE, BEGIN, EXCEPTION, END)\n- Variables : types, `%TYPE`, `%ROWTYPE`\n- Curseurs explicites et implicites\n- Boucles : FOR, WHILE, LOOP\n- IF/ELSIF/ELSE, CASE"
+    },
+    {
+      "id": "4.2",
+      "c": 4,
       "t": "Introduction au PL/SQL",
       "x": "### Introduction au PL/SQL\n\nPL/SQL: Procedural Language extensions to SQL.\nLangage de programmation qui inclut des ordres SQL.\nPermet les traitements complexes avec variables, boucles et alternatives."
     },
     {
-      "id": "6.2",
-      "c": 6,
+      "id": "4.3",
+      "c": 4,
       "t": "Pourquoi PL/SQL",
       "x": "### Pourquoi PL/SQL\n\nSQL est non procédural. PL/SQL ajoute les structures de programmation.\nLes contraintes prédéfinies ne sont pas toujours suffisantes.\nPL/SQL permet: procédures stockées, triggers, fonctions utilisateur."
     },
     {
-      "id": "6.3",
-      "c": 6,
+      "id": "4.4",
+      "c": 4,
       "t": "Structure d'un programme PL/SQL",
       "x": "### Structure d'un programme PL/SQL\n\nDECLARE (facultatif): variables, curseurs, sous-programmes.\nBEGIN ... END (obligatoire): instructions exécutables.\nEXCEPTION (facultatif): traitement des erreurs.\nChaque instruction se termine par un point-virgule."
     },
     {
-      "id": "6.4",
-      "c": 6,
+      "id": "4.5",
+      "c": 4,
       "t": "Les variables PL/SQL",
       "x": "### Les variables PL/SQL\n\nIdentificateurs: 30 caractères max, commence par une lettre.\nDéclaration: Nom_variable type_variable;\nInitialisation: Nom_variable := valeur;\nTypes: VARCHAR2(n), NUMBER(long,dec), DATE, BOOLEAN."
     },
     {
-      "id": "6.5",
-      "c": 6,
+      "id": "4.6",
+      "c": 4,
       "t": "Exemples de variables",
       "x": "### Exemples de variables\n\nc CHAR(1);\nname VARCHAR2(10) := 'Scott';\ntotal NUMBER(9,2) := 0;\npi CONSTANT NUMBER(3,2) := 3.14;\ndone BOOLEAN NOT NULL := TRUE;\nV_date DATE := TO_DATE('17-OCT-01','DD-MON-YY');"
     },
     {
-      "id": "6.6",
-      "c": 6,
+      "id": "4.7",
+      "c": 4,
       "t": "Variables typées dynamiquement",
       "x": "### Variables typées dynamiquement\n\n%TYPE: même type qu'une colonne d'une table.\nv_nom emp.name%TYPE;\n%ROWTYPE: contient toutes les colonnes d'une ligne.\nv_employe emp%ROWTYPE;"
     },
     {
-      "id": "6.7",
-      "c": 6,
+      "id": "4.8",
+      "c": 4,
       "t": "Affichage et affectation",
       "x": "### Affichage et affectation\n\nSET SERVEROUTPUT ON pour activer l'affichage.\nDBMS_OUTPUT.PUT_LINE(chaîne); pour afficher.\n|| pour la concaténation.\nAffectation par := ou par SELECT ... INTO."
     },
     {
-      "id": "6.8",
-      "c": 6,
+      "id": "4.9",
+      "c": 4,
       "t": "Variables de substitution",
       "x": "### Variables de substitution\n\nPrécédées par & ou &&.\nACCEPT pour personnaliser le message de saisie."
     },
     {
-      "id": "6.9",
-      "c": 6,
+      "id": "4.10",
+      "c": 4,
       "t": "Portée des variables",
       "x": "### Portée des variables\n\nLimitée au bloc PL/SQL de déclaration. Locale au bloc.\nUn bloc voit les objets du bloc de niveau supérieur, pas ceux de niveau inférieur.\nVariables homonymes: la plus proche déclaration est utilisée."
     },
     {
-      "id": "6.10",
-      "c": 6,
+      "id": "4.11",
+      "c": 4,
       "t": "Les boucles",
       "x": "### Les boucles\n\nLOOP ... EXIT WHEN condition; END LOOP;\nWHILE condition LOOP ... END LOOP;\nFOR i IN [REVERSE] debut..fin LOOP ... END LOOP;"
     },
     {
-      "id": "6.11",
-      "c": 6,
+      "id": "4.12",
+      "c": 4,
       "t": "Branchements conditionnels",
       "x": "### Branchements conditionnels\n\nIF condition THEN ... END IF;\nIF condition THEN ... ELSE ... END IF;\nIF condition THEN ... ELSIF condition THEN ... ELSE ... END IF;\nCASE pour structures de test multiples."
     },
     {
-      "id": "6.12",
-      "c": 6,
+      "id": "4.13",
+      "c": 4,
       "t": "Les opérateurs",
       "x": "### Les opérateurs\n\nArithmétique: +, -, *, /\nConcaténation: ||\nComparaison: =, !=, <, >, <=, >=, IS NULL, LIKE, BETWEEN, IN\nLogique: AND, OR, NOT\nAffectation: :="
     },
     {
-      "id": "7.1",
-      "c": 7,
+      "id": "4.14",
+      "c": 4,
       "t": "Introduction aux curseurs",
       "x": "### Introduction aux curseurs\n\nToutes les requêtes SQL sont associées à un curseur (zone mémoire).\nCurseur implicite (géré par Oracle) ou explicite (déclaré par l'utilisateur).\nLes curseurs explicites servent à retourner plusieurs lignes."
     },
     {
-      "id": "7.2",
-      "c": 7,
+      "id": "4.15",
+      "c": 4,
       "t": "Attributs des curseurs",
       "x": "### Attributs des curseurs\n\n%ROWCOUNT: nombre de lignes traitées.\n%FOUND: vrai si au moins une ligne traitée.\n%NOTFOUND: vrai si aucune ligne traitée.\n%ISOPEN: vrai si le curseur est ouvert."
     },
     {
-      "id": "7.3",
-      "c": 7,
-      "t": "Curseurs implicites",
-      "x": "### Curseurs implicites\n\nGérés automatiquement: SELECT mono-ligne, UPDATE, INSERT, DELETE."
-    },
-    {
-      "id": "7.4",
-      "c": 7,
+      "id": "4.16",
+      "c": 4,
       "t": "Curseurs explicites - 4 étapes",
-      "x": "### Curseurs explicites - 4 étapes\n\n1) DECLARE: CURSOR nom IS SELECT ...;\n2) OPEN nom;\n3) FETCH nom INTO variable;\n4) CLOSE nom;\nCondition de sortie: EXIT WHEN nom%NOTFOUND;"
+      "x": "### Curseurs implicites\n\nGérés automatiquement: SELECT mono-ligne, UPDATE, INSERT, DELETE.\n\n### Curseurs explicites - 4 étapes\n### Curseurs explicites - 4 étapes\n\n1) DECLARE: CURSOR nom IS SELECT ...;\n2) OPEN nom;\n3) FETCH nom INTO variable;\n4) CLOSE nom;\nCondition de sortie: EXIT WHEN nom%NOTFOUND;"
     },
     {
-      "id": "7.5",
-      "c": 7,
-      "t": "Curseurs avec FOR",
-      "x": "### Curseurs avec FOR\n\nFOR record IN cursor_name LOOP ... END LOOP;\nPlus facile: pas besoin d'OPEN, FETCH, CLOSE."
-    },
-    {
-      "id": "7.6",
-      "c": 7,
+      "id": "4.17",
+      "c": 4,
       "t": "Curseurs modifiables",
-      "x": "### Curseurs modifiables\n\nClause FOR UPDATE dans la déclaration.\nWHERE CURRENT OF nom_curseur dans UPDATE/DELETE.\nPermet de modifier la ligne du dernier FETCH."
+      "x": "### Curseurs avec FOR\n\nFOR record IN cursor_name LOOP ... END LOOP;\nPlus facile: pas besoin d'OPEN, FETCH, CLOSE.\n\n### Curseurs modifiables\n### Curseurs modifiables\n\nClause FOR UPDATE dans la déclaration.\nWHERE CURRENT OF nom_curseur dans UPDATE/DELETE.\nPermet de modifier la ligne du dernier FETCH."
     },
     {
-      "id": "7.7",
-      "c": 7,
+      "id": "4.18",
+      "c": 4,
       "t": "Curseurs paramétrés",
       "x": "### Curseurs paramétrés\n\nCURSOR nom(param1 type, param2 type) IS SELECT ... WHERE col = param1;\nRéutilisable avec des valeurs de paramètres différentes."
     },
     {
-      "id": "8.1",
-      "c": 8,
+      "id": "4.19",
+      "c": 4,
+      "t": "À mémoriser absolument",
+      "x": "✿ À RETENIR\n### Bloc PL/SQL\n```sql\nDECLARE\n    v_nom VARCHAR2(50);\n    v_sal NUMBER(7,2);\nBEGIN\n    SELECT ename, sal INTO v_nom, v_sal\n    FROM emp WHERE empno = 7369;\n    DBMS_OUTPUT.PUT_LINE(v_nom || ' : ' || v_sal);\nEXCEPTION\n    WHEN NO_DATA_FOUND THEN\n        DBMS_OUTPUT.PUT_LINE('Non trouvé');\nEND;\n/\n```\n\n### Curseur explicite\n```sql\nCURSOR c IS SELECT ename FROM emp;\nFOR rec IN c LOOP\n    DBMS_OUTPUT.PUT_LINE(rec.ename);\nEND LOOP;\n```\n\n### Attributs curseur\n| Attribut | Description |\n|----------|------------|\n| %FOUND | Ligne trouvée |\n| %NOTFOUND | Plus de lignes |\n| %ROWCOUNT | Lignes traitées |\n| %ISOPEN | Curseur ouvert |"
+    },
+    {
+      "id": "4.20",
+      "c": 4,
+      "t": "Pièges fréquents",
+      "x": "☞ Attention – Piège Fréquent\n- **SELECT INTO** : Retourne exactement **1 ligne**. 0 lignes → NO_DATA_FOUND. 2+ lignes → TOO_MANY_ROWS.\n- **DECLARE** est optionnel, **BEGIN…END** est obligatoire.\n- **Variables PL/SQL** : Pas accessibles en SQL pur. Ne pas confondre."
+    },
+    {
+      "id": "4.21",
+      "c": 4,
+      "t": "Astuces de rapidité",
+      "x": "★ Astuce Concours\n- **Boucle FOR** : Pas besoin d'OPEN/FETCH/CLOSE avec `FOR rec IN cursor`.\n- **%TYPE** : `v_nom emp.ename%TYPE` s'adapte si la table change.\n- **DBMS_OUTPUT** : N'oubliez pas `SET SERVEROUTPUT ON` pour voir les sorties."
+    },
+    {
+      "id": "5.1",
+      "c": 5,
+      "t": "Ce qui tombe dans les concours",
+      "x": "## Ce qui tombe dans les anciens concours\n- Collections PL/SQL (VARRAY, TABLE)\n- Triggers (BEFORE, AFTER, FOR EACH ROW)\n- Exceptions (prédéfinies et utilisateur)\n- Procédures et fonctions stockées"
+    },
+    {
+      "id": "5.2",
+      "c": 5,
       "t": "Les collections",
       "x": "### Les collections\n\nEnsemble ordonné d'éléments de même type, indexé par numérique ou alphanumérique.\nTrois types: INDEX-BY TABLES, NESTED TABLES, VARRAY."
     },
     {
-      "id": "8.2",
-      "c": 8,
+      "id": "5.3",
+      "c": 5,
       "t": "Déclarations",
       "x": "### Déclarations\n\nINDEX-BY TABLE: TYPE nom IS TABLE OF type INDEX BY index_type;\nNESTED TABLE: TYPE nom IS TABLE OF type;\nVARRAY: TYPE nom IS VARRAY(taille_max) OF type;\nNESTED TABLE et VARRAY doivent être initialisées avec leur constructeur."
     },
     {
-      "id": "8.3",
-      "c": 8,
+      "id": "5.4",
+      "c": 5,
       "t": "Exemples de collections",
       "x": "### Exemples de collections\n\nTYPE typ_nes_tab IS TABLE OF varchar2(100);\ntab1 := typ_nes_tab('Lundi','Mardi','Mercredi','Jeudi');\nTYPE typ_ind_tab IS TABLE OF number INDEX BY binary_integer;\nTYPE typ_var_tab IS VARRAY(30) OF varchar2(100);"
     },
     {
-      "id": "8.4",
-      "c": 8,
+      "id": "5.5",
+      "c": 5,
       "t": "Les enregistrements (RECORD)",
-      "x": "### Les enregistrements (RECORD)\n\nTYPE nom_type IS RECORD (champ1 type1, champ2 type2, ...);\nComposé de champs de types différents.\nTableaux d'enregistrements possibles."
+      "x": "### Les enregistrements (RECORD)\n\nTYPE nom_type IS RECORD (champ1 type1, champ2 type2, ...);\nComposé de champs de types différents.\nTableaux d'enregistrements possibles.\n\n### Accès aux éléments\n### Accès aux éléments\n\nSyntaxe: nom_collection(indice).\nAssignation d'une collection à une autre: même type requis."
     },
     {
-      "id": "8.5",
-      "c": 8,
-      "t": "Accès aux éléments",
-      "x": "### Accès aux éléments\n\nSyntaxe: nom_collection(indice).\nAssignation d'une collection à une autre: même type requis."
-    },
-    {
-      "id": "8.6",
-      "c": 8,
+      "id": "5.6",
+      "c": 5,
       "t": "Méthodes des collections",
       "x": "### Méthodes des collections\n\nEXISTS(i): retourne TRUE/FALSE.\nCOUNT: nombre d'éléments.\nLIMIT: taille max (VARRAY uniquement).\nFIRST/LAST: plus petit/grand indice.\nPRIOR(i)/NEXT(i): indice précédent/suivant.\nEXTEND/EXTEND(n): ajouter élément(s).\nTRIM/TRIM(n): supprimer dernier(s) élément(s).\nDELETE/DELETE(n)/DELETE(n,m): supprimer élément(s)."
     },
     {
-      "id": "8.7",
-      "c": 8,
+      "id": "5.7",
+      "c": 5,
       "t": "Attention COUNT vs LAST",
-      "x": "### Attention COUNT vs LAST\n\nAprès suppression d'éléments, COUNT ≠ LAST.\nCOUNT retourne le nombre réel d'éléments.\nLAST retourne le plus grand indice."
+      "x": "### Attention COUNT vs LAST\n\nAprès suppression d'éléments, COUNT ≠ LAST.\nCOUNT retourne le nombre réel d'éléments.\nLAST retourne le plus grand indice.\n\n### Définition d'un trigger\n### Définition d'un trigger\n\nBloc PL/SQL stocké qui se déclenche automatiquement sur un événement (INSERT/UPDATE/DELETE).\nPeut être filtré par un prédicat et activé/désactivé."
     },
     {
-      "id": "9.1",
-      "c": 9,
-      "t": "Définition d'un trigger",
-      "x": "### Définition d'un trigger\n\nBloc PL/SQL stocké qui se déclenche automatiquement sur un événement (INSERT/UPDATE/DELETE).\nPeut être filtré par un prédicat et activé/désactivé."
-    },
-    {
-      "id": "9.2",
-      "c": 9,
+      "id": "5.8",
+      "c": 5,
       "t": "Structure d'un trigger",
       "x": "### Structure d'un trigger\n\nCREATE OR REPLACE TRIGGER nom_trigger\nBEFORE|AFTER INSERT|UPDATE [OF colonnes]|DELETE ON table\n[FOR EACH ROW]\n[WHEN (prédicat)]\nBEGIN ... END;"
     },
     {
-      "id": "9.3",
-      "c": 9,
+      "id": "5.9",
+      "c": 5,
       "t": "Variables de lien :OLD et :NEW",
       "x": "### Variables de lien :OLD et :NEW\n\n:new.colonne: nouvelle valeur (après modification).\n:old.colonne: ancienne valeur (avant modification).\nDisponibles uniquement dans les triggers FOR EACH ROW."
     },
     {
-      "id": "9.4",
-      "c": 9,
+      "id": "5.10",
+      "c": 5,
       "t": "Points essentiels",
       "x": "### Points essentiels\n\nBEFORE: modifier/valider avant écriture.\nAFTER: auditer ou réagir après écriture.\nFOR EACH ROW: accès à :NEW/:OLD, règle par ligne.\nUPDATE OF col1,col2: cibler des colonnes.\nWHEN: prédicat conditionnel."
     },
     {
-      "id": "9.5",
-      "c": 9,
+      "id": "5.11",
+      "c": 5,
       "t": "Triggers multi-événements",
-      "x": "### Triggers multi-événements\n\nUn trigger peut répondre à INSERT, UPDATE et DELETE.\nPrédicats intégrés: INSERTING, UPDATING('colonne'), DELETING."
+      "x": "### Triggers multi-événements\n\nUn trigger peut répondre à INSERT, UPDATE et DELETE.\nPrédicats intégrés: INSERTING, UPDATING('colonne'), DELETING.\n\n### Gestion des triggers\n### Gestion des triggers\n\nALTER TRIGGER nom DISABLE/ENABLE;\nALTER TABLE table DISABLE/ENABLE ALL TRIGGERS;\nDROP TRIGGER nom;\nConsultation: SELECT * FROM USER_TRIGGERS;"
     },
     {
-      "id": "9.6",
-      "c": 9,
-      "t": "Gestion des triggers",
-      "x": "### Gestion des triggers\n\nALTER TRIGGER nom DISABLE/ENABLE;\nALTER TABLE table DISABLE/ENABLE ALL TRIGGERS;\nDROP TRIGGER nom;\nConsultation: SELECT * FROM USER_TRIGGERS;"
-    },
-    {
-      "id": "10.1",
-      "c": 10,
+      "id": "5.12",
+      "c": 5,
       "t": "Les exceptions",
       "x": "### Les exceptions\n\n4 catégories: nommées prédéfinies, nommées utilisateur, anonymes prédéfinies, anonymes utilisateur.\nPrincipales prédéfinies: NO_DATA_FOUND, TOO_MANY_ROWS, VALUE_ERROR, ZERO_DIVIDE."
     },
     {
-      "id": "10.2",
-      "c": 10,
+      "id": "5.13",
+      "c": 5,
       "t": "Traitement des exceptions",
       "x": "### Traitement des exceptions\n\nEXCEPTION WHEN nom_exception THEN traitement;\nWHEN OTHERS THEN traitement; pour capturer toutes les exceptions.\nSQLCODE et SQLERRM pour diagnostic."
     },
     {
-      "id": "10.3",
-      "c": 10,
+      "id": "5.14",
+      "c": 5,
       "t": "Exceptions utilisateur",
       "x": "### Exceptions utilisateur\n\nDéclaration: nom_exception EXCEPTION;\nDéclenchement: RAISE nom_exception;\nRAISE_APPLICATION_ERROR(code, message) pour erreurs personnalisées.\nPRAGMA EXCEPTION_INIT pour nommer une erreur Oracle existante."
     },
     {
-      "id": "10.4",
-      "c": 10,
+      "id": "5.15",
+      "c": 5,
       "t": "Propagation des exceptions",
-      "x": "### Propagation des exceptions\n\nPL/SQL cherche un gestionnaire dans le bloc courant, puis dans le bloc englobant, et remonte jusqu'à l'application appelante."
+      "x": "### Propagation des exceptions\n\nPL/SQL cherche un gestionnaire dans le bloc courant, puis dans le bloc englobant, et remonte jusqu'à l'application appelante.\n\n### Procédures stockées\n### Procédures stockées\n\nCREATE OR REPLACE PROCEDURE nom (param1 IN|OUT|IN OUT type) AS BEGIN ... END;\nStockées dans le noyau Oracle, sous forme de pseudo-code."
     },
     {
-      "id": "10.5",
-      "c": 10,
-      "t": "Procédures stockées",
-      "x": "### Procédures stockées\n\nCREATE OR REPLACE PROCEDURE nom (param1 IN|OUT|IN OUT type) AS BEGIN ... END;\nStockées dans le noyau Oracle, sous forme de pseudo-code."
-    },
-    {
-      "id": "10.6",
-      "c": 10,
+      "id": "5.16",
+      "c": 5,
       "t": "Fonctions stockées",
       "x": "### Fonctions stockées\n\nCREATE OR REPLACE FUNCTION nom (param1 type) RETURN type AS BEGIN ... RETURN valeur; END;\nUtilisables dans les requêtes SQL.\nLa récursivité est supportée."
+    },
+    {
+      "id": "5.17",
+      "c": 5,
+      "t": "À mémoriser absolument",
+      "x": "✿ À RETENIR\n### Trigger\n```sql\nCREATE OR REPLACE TRIGGER trg_emp\nBEFORE INSERT OR UPDATE ON emp\nFOR EACH ROW\nBEGIN\n    :NEW.date_modif := SYSDATE;\nEND;\n/\n```\n\n### Exceptions\n| Exception | Cause |\n|-----------|-------|\n| NO_DATA_FOUND | SELECT INTO → 0 ligne |\n| TOO_MANY_ROWS | SELECT INTO → 2+ lignes |\n| ZERO_DIVIDE | Division par 0 |\n| DUP_VAL_ON_INDEX | Clé dupliquée |"
+    },
+    {
+      "id": "5.18",
+      "c": 5,
+      "t": "Pièges fréquents",
+      "x": "☞ Attention – Piège Fréquent\n- **:NEW vs :OLD** : `:NEW` = nouvelle valeur (INSERT, UPDATE). `:OLD` = ancienne valeur (UPDATE, DELETE). Pas de `:OLD` pour INSERT !\n- **Trigger mutant** : Un trigger FOR EACH ROW ne peut PAS lire ou modifier la table sur laquelle il est défini."
+    },
+    {
+      "id": "5.19",
+      "c": 5,
+      "t": "Astuces de rapidité",
+      "x": "★ Astuce Concours\n- **BEFORE vs AFTER** : BEFORE pour modifier les données avant l'opération. AFTER pour des actions post-opération (logs, audit).\n- **RAISE_APPLICATION_ERROR** : Pour lever une erreur personnalisée avec un message et un code (-20000 à -20999)."
     }
   ],
-  "quiz": []
+  "quiz": [
+    {
+      "q": "DISTINCT supprime :",
+      "o": [
+        "Les colonnes",
+        "Les doublons",
+        "Les NULL",
+        "Les index"
+      ],
+      "a": 1,
+      "e": "SELECT DISTINCT."
+    },
+    {
+      "q": "HAVING s'utilise avec :",
+      "o": [
+        "WHERE",
+        "SELECT",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "a": 2,
+      "e": "HAVING filtre les groupes."
+    },
+    {
+      "q": "LEFT JOIN conserve :",
+      "o": [
+        "Toutes les lignes droites",
+        "Toutes les lignes gauches",
+        "Seulement les matchs",
+        "Aucune"
+      ],
+      "a": 1,
+      "e": "Table de gauche complète."
+    },
+    {
+      "q": "En PL/SQL, la partie obligatoire est :",
+      "o": [
+        "DECLARE",
+        "BEGIN…END",
+        "EXCEPTION",
+        "Tout"
+      ],
+      "a": 1,
+      "e": "Seul BEGIN…END est obligatoire."
+    },
+    {
+      "q": "Pour plusieurs lignes en PL/SQL :",
+      "o": [
+        "SELECT INTO",
+        "Curseur explicite",
+        "DBMS_OUTPUT",
+        "Trigger"
+      ],
+      "a": 1,
+      "e": "SELECT INTO = 1 seule ligne."
+    },
+    {
+      "q": "%ROWTYPE déclare :",
+      "o": [
+        "Une colonne",
+        "Une ligne entière",
+        "Un booléen",
+        "Un curseur"
+      ],
+      "a": 1,
+      "e": "Toutes les colonnes d'une ligne."
+    },
+    {
+      "q": "Sortir d'une boucle LOOP :",
+      "o": [
+        "BREAK",
+        "EXIT WHEN",
+        "STOP",
+        "RETURN"
+      ],
+      "a": 1,
+      "e": "Syntaxe PL/SQL."
+    },
+    {
+      "q": "Clé primaire d'une table association :",
+      "o": [
+        "Auto-incrémenté",
+        "Concaténation des FK",
+        "Nom table",
+        "NULL"
+      ],
+      "a": 1,
+      "e": "Clé composée."
+    },
+    {
+      "q": "Relation N:M dans le MLD :",
+      "o": [
+        "Rien",
+        "Table d'association",
+        "FK dans chaque entité",
+        "Trigger"
+      ],
+      "a": 1,
+      "e": "Table avec les deux clés."
+    },
+    {
+      "q": "SQL%ROWCOUNT donne :",
+      "o": [
+        "Total lignes table",
+        "Lignes du dernier DML",
+        "N° ligne",
+        "Curseurs ouverts"
+      ],
+      "a": 1,
+      "e": "Attribut curseur implicite."
+    }
+  ],
+  "chapters": {
+    "1": "Introduction aux Bases de Données",
+    "2": "Méthode Merise (MCD / MLD)",
+    "3": "SQL – Langage et Requêtes",
+    "4": "PL/SQL",
+    "5": "PL/SQL Avancé"
+  }
 }
